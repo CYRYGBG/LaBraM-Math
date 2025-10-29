@@ -555,20 +555,22 @@ def _run_one_fold(args, ds_init, ch_names_upper, metrics, fold_id, subject_id,
             device, epoch, loss_scaler, args.clip_grad, model_ema,
             log_writer=log_writer, start_steps=epoch * num_training_steps_per_epoch,
             lr_schedule_values=lr_schedule_values, wd_schedule_values=wd_schedule_values,
-            num_training_steps_per_epoch=num_training_steps_per_epoch, update_freq=args.update_freq, 
-            ch_names=ch_names_upper, is_binary=args.nb_classes == 1
+            num_training_steps_per_epoch=num_training_steps_per_epoch, update_freq=args.update_freq,
+            ch_names=ch_names_upper, is_binary=args.nb_classes == 1, verbose=False
         )
-        
+
         if args.output_dir and args.save_ckpt:
             utils.save_model(
                 args=args, model=model, model_without_ddp=model_without_ddp, optimizer=optimizer,
                 loss_scaler=loss_scaler, epoch=epoch, model_ema=model_ema, save_ckpt_freq=args.save_ckpt_freq)
-            
+
         if data_loader_val is not None:
             val_stats = evaluate(data_loader_val, model, device, header=f'Val[S{subject_id} F{fold_id}]:',
-                                 ch_names=ch_names_upper, metrics=metrics, is_binary=args.nb_classes == 1)
+                                 ch_names=ch_names_upper, metrics=metrics, is_binary=args.nb_classes == 1,
+                                 verbose=False)
             test_stats = evaluate(data_loader_test, model, device, header=f'Test[S{subject_id} F{fold_id}]:',
-                                  ch_names=ch_names_upper, metrics=metrics, is_binary=args.nb_classes == 1)
+                                  ch_names=ch_names_upper, metrics=metrics, is_binary=args.nb_classes == 1,
+                                  verbose=False)
             print(f"[S{subject_id} F{fold_id}] Val Acc: {val_stats.get('accuracy', 0):.2f}%, Test Acc: {test_stats.get('accuracy', 0):.2f}%")
             
             if max_accuracy < val_stats.get("accuracy", 0):

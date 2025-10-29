@@ -31,7 +31,8 @@ def train_one_epoch(model: torch.nn.Module, criterion: torch.nn.Module,
                     device: torch.device, epoch: int, loss_scaler, max_norm: float = 0,
                     model_ema: Optional[ModelEma] = None, log_writer=None,
                     start_steps=None, lr_schedule_values=None, wd_schedule_values=None,
-                    num_training_steps_per_epoch=None, update_freq=None, ch_names=None, is_binary=True):
+                    num_training_steps_per_epoch=None, update_freq=None, ch_names=None,
+                    is_binary=True, log_interval=10, verbose=True):
     input_chans = None
     if ch_names is not None:
         input_chans = utils.get_input_chans(ch_names)
@@ -39,8 +40,8 @@ def train_one_epoch(model: torch.nn.Module, criterion: torch.nn.Module,
     metric_logger = utils.MetricLogger(delimiter="  ")
     metric_logger.add_meter('lr', utils.SmoothedValue(window_size=1, fmt='{value:.6f}'))
     metric_logger.add_meter('min_lr', utils.SmoothedValue(window_size=1, fmt='{value:.6f}'))
-    header = 'Epoch: [{}]'.format(epoch)
-    print_freq = 10
+    header = 'Epoch: [{}]'.format(epoch) if verbose else ''
+    print_freq = log_interval if verbose else None
 
     if loss_scaler is None:
         model.zero_grad()
@@ -146,12 +147,14 @@ def train_one_epoch(model: torch.nn.Module, criterion: torch.nn.Module,
 
     # gather the stats from all processes
     metric_logger.synchronize_between_processes()
-    print("Averaged stats:", metric_logger)
+    if verbose:
+        print("Averaged stats:", metric_logger)
     return {k: meter.global_avg for k, meter in metric_logger.meters.items()}
 
 
 @torch.no_grad()
-def evaluate(data_loader, model, device, header='Test:', ch_names=None, metrics=['acc'], is_binary=True):
+def evaluate(data_loader, model, device, header='Test:', ch_names=None, metrics=['acc'],
+             is_binary=True, print_freq=10, verbose=True):
     input_chans = None
     if ch_names is not None:
         input_chans = utils.get_input_chans(ch_names)
@@ -167,7 +170,9 @@ def evaluate(data_loader, model, device, header='Test:', ch_names=None, metrics=
     model.eval()
     pred = []
     true = []
-    for step, batch in enumerate(metric_logger.log_every(data_loader, 10, header)):
+    log_header = header if verbose else ''
+    freq = print_freq if verbose else None
+    for step, batch in enumerate(metric_logger.log_every(data_loader, freq, log_header)):
         EEG = batch[0]
         target = batch[-1]
         EEG = EEG.float().to(device, non_blocking=True) / 100
@@ -198,8 +203,9 @@ def evaluate(data_loader, model, device, header='Test:', ch_names=None, metrics=
         #metric_logger.meters['acc5'].update(acc5.item(), n=batch_size)
     # gather the stats from all processes
     metric_logger.synchronize_between_processes()
-    print('* loss {losses.global_avg:.3f}'
-          .format(losses=metric_logger.loss))
+    if verbose:
+        print('* loss {losses.global_avg:.3f}'
+              .format(losses=metric_logger.loss))
     
     pred = torch.cat(pred, dim=0).numpy()
     true = torch.cat(true, dim=0).numpy()
