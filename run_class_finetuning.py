@@ -173,6 +173,12 @@ def get_args():
     parser.add_argument('--enable_deepspeed', action='store_true', default=False)
     parser.add_argument('--dataset', default='TUAB', type=str,
                         help='dataset: TUAB | TUEV')
+    parser.add_argument('--data_root', default='', type=str,
+                        help='root path of the dataset when required')
+    parser.add_argument('--kfold_num', default=5, type=int,
+                        help='number of folds when using k-fold datasets')
+    parser.add_argument('--fold_index', default=None, type=int,
+                        help='specific fold index to run when using k-fold datasets')
 
     known_args, _ = parser.parse_known_args()
 
@@ -225,10 +231,54 @@ def get_dataset(args):
         ch_names = [name.split(' ')[-1].split('-')[0] for name in ch_names]
         args.nb_classes = 6
         metrics = ["accuracy", "balanced_accuracy", "cohen_kappa", "f1_weighted"]
+    elif args.dataset == 'MATH_KFOLD':
+        if not args.data_root:
+            raise ValueError("Please specify --data_root when using the MATH_KFOLD dataset.")
+        if args.fold_index is None:
+            raise ValueError("Please set args.fold_index before loading a specific fold.")
+        fold_dir = Path(args.data_root) / f"fold_{args.fold_index}"
+        train_root = fold_dir / "train"
+        val_root = fold_dir / "eval"
+        test_root = fold_dir / "test"
+        for split_root in (train_root, val_root, test_root):
+            if not split_root.exists():
+                raise FileNotFoundError(f"Expected split directory not found: {split_root}")
+        rng = np.random.RandomState(12345)
+        train_files = os.listdir(train_root)
+        rng.shuffle(train_files)
+        val_files = os.listdir(val_root)
+        test_files = os.listdir(test_root)
+        train_dataset = utils.TUABLoader(str(train_root), train_files)
+        test_dataset = utils.TUABLoader(str(test_root), test_files)
+        val_dataset = utils.TUABLoader(str(val_root), val_files)
+        if args.nb_classes <= 0:
+            raise ValueError("Please set --nb_classes to a positive value for the MATH_KFOLD dataset.")
+        ch_names = None
+        metrics = ["accuracy", "balanced_accuracy"]
     return train_dataset, test_dataset, val_dataset, ch_names, metrics
 
 
 def main(args, ds_init):
+    if args.dataset == 'MATH_KFOLD' and args.fold_index is None:
+        fold_accuracies = []
+        for fold_idx in range(args.kfold_num):
+            print(f"========== Running fold {fold_idx} / {args.kfold_num} ==========")
+            fold_args = argparse.Namespace(**vars(args))
+            fold_args.fold_index = fold_idx
+            if args.output_dir:
+                fold_args.output_dir = os.path.join(args.output_dir, f"fold_{fold_idx}")
+                Path(fold_args.output_dir).mkdir(parents=True, exist_ok=True)
+            if args.log_dir:
+                fold_args.log_dir = os.path.join(args.log_dir, f"fold_{fold_idx}")
+            fold_result = main(fold_args, ds_init)
+            if isinstance(fold_result, dict) and 'accuracy' in fold_result and fold_result['accuracy'] is not None:
+                fold_accuracies.append(fold_result['accuracy'])
+        if fold_accuracies:
+            mean_acc = float(np.mean(fold_accuracies))
+            print(f"Average accuracy over {len(fold_accuracies)} folds: {mean_acc:.4f}")
+            return {"accuracy": mean_acc}
+        return
+
     utils.init_distributed_mode(args)
 
     if ds_init is not None:
@@ -460,17 +510,33 @@ def main(args, ds_init):
     if args.eval:
         balanced_accuracy = []
         accuracy = []
-        for data_loader in data_loader_test:
+        loaders = data_loader_test if isinstance(data_loader_test, list) else [data_loader_test]
+        for data_loader in loaders:
             test_stats = evaluate(data_loader, model, device, header='Test:', ch_names=ch_names, metrics=metrics, is_binary=(args.nb_classes == 1))
-            accuracy.append(test_stats['accuracy'])
-            balanced_accuracy.append(test_stats['balanced_accuracy'])
-        print(f"======Accuracy: {np.mean(accuracy)} {np.std(accuracy)}, balanced accuracy: {np.mean(balanced_accuracy)} {np.std(balanced_accuracy)}")
-        exit(0)
+            if test_stats.get('accuracy') is not None:
+                accuracy.append(test_stats.get('accuracy'))
+            if test_stats.get('balanced_accuracy') is not None:
+                balanced_accuracy.append(test_stats.get('balanced_accuracy'))
+        if accuracy:
+            acc_mean = float(np.mean(accuracy))
+            acc_std = float(np.std(accuracy))
+        else:
+            acc_mean = float('nan')
+            acc_std = float('nan')
+        if balanced_accuracy:
+            bal_mean = float(np.mean(balanced_accuracy))
+            bal_std = float(np.std(balanced_accuracy))
+        else:
+            bal_mean = float('nan')
+            bal_std = float('nan')
+        print(f"======Accuracy: {acc_mean} {acc_std}, balanced accuracy: {bal_mean} {bal_std}")
+        return {"accuracy": acc_mean if accuracy else None}
 
     print(f"Start training for {args.epochs} epochs")
     start_time = time.time()
     max_accuracy = 0.0
     max_accuracy_test = 0.0
+    best_test_stats = None
     for epoch in range(args.start_epoch, args.epochs):
         if args.distributed:
             data_loader_train.sampler.set_epoch(epoch)
@@ -503,6 +569,7 @@ def main(args, ds_init):
                         args=args, model=model, model_without_ddp=model_without_ddp, optimizer=optimizer,
                         loss_scaler=loss_scaler, epoch="best", model_ema=model_ema)
                 max_accuracy_test = test_stats["accuracy"]
+                best_test_stats = test_stats.copy()
 
             print(f'Max accuracy val: {max_accuracy:.2f}%, max accuracy test: {max_accuracy_test:.2f}%')
             if log_writer is not None:
@@ -556,6 +623,9 @@ def main(args, ds_init):
     total_time = time.time() - start_time
     total_time_str = str(datetime.timedelta(seconds=int(total_time)))
     print('Training time {}'.format(total_time_str))
+    return best_test_stats if best_test_stats is not None else {
+        "accuracy": max_accuracy_test if max_accuracy_test != 0.0 else None
+    }
 
 
 if __name__ == '__main__':
