@@ -55,7 +55,7 @@ CONFIG = {
     "LAYER_DECAY": 0.65,
     "DROP_PATH": 0.1,
     "UPDATE_FREQ": 1,
-    "SAVE_CKPT_FREQ": 5,
+    "SAVE_CKPT_FREQ": 9999,
     "NUM_WORKERS": 4,
 
     # 官方脚本常见开关（保持与 README 一致）

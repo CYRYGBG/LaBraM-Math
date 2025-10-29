@@ -1,0 +1,3683 @@
+
+===== Launch Command =====
+/home/yeqi3/anaconda3/envs/cyr/bin/torchrun --nproc_per_node=3 /home/yeqi3/cyr/code/LaBraM/run_math_finetuning.py --within_subject_cv --model labram_base_patch200_200 --output_dir /usr/data/yeqi3/LaBraM_log/math/cv --log_dir /usr/data/yeqi3/LaBraM_log/math/log --pkl_roots /usr/data/yeqi3/labram_processed/read,/usr/data/yeqi3/labram_processed/type,/usr/data/yeqi3/labram_processed/read_new,/usr/data/yeqi3/labram_processed/type_new --subject_regex 'sub_(\d+)_simplified' --cv_splits 5 --batch_size 32 --epochs 50 --lr 0.0005 --warmup_epochs 5 --layer_decay 0.65 --drop_path 0.1 --update_freq 1 --save_ckpt_freq 9999 --num_workers 4 --disable_rel_pos_bias --abs_pos_emb --disable_qkv_bias --finetune /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth --seed 42
+==========================
+
+| distributed init (rank 2): env://, gpu 2
+| distributed init (rank 1): env://, gpu 1
+| distributed init (rank 0): env://, gpu 0
+[rank1]:[W1029 19:38:07.567002022 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+[rank2]:[W1029 19:38:07.568512592 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+[rank0]:[W1029 19:38:07.606850839 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+Namespace(batch_size=32, epochs=50, update_freq=1, save_ckpt_freq=9999, robust_test=None, model='labram_base_patch200_200', qkv_bias=False, rel_pos_bias=False, abs_pos_emb=True, layer_scale_init_value=0.1, input_size=200, drop=0.0, attn_drop_rate=0.0, drop_path=0.1, disable_eval_during_finetuning=False, model_ema=False, model_ema_decay=0.9999, model_ema_force_cpu=False, opt='adamw', opt_eps=1e-08, opt_betas=None, clip_grad=None, momentum=0.9, weight_decay=0.05, weight_decay_end=None, lr=0.0005, layer_decay=0.65, warmup_lr=1e-06, min_lr=1e-06, warmup_epochs=5, warmup_steps=-1, smoothing=0.1, reprob=0.25, remode='pixel', recount=1, resplit=False, finetune='/home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth', model_key='model|module', model_prefix='', model_filter_name='gzp', init_scale=0.001, use_mean_pooling=True, disable_weight_decay_on_rel_pos_bias=False, nb_classes=0, output_dir='/usr/data/yeqi3/LaBraM_log/math/cv', log_dir='/usr/data/yeqi3/LaBraM_log/math/log', device='cuda', seed=42, resume='', auto_resume=True, save_ckpt=True, start_epoch=0, eval=False, dist_eval=False, num_workers=4, pin_mem=True, world_size=3, local_rank=-1, dist_on_itp=False, dist_url='env://', enable_deepspeed=False, dataset='TUAB', within_subject_cv=True, pkl_roots='/usr/data/yeqi3/labram_processed/read,/usr/data/yeqi3/labram_processed/type,/usr/data/yeqi3/labram_processed/read_new,/usr/data/yeqi3/labram_processed/type_new', subject_regex='sub_(\\d+)_simplified', cv_splits=5, channels_upper_csv='', rank=0, gpu=0, distributed=True, dist_backend='nccl')
+
+===== Subject 1: 446 samples, 5-fold CV =====
+[S1 F0] Found completion marker, skip this fold.
+[S1 F1] Found completion marker, skip this fold.
+[S1 F2] Found completion marker, skip this fold.
+[S1 F3] Found completion marker, skip this fold.
+[S1 F4] Found completion marker, skip this fold.
+
+===== Subject 2: 449 samples, 5-fold CV =====
+[S2 F0] Found completion marker, skip this fold.
+[S2 F1] Found completion marker, skip this fold.
+[S2 F2] Found completion marker, skip this fold.
+[S2 F3] Found completion marker, skip this fold.
+[S2 F4] Found completion marker, skip this fold.
+
+===== Subject 3: 425 samples, 5-fold CV =====
+[S3 F0] Found completion marker, skip this fold.
+[S3 F1] Found completion marker, skip this fold.
+[S3 F2] Found completion marker, skip this fold.
+[S3 F3] Found completion marker, skip this fold.
+[S3 F4] Found completion marker, skip this fold.
+
+===== Subject 4: 466 samples, 5-fold CV =====
+[S4 F0] Found completion marker, skip this fold.
+[S4 F1] Found completion marker, skip this fold.
+[S4 F2] Found completion marker, skip this fold.
+[S4 F3] Found completion marker, skip this fold.
+[S4 F4] Found completion marker, skip this fold.
+
+===== Subject 5: 471 samples, 5-fold CV =====
+[S5 F0] Found completion marker, skip this fold.
+[S5 F1] Found completion marker, skip this fold.
+[S5 F2] Found completion marker, skip this fold.
+[S5 F3] Found completion marker, skip this fold.
+[S5 F4] Found completion marker, skip this fold.
+
+===== Subject 6: 443 samples, 5-fold CV =====
+[S6 F0] Found completion marker, skip this fold.
+[S6 F1] Found completion marker, skip this fold.
+[S6 F2] Found completion marker, skip this fold.
+[S6 F3] Found completion marker, skip this fold.
+[S6 F4] Found completion marker, skip this fold.
+
+===== Subject 7: 458 samples, 5-fold CV =====
+[S7 F0] Found completion marker, skip this fold.
+[S7 F1] Found completion marker, skip this fold.
+[S7 F2] Found completion marker, skip this fold.
+[S7 F3] Found completion marker, skip this fold.
+[S7 F4] Found completion marker, skip this fold.
+
+===== Subject 8: 470 samples, 5-fold CV =====
+[S8 F0] Found completion marker, skip this fold.
+[S8 F1] Found completion marker, skip this fold.
+[S8 F2] Found completion marker, skip this fold.
+[S8 F3] Found completion marker, skip this fold.
+[S8 F4] Found completion marker, skip this fold.
+
+===== Subject 9: 470 samples, 5-fold CV =====
+[S9 F0] Found completion marker, skip this fold.
+[S9 F1] Found completion marker, skip this fold.
+[S9 F2] Found completion marker, skip this fold.
+[S9 F3] Found completion marker, skip this fold.
+[S9 F4] Found completion marker, skip this fold.
+
+===== Subject 10: 470 samples, 5-fold CV =====
+[S10 F0] Found completion marker, skip this fold.
+[S10 F1] Found completion marker, skip this fold.
+[S10 F2] Found completion marker, skip this fold.
+[S10 F3] Found completion marker, skip this fold.
+[S10 F4] Found completion marker, skip this fold.
+
+===== Subject 11: 469 samples, 5-fold CV =====
+[S11 F0] Found completion marker, skip this fold.
+[S11 F1] Found completion marker, skip this fold.
+[S11 F2] Found completion marker, skip this fold.
+[S11 F3] Found completion marker, skip this fold.
+[S11 F4] Found completion marker, skip this fold.
+
+===== Subject 12: 430 samples, 5-fold CV =====
+[S12 F0] Found completion marker, skip this fold.
+[S12 F1] Found completion marker, skip this fold.
+[S12 F2] Found completion marker, skip this fold.
+[S12 F3] Found completion marker, skip this fold.
+[S12 F4] Found completion marker, skip this fold.
+
+===== Subject 13: 475 samples, 5-fold CV =====
+[S13 F0] Found completion marker, skip this fold.
+[S13 F1] Found completion marker, skip this fold.
+[S13 F2] Found completion marker, skip this fold.
+[S13 F3] Found completion marker, skip this fold.
+[S13 F4] Found completion marker, skip this fold.
+
+===== Subject 14: 430 samples, 5-fold CV =====
+[S14 F0] Found completion marker, skip this fold.
+[S14 F1] Patch size = 200
+Load ckpt from /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth
+Load state_dict by model_key = model
+Weights of NeuralTransformer not initialized from pretrained model: ['fc_norm.weight', 'fc_norm.bias', 'head.weight', 'head.bias']
+Weights from pretrained model not used in NeuralTransformer: ['mask_token', 'lm_head.weight', 'lm_head.bias', 'norm.weight', 'norm.bias']
+Model = NeuralTransformer(
+  (patch_embed): TemporalConv(
+    (conv1): Conv2d(1, 8, kernel_size=(1, 15), stride=(1, 8), padding=(0, 7))
+    (gelu1): GELU(approximate='none')
+    (norm1): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv2): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (gelu2): GELU(approximate='none')
+    (norm2): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv3): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (norm3): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (gelu3): GELU(approximate='none')
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (blocks): ModuleList(
+    (0): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (1): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.00909090880304575)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (2): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0181818176060915)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (3): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.027272727340459824)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (4): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.036363635212183)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (5): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.045454543083906174)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (6): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.054545458406209946)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (7): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.06363636255264282)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (8): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0727272778749466)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (9): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.08181818574666977)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (10): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.09090909361839294)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (11): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.10000000149011612)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (norm): Identity()
+  (fc_norm): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+  (head): Linear(in_features=200, out_features=2, bias=True)
+)
+number of params: 5820338
+LR = 0.00050000
+Batch size = 96
+Update frequent = 1
+Number of training examples = 258
+Number of training training per epoch = 2
+Assigned values = [0.003697205891018715, 0.005688009063105715, 0.008750783174008792, 0.013462743344628911, 0.02071191283789063, 0.03186448128906251, 0.049022278906250015, 0.07541889062500001, 0.11602906250000002, 0.17850625000000003, 0.274625, 0.42250000000000004, 0.65, 1.0]
+Skip weight decay name marked in model: {'time_embed', 'cls_token', 'pos_embed'}
+Param groups = {
+  "layer_0_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "cls_token",
+      "pos_embed",
+      "patch_embed.conv1.bias",
+      "patch_embed.norm1.weight",
+      "patch_embed.norm1.bias",
+      "patch_embed.conv2.bias",
+      "patch_embed.norm2.weight",
+      "patch_embed.norm2.bias",
+      "patch_embed.conv3.bias",
+      "patch_embed.norm3.weight",
+      "patch_embed.norm3.bias"
+    ],
+    "lr_scale": 0.003697205891018715
+  },
+  "layer_13_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "time_embed",
+      "fc_norm.weight",
+      "fc_norm.bias",
+      "head.bias"
+    ],
+    "lr_scale": 1.0
+  },
+  "layer_0_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "patch_embed.conv1.weight",
+      "patch_embed.conv2.weight",
+      "patch_embed.conv3.weight"
+    ],
+    "lr_scale": 0.003697205891018715
+  },
+  "layer_1_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.0.gamma_1",
+      "blocks.0.gamma_2",
+      "blocks.0.norm1.weight",
+      "blocks.0.norm1.bias",
+      "blocks.0.attn.q_norm.weight",
+      "blocks.0.attn.q_norm.bias",
+      "blocks.0.attn.k_norm.weight",
+      "blocks.0.attn.k_norm.bias",
+      "blocks.0.attn.proj.bias",
+      "blocks.0.norm2.weight",
+      "blocks.0.norm2.bias",
+      "blocks.0.mlp.fc1.bias",
+      "blocks.0.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.005688009063105715
+  },
+  "layer_1_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.0.attn.qkv.weight",
+      "blocks.0.attn.proj.weight",
+      "blocks.0.mlp.fc1.weight",
+      "blocks.0.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.005688009063105715
+  },
+  "layer_2_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.1.gamma_1",
+      "blocks.1.gamma_2",
+      "blocks.1.norm1.weight",
+      "blocks.1.norm1.bias",
+      "blocks.1.attn.q_norm.weight",
+      "blocks.1.attn.q_norm.bias",
+      "blocks.1.attn.k_norm.weight",
+      "blocks.1.attn.k_norm.bias",
+      "blocks.1.attn.proj.bias",
+      "blocks.1.norm2.weight",
+      "blocks.1.norm2.bias",
+      "blocks.1.mlp.fc1.bias",
+      "blocks.1.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.008750783174008792
+  },
+  "layer_2_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.1.attn.qkv.weight",
+      "blocks.1.attn.proj.weight",
+      "blocks.1.mlp.fc1.weight",
+      "blocks.1.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.008750783174008792
+  },
+  "layer_3_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.2.gamma_1",
+      "blocks.2.gamma_2",
+      "blocks.2.norm1.weight",
+      "blocks.2.norm1.bias",
+      "blocks.2.attn.q_norm.weight",
+      "blocks.2.attn.q_norm.bias",
+      "blocks.2.attn.k_norm.weight",
+      "blocks.2.attn.k_norm.bias",
+      "blocks.2.attn.proj.bias",
+      "blocks.2.norm2.weight",
+      "blocks.2.norm2.bias",
+      "blocks.2.mlp.fc1.bias",
+      "blocks.2.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.013462743344628911
+  },
+  "layer_3_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.2.attn.qkv.weight",
+      "blocks.2.attn.proj.weight",
+      "blocks.2.mlp.fc1.weight",
+      "blocks.2.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.013462743344628911
+  },
+  "layer_4_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.3.gamma_1",
+      "blocks.3.gamma_2",
+      "blocks.3.norm1.weight",
+      "blocks.3.norm1.bias",
+      "blocks.3.attn.q_norm.weight",
+      "blocks.3.attn.q_norm.bias",
+      "blocks.3.attn.k_norm.weight",
+      "blocks.3.attn.k_norm.bias",
+      "blocks.3.attn.proj.bias",
+      "blocks.3.norm2.weight",
+      "blocks.3.norm2.bias",
+      "blocks.3.mlp.fc1.bias",
+      "blocks.3.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.02071191283789063
+  },
+  "layer_4_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.3.attn.qkv.weight",
+      "blocks.3.attn.proj.weight",
+      "blocks.3.mlp.fc1.weight",
+      "blocks.3.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.02071191283789063
+  },
+  "layer_5_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.4.gamma_1",
+      "blocks.4.gamma_2",
+      "blocks.4.norm1.weight",
+      "blocks.4.norm1.bias",
+      "blocks.4.attn.q_norm.weight",
+      "blocks.4.attn.q_norm.bias",
+      "blocks.4.attn.k_norm.weight",
+      "blocks.4.attn.k_norm.bias",
+      "blocks.4.attn.proj.bias",
+      "blocks.4.norm2.weight",
+      "blocks.4.norm2.bias",
+      "blocks.4.mlp.fc1.bias",
+      "blocks.4.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.03186448128906251
+  },
+  "layer_5_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.4.attn.qkv.weight",
+      "blocks.4.attn.proj.weight",
+      "blocks.4.mlp.fc1.weight",
+      "blocks.4.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.03186448128906251
+  },
+  "layer_6_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.5.gamma_1",
+      "blocks.5.gamma_2",
+      "blocks.5.norm1.weight",
+      "blocks.5.norm1.bias",
+      "blocks.5.attn.q_norm.weight",
+      "blocks.5.attn.q_norm.bias",
+      "blocks.5.attn.k_norm.weight",
+      "blocks.5.attn.k_norm.bias",
+      "blocks.5.attn.proj.bias",
+      "blocks.5.norm2.weight",
+      "blocks.5.norm2.bias",
+      "blocks.5.mlp.fc1.bias",
+      "blocks.5.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.049022278906250015
+  },
+  "layer_6_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.5.attn.qkv.weight",
+      "blocks.5.attn.proj.weight",
+      "blocks.5.mlp.fc1.weight",
+      "blocks.5.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.049022278906250015
+  },
+  "layer_7_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.6.gamma_1",
+      "blocks.6.gamma_2",
+      "blocks.6.norm1.weight",
+      "blocks.6.norm1.bias",
+      "blocks.6.attn.q_norm.weight",
+      "blocks.6.attn.q_norm.bias",
+      "blocks.6.attn.k_norm.weight",
+      "blocks.6.attn.k_norm.bias",
+      "blocks.6.attn.proj.bias",
+      "blocks.6.norm2.weight",
+      "blocks.6.norm2.bias",
+      "blocks.6.mlp.fc1.bias",
+      "blocks.6.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.07541889062500001
+  },
+  "layer_7_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.6.attn.qkv.weight",
+      "blocks.6.attn.proj.weight",
+      "blocks.6.mlp.fc1.weight",
+      "blocks.6.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.07541889062500001
+  },
+  "layer_8_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.7.gamma_1",
+      "blocks.7.gamma_2",
+      "blocks.7.norm1.weight",
+      "blocks.7.norm1.bias",
+      "blocks.7.attn.q_norm.weight",
+      "blocks.7.attn.q_norm.bias",
+      "blocks.7.attn.k_norm.weight",
+      "blocks.7.attn.k_norm.bias",
+      "blocks.7.attn.proj.bias",
+      "blocks.7.norm2.weight",
+      "blocks.7.norm2.bias",
+      "blocks.7.mlp.fc1.bias",
+      "blocks.7.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.11602906250000002
+  },
+  "layer_8_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.7.attn.qkv.weight",
+      "blocks.7.attn.proj.weight",
+      "blocks.7.mlp.fc1.weight",
+      "blocks.7.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.11602906250000002
+  },
+  "layer_9_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.8.gamma_1",
+      "blocks.8.gamma_2",
+      "blocks.8.norm1.weight",
+      "blocks.8.norm1.bias",
+      "blocks.8.attn.q_norm.weight",
+      "blocks.8.attn.q_norm.bias",
+      "blocks.8.attn.k_norm.weight",
+      "blocks.8.attn.k_norm.bias",
+      "blocks.8.attn.proj.bias",
+      "blocks.8.norm2.weight",
+      "blocks.8.norm2.bias",
+      "blocks.8.mlp.fc1.bias",
+      "blocks.8.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.17850625000000003
+  },
+  "layer_9_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.8.attn.qkv.weight",
+      "blocks.8.attn.proj.weight",
+      "blocks.8.mlp.fc1.weight",
+      "blocks.8.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.17850625000000003
+  },
+  "layer_10_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.9.gamma_1",
+      "blocks.9.gamma_2",
+      "blocks.9.norm1.weight",
+      "blocks.9.norm1.bias",
+      "blocks.9.attn.q_norm.weight",
+      "blocks.9.attn.q_norm.bias",
+      "blocks.9.attn.k_norm.weight",
+      "blocks.9.attn.k_norm.bias",
+      "blocks.9.attn.proj.bias",
+      "blocks.9.norm2.weight",
+      "blocks.9.norm2.bias",
+      "blocks.9.mlp.fc1.bias",
+      "blocks.9.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.274625
+  },
+  "layer_10_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.9.attn.qkv.weight",
+      "blocks.9.attn.proj.weight",
+      "blocks.9.mlp.fc1.weight",
+      "blocks.9.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.274625
+  },
+  "layer_11_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.10.gamma_1",
+      "blocks.10.gamma_2",
+      "blocks.10.norm1.weight",
+      "blocks.10.norm1.bias",
+      "blocks.10.attn.q_norm.weight",
+      "blocks.10.attn.q_norm.bias",
+      "blocks.10.attn.k_norm.weight",
+      "blocks.10.attn.k_norm.bias",
+      "blocks.10.attn.proj.bias",
+      "blocks.10.norm2.weight",
+      "blocks.10.norm2.bias",
+      "blocks.10.mlp.fc1.bias",
+      "blocks.10.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.42250000000000004
+  },
+  "layer_11_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.10.attn.qkv.weight",
+      "blocks.10.attn.proj.weight",
+      "blocks.10.mlp.fc1.weight",
+      "blocks.10.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.42250000000000004
+  },
+  "layer_12_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.11.gamma_1",
+      "blocks.11.gamma_2",
+      "blocks.11.norm1.weight",
+      "blocks.11.norm1.bias",
+      "blocks.11.attn.q_norm.weight",
+      "blocks.11.attn.q_norm.bias",
+      "blocks.11.attn.k_norm.weight",
+      "blocks.11.attn.k_norm.bias",
+      "blocks.11.attn.proj.bias",
+      "blocks.11.norm2.weight",
+      "blocks.11.norm2.bias",
+      "blocks.11.mlp.fc1.bias",
+      "blocks.11.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.65
+  },
+  "layer_12_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.11.attn.qkv.weight",
+      "blocks.11.attn.proj.weight",
+      "blocks.11.mlp.fc1.weight",
+      "blocks.11.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.65
+  },
+  "layer_13_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "head.weight"
+    ],
+    "lr_scale": 1.0
+  }
+}
+Optimizer config: {'lr': 0.0005, 'weight_decay': 0.0, 'eps': 1e-08}
+Use step level LR scheduler!
+Set warmup steps = 10
+Set warmup steps = 0
+Max WD = 0.0500000, Min WD = 0.0500000
+criterion = LabelSmoothingCrossEntropy()
+Auto resume checkpoint: 
+[S14 F1] Start training for 50 epochs
+[rank0]:[W1029 19:38:12.299890150 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank1]:[W1029 19:38:12.301058672 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank2]:[W1029 19:38:12.336130445 reducer.cpp:1400] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+NaN or Inf found in input tensor.
+[S14 F1] Val Acc: 0.48%, Test Acc: 0.48%
+[S14 F1] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F1/checkpoint_best_S14_F1.pth
+[S14 F1] Val Acc: 0.49%, Test Acc: 0.58%
+[S14 F1] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F1/checkpoint_best_S14_F1.pth
+NaN or Inf found in input tensor.
+[S14 F1] Val Acc: 0.52%, Test Acc: 0.52%
+[S14 F1] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F1/checkpoint_best_S14_F1.pth
+[S14 F1] Val Acc: 0.52%, Test Acc: 0.52%
+[S14 F1] Val Acc: 0.52%, Test Acc: 0.52%
+[S14 F1] Val Acc: 0.47%, Test Acc: 0.50%
+[S14 F1] Val Acc: 0.50%, Test Acc: 0.49%
+[S14 F1] Val Acc: 0.45%, Test Acc: 0.53%
+[S14 F1] Val Acc: 0.40%, Test Acc: 0.63%
+NaN or Inf found in input tensor.
+[S14 F1] Val Acc: 0.43%, Test Acc: 0.55%
+[S14 F1] Val Acc: 0.43%, Test Acc: 0.52%
+[S14 F1] Val Acc: 0.44%, Test Acc: 0.55%
+[S14 F1] Val Acc: 0.48%, Test Acc: 0.62%
+[S14 F1] Val Acc: 0.48%, Test Acc: 0.64%
+[S14 F1] Val Acc: 0.45%, Test Acc: 0.63%
+[S14 F1] Val Acc: 0.45%, Test Acc: 0.65%
+[S14 F1] Val Acc: 0.51%, Test Acc: 0.64%
+NaN or Inf found in input tensor.
+[S14 F1] Val Acc: 0.50%, Test Acc: 0.64%
+[S14 F1] Val Acc: 0.45%, Test Acc: 0.55%
+[S14 F1] Val Acc: 0.43%, Test Acc: 0.55%
+NaN or Inf found in input tensor.
+[S14 F1] Val Acc: 0.44%, Test Acc: 0.56%
+[S14 F1] Val Acc: 0.49%, Test Acc: 0.67%
+[S14 F1] Val Acc: 0.50%, Test Acc: 0.63%
+[S14 F1] Val Acc: 0.48%, Test Acc: 0.58%
+[S14 F1] Val Acc: 0.49%, Test Acc: 0.64%
+[S14 F1] Val Acc: 0.50%, Test Acc: 0.63%
+[S14 F1] Val Acc: 0.51%, Test Acc: 0.58%
+[S14 F1] Val Acc: 0.56%, Test Acc: 0.60%
+[S14 F1] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F1/checkpoint_best_S14_F1.pth
+[S14 F1] Val Acc: 0.52%, Test Acc: 0.67%
+[S14 F1] Val Acc: 0.52%, Test Acc: 0.63%
+[S14 F1] Val Acc: 0.50%, Test Acc: 0.58%
+[S14 F1] Val Acc: 0.49%, Test Acc: 0.56%
+[S14 F1] Val Acc: 0.48%, Test Acc: 0.57%
+[S14 F1] Val Acc: 0.48%, Test Acc: 0.62%
+[S14 F1] Val Acc: 0.48%, Test Acc: 0.63%
+[S14 F1] Val Acc: 0.50%, Test Acc: 0.60%
+NaN or Inf found in input tensor.
+[S14 F1] Val Acc: 0.50%, Test Acc: 0.59%
+[S14 F1] Val Acc: 0.48%, Test Acc: 0.63%
+[S14 F1] Val Acc: 0.49%, Test Acc: 0.62%
+[S14 F1] Val Acc: 0.48%, Test Acc: 0.59%
+[S14 F1] Val Acc: 0.49%, Test Acc: 0.58%
+[S14 F1] Val Acc: 0.49%, Test Acc: 0.57%
+NaN or Inf found in input tensor.
+[S14 F1] Val Acc: 0.47%, Test Acc: 0.58%
+[S14 F1] Val Acc: 0.49%, Test Acc: 0.60%
+[S14 F1] Val Acc: 0.50%, Test Acc: 0.59%
+[S14 F1] Val Acc: 0.50%, Test Acc: 0.59%
+[S14 F1] Val Acc: 0.50%, Test Acc: 0.59%
+[S14 F1] Val Acc: 0.50%, Test Acc: 0.59%
+[S14 F1] Val Acc: 0.50%, Test Acc: 0.59%
+[S14 F1] Val Acc: 0.49%, Test Acc: 0.59%
+[S14 F1] Training time 0:01:13
+[S14 F1] Wrote completion marker -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F1/done.json
+[S14 F2] Patch size = 200
+Load ckpt from /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth
+Load state_dict by model_key = model
+Weights of NeuralTransformer not initialized from pretrained model: ['fc_norm.weight', 'fc_norm.bias', 'head.weight', 'head.bias']
+Weights from pretrained model not used in NeuralTransformer: ['mask_token', 'lm_head.weight', 'lm_head.bias', 'norm.weight', 'norm.bias']
+Model = NeuralTransformer(
+  (patch_embed): TemporalConv(
+    (conv1): Conv2d(1, 8, kernel_size=(1, 15), stride=(1, 8), padding=(0, 7))
+    (gelu1): GELU(approximate='none')
+    (norm1): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv2): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (gelu2): GELU(approximate='none')
+    (norm2): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv3): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (norm3): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (gelu3): GELU(approximate='none')
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (blocks): ModuleList(
+    (0): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (1): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.00909090880304575)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (2): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0181818176060915)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (3): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.027272727340459824)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (4): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.036363635212183)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (5): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.045454543083906174)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (6): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.054545458406209946)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (7): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.06363636255264282)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (8): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0727272778749466)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (9): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.08181818574666977)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (10): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.09090909361839294)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (11): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.10000000149011612)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (norm): Identity()
+  (fc_norm): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+  (head): Linear(in_features=200, out_features=2, bias=True)
+)
+number of params: 5820338
+LR = 0.00050000
+Batch size = 96
+Update frequent = 1
+Number of training examples = 258
+Number of training training per epoch = 2
+Assigned values = [0.003697205891018715, 0.005688009063105715, 0.008750783174008792, 0.013462743344628911, 0.02071191283789063, 0.03186448128906251, 0.049022278906250015, 0.07541889062500001, 0.11602906250000002, 0.17850625000000003, 0.274625, 0.42250000000000004, 0.65, 1.0]
+Skip weight decay name marked in model: {'time_embed', 'cls_token', 'pos_embed'}
+Param groups = {
+  "layer_0_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "cls_token",
+      "pos_embed",
+      "patch_embed.conv1.bias",
+      "patch_embed.norm1.weight",
+      "patch_embed.norm1.bias",
+      "patch_embed.conv2.bias",
+      "patch_embed.norm2.weight",
+      "patch_embed.norm2.bias",
+      "patch_embed.conv3.bias",
+      "patch_embed.norm3.weight",
+      "patch_embed.norm3.bias"
+    ],
+    "lr_scale": 0.003697205891018715
+  },
+  "layer_13_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "time_embed",
+      "fc_norm.weight",
+      "fc_norm.bias",
+      "head.bias"
+    ],
+    "lr_scale": 1.0
+  },
+  "layer_0_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "patch_embed.conv1.weight",
+      "patch_embed.conv2.weight",
+      "patch_embed.conv3.weight"
+    ],
+    "lr_scale": 0.003697205891018715
+  },
+  "layer_1_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.0.gamma_1",
+      "blocks.0.gamma_2",
+      "blocks.0.norm1.weight",
+      "blocks.0.norm1.bias",
+      "blocks.0.attn.q_norm.weight",
+      "blocks.0.attn.q_norm.bias",
+      "blocks.0.attn.k_norm.weight",
+      "blocks.0.attn.k_norm.bias",
+      "blocks.0.attn.proj.bias",
+      "blocks.0.norm2.weight",
+      "blocks.0.norm2.bias",
+      "blocks.0.mlp.fc1.bias",
+      "blocks.0.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.005688009063105715
+  },
+  "layer_1_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.0.attn.qkv.weight",
+      "blocks.0.attn.proj.weight",
+      "blocks.0.mlp.fc1.weight",
+      "blocks.0.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.005688009063105715
+  },
+  "layer_2_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.1.gamma_1",
+      "blocks.1.gamma_2",
+      "blocks.1.norm1.weight",
+      "blocks.1.norm1.bias",
+      "blocks.1.attn.q_norm.weight",
+      "blocks.1.attn.q_norm.bias",
+      "blocks.1.attn.k_norm.weight",
+      "blocks.1.attn.k_norm.bias",
+      "blocks.1.attn.proj.bias",
+      "blocks.1.norm2.weight",
+      "blocks.1.norm2.bias",
+      "blocks.1.mlp.fc1.bias",
+      "blocks.1.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.008750783174008792
+  },
+  "layer_2_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.1.attn.qkv.weight",
+      "blocks.1.attn.proj.weight",
+      "blocks.1.mlp.fc1.weight",
+      "blocks.1.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.008750783174008792
+  },
+  "layer_3_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.2.gamma_1",
+      "blocks.2.gamma_2",
+      "blocks.2.norm1.weight",
+      "blocks.2.norm1.bias",
+      "blocks.2.attn.q_norm.weight",
+      "blocks.2.attn.q_norm.bias",
+      "blocks.2.attn.k_norm.weight",
+      "blocks.2.attn.k_norm.bias",
+      "blocks.2.attn.proj.bias",
+      "blocks.2.norm2.weight",
+      "blocks.2.norm2.bias",
+      "blocks.2.mlp.fc1.bias",
+      "blocks.2.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.013462743344628911
+  },
+  "layer_3_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.2.attn.qkv.weight",
+      "blocks.2.attn.proj.weight",
+      "blocks.2.mlp.fc1.weight",
+      "blocks.2.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.013462743344628911
+  },
+  "layer_4_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.3.gamma_1",
+      "blocks.3.gamma_2",
+      "blocks.3.norm1.weight",
+      "blocks.3.norm1.bias",
+      "blocks.3.attn.q_norm.weight",
+      "blocks.3.attn.q_norm.bias",
+      "blocks.3.attn.k_norm.weight",
+      "blocks.3.attn.k_norm.bias",
+      "blocks.3.attn.proj.bias",
+      "blocks.3.norm2.weight",
+      "blocks.3.norm2.bias",
+      "blocks.3.mlp.fc1.bias",
+      "blocks.3.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.02071191283789063
+  },
+  "layer_4_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.3.attn.qkv.weight",
+      "blocks.3.attn.proj.weight",
+      "blocks.3.mlp.fc1.weight",
+      "blocks.3.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.02071191283789063
+  },
+  "layer_5_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.4.gamma_1",
+      "blocks.4.gamma_2",
+      "blocks.4.norm1.weight",
+      "blocks.4.norm1.bias",
+      "blocks.4.attn.q_norm.weight",
+      "blocks.4.attn.q_norm.bias",
+      "blocks.4.attn.k_norm.weight",
+      "blocks.4.attn.k_norm.bias",
+      "blocks.4.attn.proj.bias",
+      "blocks.4.norm2.weight",
+      "blocks.4.norm2.bias",
+      "blocks.4.mlp.fc1.bias",
+      "blocks.4.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.03186448128906251
+  },
+  "layer_5_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.4.attn.qkv.weight",
+      "blocks.4.attn.proj.weight",
+      "blocks.4.mlp.fc1.weight",
+      "blocks.4.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.03186448128906251
+  },
+  "layer_6_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.5.gamma_1",
+      "blocks.5.gamma_2",
+      "blocks.5.norm1.weight",
+      "blocks.5.norm1.bias",
+      "blocks.5.attn.q_norm.weight",
+      "blocks.5.attn.q_norm.bias",
+      "blocks.5.attn.k_norm.weight",
+      "blocks.5.attn.k_norm.bias",
+      "blocks.5.attn.proj.bias",
+      "blocks.5.norm2.weight",
+      "blocks.5.norm2.bias",
+      "blocks.5.mlp.fc1.bias",
+      "blocks.5.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.049022278906250015
+  },
+  "layer_6_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.5.attn.qkv.weight",
+      "blocks.5.attn.proj.weight",
+      "blocks.5.mlp.fc1.weight",
+      "blocks.5.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.049022278906250015
+  },
+  "layer_7_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.6.gamma_1",
+      "blocks.6.gamma_2",
+      "blocks.6.norm1.weight",
+      "blocks.6.norm1.bias",
+      "blocks.6.attn.q_norm.weight",
+      "blocks.6.attn.q_norm.bias",
+      "blocks.6.attn.k_norm.weight",
+      "blocks.6.attn.k_norm.bias",
+      "blocks.6.attn.proj.bias",
+      "blocks.6.norm2.weight",
+      "blocks.6.norm2.bias",
+      "blocks.6.mlp.fc1.bias",
+      "blocks.6.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.07541889062500001
+  },
+  "layer_7_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.6.attn.qkv.weight",
+      "blocks.6.attn.proj.weight",
+      "blocks.6.mlp.fc1.weight",
+      "blocks.6.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.07541889062500001
+  },
+  "layer_8_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.7.gamma_1",
+      "blocks.7.gamma_2",
+      "blocks.7.norm1.weight",
+      "blocks.7.norm1.bias",
+      "blocks.7.attn.q_norm.weight",
+      "blocks.7.attn.q_norm.bias",
+      "blocks.7.attn.k_norm.weight",
+      "blocks.7.attn.k_norm.bias",
+      "blocks.7.attn.proj.bias",
+      "blocks.7.norm2.weight",
+      "blocks.7.norm2.bias",
+      "blocks.7.mlp.fc1.bias",
+      "blocks.7.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.11602906250000002
+  },
+  "layer_8_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.7.attn.qkv.weight",
+      "blocks.7.attn.proj.weight",
+      "blocks.7.mlp.fc1.weight",
+      "blocks.7.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.11602906250000002
+  },
+  "layer_9_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.8.gamma_1",
+      "blocks.8.gamma_2",
+      "blocks.8.norm1.weight",
+      "blocks.8.norm1.bias",
+      "blocks.8.attn.q_norm.weight",
+      "blocks.8.attn.q_norm.bias",
+      "blocks.8.attn.k_norm.weight",
+      "blocks.8.attn.k_norm.bias",
+      "blocks.8.attn.proj.bias",
+      "blocks.8.norm2.weight",
+      "blocks.8.norm2.bias",
+      "blocks.8.mlp.fc1.bias",
+      "blocks.8.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.17850625000000003
+  },
+  "layer_9_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.8.attn.qkv.weight",
+      "blocks.8.attn.proj.weight",
+      "blocks.8.mlp.fc1.weight",
+      "blocks.8.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.17850625000000003
+  },
+  "layer_10_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.9.gamma_1",
+      "blocks.9.gamma_2",
+      "blocks.9.norm1.weight",
+      "blocks.9.norm1.bias",
+      "blocks.9.attn.q_norm.weight",
+      "blocks.9.attn.q_norm.bias",
+      "blocks.9.attn.k_norm.weight",
+      "blocks.9.attn.k_norm.bias",
+      "blocks.9.attn.proj.bias",
+      "blocks.9.norm2.weight",
+      "blocks.9.norm2.bias",
+      "blocks.9.mlp.fc1.bias",
+      "blocks.9.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.274625
+  },
+  "layer_10_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.9.attn.qkv.weight",
+      "blocks.9.attn.proj.weight",
+      "blocks.9.mlp.fc1.weight",
+      "blocks.9.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.274625
+  },
+  "layer_11_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.10.gamma_1",
+      "blocks.10.gamma_2",
+      "blocks.10.norm1.weight",
+      "blocks.10.norm1.bias",
+      "blocks.10.attn.q_norm.weight",
+      "blocks.10.attn.q_norm.bias",
+      "blocks.10.attn.k_norm.weight",
+      "blocks.10.attn.k_norm.bias",
+      "blocks.10.attn.proj.bias",
+      "blocks.10.norm2.weight",
+      "blocks.10.norm2.bias",
+      "blocks.10.mlp.fc1.bias",
+      "blocks.10.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.42250000000000004
+  },
+  "layer_11_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.10.attn.qkv.weight",
+      "blocks.10.attn.proj.weight",
+      "blocks.10.mlp.fc1.weight",
+      "blocks.10.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.42250000000000004
+  },
+  "layer_12_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.11.gamma_1",
+      "blocks.11.gamma_2",
+      "blocks.11.norm1.weight",
+      "blocks.11.norm1.bias",
+      "blocks.11.attn.q_norm.weight",
+      "blocks.11.attn.q_norm.bias",
+      "blocks.11.attn.k_norm.weight",
+      "blocks.11.attn.k_norm.bias",
+      "blocks.11.attn.proj.bias",
+      "blocks.11.norm2.weight",
+      "blocks.11.norm2.bias",
+      "blocks.11.mlp.fc1.bias",
+      "blocks.11.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.65
+  },
+  "layer_12_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.11.attn.qkv.weight",
+      "blocks.11.attn.proj.weight",
+      "blocks.11.mlp.fc1.weight",
+      "blocks.11.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.65
+  },
+  "layer_13_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "head.weight"
+    ],
+    "lr_scale": 1.0
+  }
+}
+Optimizer config: {'lr': 0.0005, 'weight_decay': 0.0, 'eps': 1e-08}
+Use step level LR scheduler!
+Set warmup steps = 10
+Set warmup steps = 0
+Max WD = 0.0500000, Min WD = 0.0500000
+criterion = LabelSmoothingCrossEntropy()
+Auto resume checkpoint: 
+[S14 F2] Start training for 50 epochs
+NaN or Inf found in input tensor.
+[S14 F2] Val Acc: 0.49%, Test Acc: 0.48%
+[S14 F2] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F2/checkpoint_best_S14_F2.pth
+[S14 F2] Val Acc: 0.51%, Test Acc: 0.52%
+[S14 F2] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F2/checkpoint_best_S14_F2.pth
+[S14 F2] Val Acc: 0.51%, Test Acc: 0.52%
+[S14 F2] Val Acc: 0.51%, Test Acc: 0.52%
+[S14 F2] Val Acc: 0.53%, Test Acc: 0.47%
+[S14 F2] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F2/checkpoint_best_S14_F2.pth
+[S14 F2] Val Acc: 0.56%, Test Acc: 0.51%
+[S14 F2] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F2/checkpoint_best_S14_F2.pth
+NaN or Inf found in input tensor.
+[S14 F2] Val Acc: 0.56%, Test Acc: 0.51%
+NaN or Inf found in input tensor.
+[S14 F2] Val Acc: 0.58%, Test Acc: 0.50%
+[S14 F2] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F2/checkpoint_best_S14_F2.pth
+[S14 F2] Val Acc: 0.49%, Test Acc: 0.55%
+[S14 F2] Val Acc: 0.49%, Test Acc: 0.56%
+[S14 F2] Val Acc: 0.55%, Test Acc: 0.51%
+[S14 F2] Val Acc: 0.50%, Test Acc: 0.50%
+[S14 F2] Val Acc: 0.51%, Test Acc: 0.50%
+[S14 F2] Val Acc: 0.52%, Test Acc: 0.49%
+[S14 F2] Val Acc: 0.47%, Test Acc: 0.49%
+[S14 F2] Val Acc: 0.53%, Test Acc: 0.45%
+[S14 F2] Val Acc: 0.58%, Test Acc: 0.43%
+NaN or Inf found in input tensor.
+[S14 F2] Val Acc: 0.56%, Test Acc: 0.48%
+[S14 F2] Val Acc: 0.55%, Test Acc: 0.47%
+[S14 F2] Val Acc: 0.55%, Test Acc: 0.48%
+NaN or Inf found in input tensor.
+[S14 F2] Val Acc: 0.56%, Test Acc: 0.49%
+[S14 F2] Val Acc: 0.57%, Test Acc: 0.45%
+[S14 F2] Val Acc: 0.58%, Test Acc: 0.45%
+NaN or Inf found in input tensor.
+[S14 F2] Val Acc: 0.60%, Test Acc: 0.44%
+[S14 F2] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F2/checkpoint_best_S14_F2.pth
+[S14 F2] Val Acc: 0.59%, Test Acc: 0.47%
+[S14 F2] Val Acc: 0.56%, Test Acc: 0.50%
+[S14 F2] Val Acc: 0.59%, Test Acc: 0.48%
+[S14 F2] Val Acc: 0.60%, Test Acc: 0.49%
+NaN or Inf found in input tensor.
+[S14 F2] Val Acc: 0.60%, Test Acc: 0.49%
+[S14 F2] Val Acc: 0.59%, Test Acc: 0.48%
+[S14 F2] Val Acc: 0.59%, Test Acc: 0.50%
+[S14 F2] Val Acc: 0.59%, Test Acc: 0.52%
+[S14 F2] Val Acc: 0.62%, Test Acc: 0.51%
+[S14 F2] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F2/checkpoint_best_S14_F2.pth
+[S14 F2] Val Acc: 0.62%, Test Acc: 0.50%
+[S14 F2] Val Acc: 0.60%, Test Acc: 0.51%
+[S14 F2] Val Acc: 0.64%, Test Acc: 0.51%
+[S14 F2] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F2/checkpoint_best_S14_F2.pth
+[S14 F2] Val Acc: 0.63%, Test Acc: 0.50%
+[S14 F2] Val Acc: 0.60%, Test Acc: 0.50%
+[S14 F2] Val Acc: 0.59%, Test Acc: 0.50%
+[S14 F2] Val Acc: 0.58%, Test Acc: 0.49%
+[S14 F2] Val Acc: 0.63%, Test Acc: 0.51%
+[S14 F2] Val Acc: 0.62%, Test Acc: 0.53%
+NaN or Inf found in input tensor.
+[S14 F2] Val Acc: 0.62%, Test Acc: 0.53%
+[S14 F2] Val Acc: 0.63%, Test Acc: 0.53%
+[S14 F2] Val Acc: 0.63%, Test Acc: 0.50%
+[S14 F2] Val Acc: 0.60%, Test Acc: 0.51%
+[S14 F2] Val Acc: 0.57%, Test Acc: 0.51%
+[S14 F2] Val Acc: 0.57%, Test Acc: 0.51%
+[S14 F2] Val Acc: 0.57%, Test Acc: 0.51%
+[S14 F2] Val Acc: 0.57%, Test Acc: 0.51%
+[S14 F2] Training time 0:01:16
+[S14 F2] Wrote completion marker -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F2/done.json
+[S14 F3] Patch size = 200
+Load ckpt from /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth
+Load state_dict by model_key = model
+Weights of NeuralTransformer not initialized from pretrained model: ['fc_norm.weight', 'fc_norm.bias', 'head.weight', 'head.bias']
+Weights from pretrained model not used in NeuralTransformer: ['mask_token', 'lm_head.weight', 'lm_head.bias', 'norm.weight', 'norm.bias']
+Model = NeuralTransformer(
+  (patch_embed): TemporalConv(
+    (conv1): Conv2d(1, 8, kernel_size=(1, 15), stride=(1, 8), padding=(0, 7))
+    (gelu1): GELU(approximate='none')
+    (norm1): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv2): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (gelu2): GELU(approximate='none')
+    (norm2): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv3): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (norm3): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (gelu3): GELU(approximate='none')
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (blocks): ModuleList(
+    (0): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (1): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.00909090880304575)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (2): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0181818176060915)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (3): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.027272727340459824)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (4): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.036363635212183)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (5): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.045454543083906174)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (6): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.054545458406209946)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (7): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.06363636255264282)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (8): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0727272778749466)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (9): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.08181818574666977)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (10): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.09090909361839294)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (11): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.10000000149011612)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (norm): Identity()
+  (fc_norm): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+  (head): Linear(in_features=200, out_features=2, bias=True)
+)
+number of params: 5820338
+LR = 0.00050000
+Batch size = 96
+Update frequent = 1
+Number of training examples = 258
+Number of training training per epoch = 2
+Assigned values = [0.003697205891018715, 0.005688009063105715, 0.008750783174008792, 0.013462743344628911, 0.02071191283789063, 0.03186448128906251, 0.049022278906250015, 0.07541889062500001, 0.11602906250000002, 0.17850625000000003, 0.274625, 0.42250000000000004, 0.65, 1.0]
+Skip weight decay name marked in model: {'time_embed', 'cls_token', 'pos_embed'}
+Param groups = {
+  "layer_0_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "cls_token",
+      "pos_embed",
+      "patch_embed.conv1.bias",
+      "patch_embed.norm1.weight",
+      "patch_embed.norm1.bias",
+      "patch_embed.conv2.bias",
+      "patch_embed.norm2.weight",
+      "patch_embed.norm2.bias",
+      "patch_embed.conv3.bias",
+      "patch_embed.norm3.weight",
+      "patch_embed.norm3.bias"
+    ],
+    "lr_scale": 0.003697205891018715
+  },
+  "layer_13_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "time_embed",
+      "fc_norm.weight",
+      "fc_norm.bias",
+      "head.bias"
+    ],
+    "lr_scale": 1.0
+  },
+  "layer_0_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "patch_embed.conv1.weight",
+      "patch_embed.conv2.weight",
+      "patch_embed.conv3.weight"
+    ],
+    "lr_scale": 0.003697205891018715
+  },
+  "layer_1_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.0.gamma_1",
+      "blocks.0.gamma_2",
+      "blocks.0.norm1.weight",
+      "blocks.0.norm1.bias",
+      "blocks.0.attn.q_norm.weight",
+      "blocks.0.attn.q_norm.bias",
+      "blocks.0.attn.k_norm.weight",
+      "blocks.0.attn.k_norm.bias",
+      "blocks.0.attn.proj.bias",
+      "blocks.0.norm2.weight",
+      "blocks.0.norm2.bias",
+      "blocks.0.mlp.fc1.bias",
+      "blocks.0.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.005688009063105715
+  },
+  "layer_1_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.0.attn.qkv.weight",
+      "blocks.0.attn.proj.weight",
+      "blocks.0.mlp.fc1.weight",
+      "blocks.0.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.005688009063105715
+  },
+  "layer_2_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.1.gamma_1",
+      "blocks.1.gamma_2",
+      "blocks.1.norm1.weight",
+      "blocks.1.norm1.bias",
+      "blocks.1.attn.q_norm.weight",
+      "blocks.1.attn.q_norm.bias",
+      "blocks.1.attn.k_norm.weight",
+      "blocks.1.attn.k_norm.bias",
+      "blocks.1.attn.proj.bias",
+      "blocks.1.norm2.weight",
+      "blocks.1.norm2.bias",
+      "blocks.1.mlp.fc1.bias",
+      "blocks.1.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.008750783174008792
+  },
+  "layer_2_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.1.attn.qkv.weight",
+      "blocks.1.attn.proj.weight",
+      "blocks.1.mlp.fc1.weight",
+      "blocks.1.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.008750783174008792
+  },
+  "layer_3_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.2.gamma_1",
+      "blocks.2.gamma_2",
+      "blocks.2.norm1.weight",
+      "blocks.2.norm1.bias",
+      "blocks.2.attn.q_norm.weight",
+      "blocks.2.attn.q_norm.bias",
+      "blocks.2.attn.k_norm.weight",
+      "blocks.2.attn.k_norm.bias",
+      "blocks.2.attn.proj.bias",
+      "blocks.2.norm2.weight",
+      "blocks.2.norm2.bias",
+      "blocks.2.mlp.fc1.bias",
+      "blocks.2.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.013462743344628911
+  },
+  "layer_3_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.2.attn.qkv.weight",
+      "blocks.2.attn.proj.weight",
+      "blocks.2.mlp.fc1.weight",
+      "blocks.2.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.013462743344628911
+  },
+  "layer_4_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.3.gamma_1",
+      "blocks.3.gamma_2",
+      "blocks.3.norm1.weight",
+      "blocks.3.norm1.bias",
+      "blocks.3.attn.q_norm.weight",
+      "blocks.3.attn.q_norm.bias",
+      "blocks.3.attn.k_norm.weight",
+      "blocks.3.attn.k_norm.bias",
+      "blocks.3.attn.proj.bias",
+      "blocks.3.norm2.weight",
+      "blocks.3.norm2.bias",
+      "blocks.3.mlp.fc1.bias",
+      "blocks.3.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.02071191283789063
+  },
+  "layer_4_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.3.attn.qkv.weight",
+      "blocks.3.attn.proj.weight",
+      "blocks.3.mlp.fc1.weight",
+      "blocks.3.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.02071191283789063
+  },
+  "layer_5_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.4.gamma_1",
+      "blocks.4.gamma_2",
+      "blocks.4.norm1.weight",
+      "blocks.4.norm1.bias",
+      "blocks.4.attn.q_norm.weight",
+      "blocks.4.attn.q_norm.bias",
+      "blocks.4.attn.k_norm.weight",
+      "blocks.4.attn.k_norm.bias",
+      "blocks.4.attn.proj.bias",
+      "blocks.4.norm2.weight",
+      "blocks.4.norm2.bias",
+      "blocks.4.mlp.fc1.bias",
+      "blocks.4.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.03186448128906251
+  },
+  "layer_5_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.4.attn.qkv.weight",
+      "blocks.4.attn.proj.weight",
+      "blocks.4.mlp.fc1.weight",
+      "blocks.4.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.03186448128906251
+  },
+  "layer_6_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.5.gamma_1",
+      "blocks.5.gamma_2",
+      "blocks.5.norm1.weight",
+      "blocks.5.norm1.bias",
+      "blocks.5.attn.q_norm.weight",
+      "blocks.5.attn.q_norm.bias",
+      "blocks.5.attn.k_norm.weight",
+      "blocks.5.attn.k_norm.bias",
+      "blocks.5.attn.proj.bias",
+      "blocks.5.norm2.weight",
+      "blocks.5.norm2.bias",
+      "blocks.5.mlp.fc1.bias",
+      "blocks.5.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.049022278906250015
+  },
+  "layer_6_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.5.attn.qkv.weight",
+      "blocks.5.attn.proj.weight",
+      "blocks.5.mlp.fc1.weight",
+      "blocks.5.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.049022278906250015
+  },
+  "layer_7_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.6.gamma_1",
+      "blocks.6.gamma_2",
+      "blocks.6.norm1.weight",
+      "blocks.6.norm1.bias",
+      "blocks.6.attn.q_norm.weight",
+      "blocks.6.attn.q_norm.bias",
+      "blocks.6.attn.k_norm.weight",
+      "blocks.6.attn.k_norm.bias",
+      "blocks.6.attn.proj.bias",
+      "blocks.6.norm2.weight",
+      "blocks.6.norm2.bias",
+      "blocks.6.mlp.fc1.bias",
+      "blocks.6.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.07541889062500001
+  },
+  "layer_7_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.6.attn.qkv.weight",
+      "blocks.6.attn.proj.weight",
+      "blocks.6.mlp.fc1.weight",
+      "blocks.6.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.07541889062500001
+  },
+  "layer_8_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.7.gamma_1",
+      "blocks.7.gamma_2",
+      "blocks.7.norm1.weight",
+      "blocks.7.norm1.bias",
+      "blocks.7.attn.q_norm.weight",
+      "blocks.7.attn.q_norm.bias",
+      "blocks.7.attn.k_norm.weight",
+      "blocks.7.attn.k_norm.bias",
+      "blocks.7.attn.proj.bias",
+      "blocks.7.norm2.weight",
+      "blocks.7.norm2.bias",
+      "blocks.7.mlp.fc1.bias",
+      "blocks.7.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.11602906250000002
+  },
+  "layer_8_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.7.attn.qkv.weight",
+      "blocks.7.attn.proj.weight",
+      "blocks.7.mlp.fc1.weight",
+      "blocks.7.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.11602906250000002
+  },
+  "layer_9_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.8.gamma_1",
+      "blocks.8.gamma_2",
+      "blocks.8.norm1.weight",
+      "blocks.8.norm1.bias",
+      "blocks.8.attn.q_norm.weight",
+      "blocks.8.attn.q_norm.bias",
+      "blocks.8.attn.k_norm.weight",
+      "blocks.8.attn.k_norm.bias",
+      "blocks.8.attn.proj.bias",
+      "blocks.8.norm2.weight",
+      "blocks.8.norm2.bias",
+      "blocks.8.mlp.fc1.bias",
+      "blocks.8.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.17850625000000003
+  },
+  "layer_9_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.8.attn.qkv.weight",
+      "blocks.8.attn.proj.weight",
+      "blocks.8.mlp.fc1.weight",
+      "blocks.8.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.17850625000000003
+  },
+  "layer_10_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.9.gamma_1",
+      "blocks.9.gamma_2",
+      "blocks.9.norm1.weight",
+      "blocks.9.norm1.bias",
+      "blocks.9.attn.q_norm.weight",
+      "blocks.9.attn.q_norm.bias",
+      "blocks.9.attn.k_norm.weight",
+      "blocks.9.attn.k_norm.bias",
+      "blocks.9.attn.proj.bias",
+      "blocks.9.norm2.weight",
+      "blocks.9.norm2.bias",
+      "blocks.9.mlp.fc1.bias",
+      "blocks.9.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.274625
+  },
+  "layer_10_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.9.attn.qkv.weight",
+      "blocks.9.attn.proj.weight",
+      "blocks.9.mlp.fc1.weight",
+      "blocks.9.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.274625
+  },
+  "layer_11_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.10.gamma_1",
+      "blocks.10.gamma_2",
+      "blocks.10.norm1.weight",
+      "blocks.10.norm1.bias",
+      "blocks.10.attn.q_norm.weight",
+      "blocks.10.attn.q_norm.bias",
+      "blocks.10.attn.k_norm.weight",
+      "blocks.10.attn.k_norm.bias",
+      "blocks.10.attn.proj.bias",
+      "blocks.10.norm2.weight",
+      "blocks.10.norm2.bias",
+      "blocks.10.mlp.fc1.bias",
+      "blocks.10.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.42250000000000004
+  },
+  "layer_11_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.10.attn.qkv.weight",
+      "blocks.10.attn.proj.weight",
+      "blocks.10.mlp.fc1.weight",
+      "blocks.10.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.42250000000000004
+  },
+  "layer_12_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.11.gamma_1",
+      "blocks.11.gamma_2",
+      "blocks.11.norm1.weight",
+      "blocks.11.norm1.bias",
+      "blocks.11.attn.q_norm.weight",
+      "blocks.11.attn.q_norm.bias",
+      "blocks.11.attn.k_norm.weight",
+      "blocks.11.attn.k_norm.bias",
+      "blocks.11.attn.proj.bias",
+      "blocks.11.norm2.weight",
+      "blocks.11.norm2.bias",
+      "blocks.11.mlp.fc1.bias",
+      "blocks.11.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.65
+  },
+  "layer_12_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.11.attn.qkv.weight",
+      "blocks.11.attn.proj.weight",
+      "blocks.11.mlp.fc1.weight",
+      "blocks.11.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.65
+  },
+  "layer_13_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "head.weight"
+    ],
+    "lr_scale": 1.0
+  }
+}
+Optimizer config: {'lr': 0.0005, 'weight_decay': 0.0, 'eps': 1e-08}
+Use step level LR scheduler!
+Set warmup steps = 10
+Set warmup steps = 0
+Max WD = 0.0500000, Min WD = 0.0500000
+criterion = LabelSmoothingCrossEntropy()
+Auto resume checkpoint: 
+[S14 F3] Start training for 50 epochs
+NaN or Inf found in input tensor.
+[S14 F3] Val Acc: 0.49%, Test Acc: 0.49%
+[S14 F3] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F3/checkpoint_best_S14_F3.pth
+NaN or Inf found in input tensor.
+[S14 F3] Val Acc: 0.51%, Test Acc: 0.51%
+[S14 F3] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F3/checkpoint_best_S14_F3.pth
+[S14 F3] Val Acc: 0.48%, Test Acc: 0.52%
+[S14 F3] Val Acc: 0.50%, Test Acc: 0.52%
+[S14 F3] Val Acc: 0.51%, Test Acc: 0.51%
+[S14 F3] Val Acc: 0.57%, Test Acc: 0.50%
+[S14 F3] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F3/checkpoint_best_S14_F3.pth
+[S14 F3] Val Acc: 0.59%, Test Acc: 0.50%
+[S14 F3] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F3/checkpoint_best_S14_F3.pth
+NaN or Inf found in input tensor.
+[S14 F3] Val Acc: 0.60%, Test Acc: 0.50%
+[S14 F3] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F3/checkpoint_best_S14_F3.pth
+NaN or Inf found in input tensor.
+[S14 F3] Val Acc: 0.60%, Test Acc: 0.47%
+[S14 F3] Val Acc: 0.62%, Test Acc: 0.55%
+[S14 F3] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F3/checkpoint_best_S14_F3.pth
+NaN or Inf found in input tensor.
+[S14 F3] Val Acc: 0.63%, Test Acc: 0.50%
+[S14 F3] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F3/checkpoint_best_S14_F3.pth
+[S14 F3] Val Acc: 0.63%, Test Acc: 0.59%
+[S14 F3] Val Acc: 0.55%, Test Acc: 0.55%
+[S14 F3] Val Acc: 0.64%, Test Acc: 0.51%
+[S14 F3] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F3/checkpoint_best_S14_F3.pth
+[S14 F3] Val Acc: 0.56%, Test Acc: 0.53%
+[S14 F3] Val Acc: 0.51%, Test Acc: 0.51%
+[S14 F3] Val Acc: 0.51%, Test Acc: 0.50%
+[S14 F3] Val Acc: 0.57%, Test Acc: 0.51%
+[S14 F3] Val Acc: 0.58%, Test Acc: 0.47%
+[S14 F3] Val Acc: 0.58%, Test Acc: 0.49%
+[S14 F3] Val Acc: 0.57%, Test Acc: 0.51%
+[S14 F3] Val Acc: 0.57%, Test Acc: 0.51%
+[S14 F3] Val Acc: 0.57%, Test Acc: 0.49%
+[S14 F3] Val Acc: 0.57%, Test Acc: 0.50%
+[S14 F3] Val Acc: 0.63%, Test Acc: 0.49%
+[S14 F3] Val Acc: 0.57%, Test Acc: 0.51%
+[S14 F3] Val Acc: 0.60%, Test Acc: 0.49%
+[S14 F3] Val Acc: 0.60%, Test Acc: 0.50%
+[S14 F3] Val Acc: 0.58%, Test Acc: 0.51%
+[S14 F3] Val Acc: 0.57%, Test Acc: 0.55%
+[S14 F3] Val Acc: 0.57%, Test Acc: 0.52%
+[S14 F3] Val Acc: 0.57%, Test Acc: 0.51%
+[S14 F3] Val Acc: 0.59%, Test Acc: 0.50%
+[S14 F3] Val Acc: 0.59%, Test Acc: 0.51%
+[S14 F3] Val Acc: 0.59%, Test Acc: 0.55%
+[S14 F3] Val Acc: 0.65%, Test Acc: 0.55%
+[S14 F3] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F3/checkpoint_best_S14_F3.pth
+[S14 F3] Val Acc: 0.65%, Test Acc: 0.57%
+[S14 F3] Val Acc: 0.60%, Test Acc: 0.53%
+[S14 F3] Val Acc: 0.62%, Test Acc: 0.52%
+[S14 F3] Val Acc: 0.62%, Test Acc: 0.53%
+[S14 F3] Val Acc: 0.59%, Test Acc: 0.52%
+[S14 F3] Val Acc: 0.58%, Test Acc: 0.56%
+[S14 F3] Val Acc: 0.62%, Test Acc: 0.52%
+[S14 F3] Val Acc: 0.64%, Test Acc: 0.52%
+[S14 F3] Val Acc: 0.64%, Test Acc: 0.53%
+[S14 F3] Val Acc: 0.64%, Test Acc: 0.55%
+[S14 F3] Val Acc: 0.64%, Test Acc: 0.55%
+[S14 F3] Val Acc: 0.64%, Test Acc: 0.55%
+[S14 F3] Val Acc: 0.64%, Test Acc: 0.55%
+[S14 F3] Val Acc: 0.64%, Test Acc: 0.55%
+[S14 F3] Training time 0:01:17
+[S14 F3] Wrote completion marker -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F3/done.json
+[S14 F4] Patch size = 200
+Load ckpt from /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth
+Load state_dict by model_key = model
+Weights of NeuralTransformer not initialized from pretrained model: ['fc_norm.weight', 'fc_norm.bias', 'head.weight', 'head.bias']
+Weights from pretrained model not used in NeuralTransformer: ['mask_token', 'lm_head.weight', 'lm_head.bias', 'norm.weight', 'norm.bias']
+Model = NeuralTransformer(
+  (patch_embed): TemporalConv(
+    (conv1): Conv2d(1, 8, kernel_size=(1, 15), stride=(1, 8), padding=(0, 7))
+    (gelu1): GELU(approximate='none')
+    (norm1): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv2): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (gelu2): GELU(approximate='none')
+    (norm2): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv3): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (norm3): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (gelu3): GELU(approximate='none')
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (blocks): ModuleList(
+    (0): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (1): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.00909090880304575)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (2): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0181818176060915)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (3): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.027272727340459824)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (4): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.036363635212183)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (5): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.045454543083906174)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (6): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.054545458406209946)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (7): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.06363636255264282)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (8): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0727272778749466)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (9): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.08181818574666977)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (10): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.09090909361839294)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (11): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.10000000149011612)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (norm): Identity()
+  (fc_norm): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+  (head): Linear(in_features=200, out_features=2, bias=True)
+)
+number of params: 5820338
+LR = 0.00050000
+Batch size = 96
+Update frequent = 1
+Number of training examples = 258
+Number of training training per epoch = 2
+Assigned values = [0.003697205891018715, 0.005688009063105715, 0.008750783174008792, 0.013462743344628911, 0.02071191283789063, 0.03186448128906251, 0.049022278906250015, 0.07541889062500001, 0.11602906250000002, 0.17850625000000003, 0.274625, 0.42250000000000004, 0.65, 1.0]
+Skip weight decay name marked in model: {'time_embed', 'cls_token', 'pos_embed'}
+Param groups = {
+  "layer_0_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "cls_token",
+      "pos_embed",
+      "patch_embed.conv1.bias",
+      "patch_embed.norm1.weight",
+      "patch_embed.norm1.bias",
+      "patch_embed.conv2.bias",
+      "patch_embed.norm2.weight",
+      "patch_embed.norm2.bias",
+      "patch_embed.conv3.bias",
+      "patch_embed.norm3.weight",
+      "patch_embed.norm3.bias"
+    ],
+    "lr_scale": 0.003697205891018715
+  },
+  "layer_13_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "time_embed",
+      "fc_norm.weight",
+      "fc_norm.bias",
+      "head.bias"
+    ],
+    "lr_scale": 1.0
+  },
+  "layer_0_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "patch_embed.conv1.weight",
+      "patch_embed.conv2.weight",
+      "patch_embed.conv3.weight"
+    ],
+    "lr_scale": 0.003697205891018715
+  },
+  "layer_1_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.0.gamma_1",
+      "blocks.0.gamma_2",
+      "blocks.0.norm1.weight",
+      "blocks.0.norm1.bias",
+      "blocks.0.attn.q_norm.weight",
+      "blocks.0.attn.q_norm.bias",
+      "blocks.0.attn.k_norm.weight",
+      "blocks.0.attn.k_norm.bias",
+      "blocks.0.attn.proj.bias",
+      "blocks.0.norm2.weight",
+      "blocks.0.norm2.bias",
+      "blocks.0.mlp.fc1.bias",
+      "blocks.0.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.005688009063105715
+  },
+  "layer_1_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.0.attn.qkv.weight",
+      "blocks.0.attn.proj.weight",
+      "blocks.0.mlp.fc1.weight",
+      "blocks.0.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.005688009063105715
+  },
+  "layer_2_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.1.gamma_1",
+      "blocks.1.gamma_2",
+      "blocks.1.norm1.weight",
+      "blocks.1.norm1.bias",
+      "blocks.1.attn.q_norm.weight",
+      "blocks.1.attn.q_norm.bias",
+      "blocks.1.attn.k_norm.weight",
+      "blocks.1.attn.k_norm.bias",
+      "blocks.1.attn.proj.bias",
+      "blocks.1.norm2.weight",
+      "blocks.1.norm2.bias",
+      "blocks.1.mlp.fc1.bias",
+      "blocks.1.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.008750783174008792
+  },
+  "layer_2_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.1.attn.qkv.weight",
+      "blocks.1.attn.proj.weight",
+      "blocks.1.mlp.fc1.weight",
+      "blocks.1.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.008750783174008792
+  },
+  "layer_3_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.2.gamma_1",
+      "blocks.2.gamma_2",
+      "blocks.2.norm1.weight",
+      "blocks.2.norm1.bias",
+      "blocks.2.attn.q_norm.weight",
+      "blocks.2.attn.q_norm.bias",
+      "blocks.2.attn.k_norm.weight",
+      "blocks.2.attn.k_norm.bias",
+      "blocks.2.attn.proj.bias",
+      "blocks.2.norm2.weight",
+      "blocks.2.norm2.bias",
+      "blocks.2.mlp.fc1.bias",
+      "blocks.2.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.013462743344628911
+  },
+  "layer_3_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.2.attn.qkv.weight",
+      "blocks.2.attn.proj.weight",
+      "blocks.2.mlp.fc1.weight",
+      "blocks.2.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.013462743344628911
+  },
+  "layer_4_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.3.gamma_1",
+      "blocks.3.gamma_2",
+      "blocks.3.norm1.weight",
+      "blocks.3.norm1.bias",
+      "blocks.3.attn.q_norm.weight",
+      "blocks.3.attn.q_norm.bias",
+      "blocks.3.attn.k_norm.weight",
+      "blocks.3.attn.k_norm.bias",
+      "blocks.3.attn.proj.bias",
+      "blocks.3.norm2.weight",
+      "blocks.3.norm2.bias",
+      "blocks.3.mlp.fc1.bias",
+      "blocks.3.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.02071191283789063
+  },
+  "layer_4_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.3.attn.qkv.weight",
+      "blocks.3.attn.proj.weight",
+      "blocks.3.mlp.fc1.weight",
+      "blocks.3.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.02071191283789063
+  },
+  "layer_5_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.4.gamma_1",
+      "blocks.4.gamma_2",
+      "blocks.4.norm1.weight",
+      "blocks.4.norm1.bias",
+      "blocks.4.attn.q_norm.weight",
+      "blocks.4.attn.q_norm.bias",
+      "blocks.4.attn.k_norm.weight",
+      "blocks.4.attn.k_norm.bias",
+      "blocks.4.attn.proj.bias",
+      "blocks.4.norm2.weight",
+      "blocks.4.norm2.bias",
+      "blocks.4.mlp.fc1.bias",
+      "blocks.4.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.03186448128906251
+  },
+  "layer_5_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.4.attn.qkv.weight",
+      "blocks.4.attn.proj.weight",
+      "blocks.4.mlp.fc1.weight",
+      "blocks.4.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.03186448128906251
+  },
+  "layer_6_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.5.gamma_1",
+      "blocks.5.gamma_2",
+      "blocks.5.norm1.weight",
+      "blocks.5.norm1.bias",
+      "blocks.5.attn.q_norm.weight",
+      "blocks.5.attn.q_norm.bias",
+      "blocks.5.attn.k_norm.weight",
+      "blocks.5.attn.k_norm.bias",
+      "blocks.5.attn.proj.bias",
+      "blocks.5.norm2.weight",
+      "blocks.5.norm2.bias",
+      "blocks.5.mlp.fc1.bias",
+      "blocks.5.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.049022278906250015
+  },
+  "layer_6_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.5.attn.qkv.weight",
+      "blocks.5.attn.proj.weight",
+      "blocks.5.mlp.fc1.weight",
+      "blocks.5.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.049022278906250015
+  },
+  "layer_7_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.6.gamma_1",
+      "blocks.6.gamma_2",
+      "blocks.6.norm1.weight",
+      "blocks.6.norm1.bias",
+      "blocks.6.attn.q_norm.weight",
+      "blocks.6.attn.q_norm.bias",
+      "blocks.6.attn.k_norm.weight",
+      "blocks.6.attn.k_norm.bias",
+      "blocks.6.attn.proj.bias",
+      "blocks.6.norm2.weight",
+      "blocks.6.norm2.bias",
+      "blocks.6.mlp.fc1.bias",
+      "blocks.6.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.07541889062500001
+  },
+  "layer_7_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.6.attn.qkv.weight",
+      "blocks.6.attn.proj.weight",
+      "blocks.6.mlp.fc1.weight",
+      "blocks.6.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.07541889062500001
+  },
+  "layer_8_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.7.gamma_1",
+      "blocks.7.gamma_2",
+      "blocks.7.norm1.weight",
+      "blocks.7.norm1.bias",
+      "blocks.7.attn.q_norm.weight",
+      "blocks.7.attn.q_norm.bias",
+      "blocks.7.attn.k_norm.weight",
+      "blocks.7.attn.k_norm.bias",
+      "blocks.7.attn.proj.bias",
+      "blocks.7.norm2.weight",
+      "blocks.7.norm2.bias",
+      "blocks.7.mlp.fc1.bias",
+      "blocks.7.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.11602906250000002
+  },
+  "layer_8_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.7.attn.qkv.weight",
+      "blocks.7.attn.proj.weight",
+      "blocks.7.mlp.fc1.weight",
+      "blocks.7.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.11602906250000002
+  },
+  "layer_9_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.8.gamma_1",
+      "blocks.8.gamma_2",
+      "blocks.8.norm1.weight",
+      "blocks.8.norm1.bias",
+      "blocks.8.attn.q_norm.weight",
+      "blocks.8.attn.q_norm.bias",
+      "blocks.8.attn.k_norm.weight",
+      "blocks.8.attn.k_norm.bias",
+      "blocks.8.attn.proj.bias",
+      "blocks.8.norm2.weight",
+      "blocks.8.norm2.bias",
+      "blocks.8.mlp.fc1.bias",
+      "blocks.8.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.17850625000000003
+  },
+  "layer_9_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.8.attn.qkv.weight",
+      "blocks.8.attn.proj.weight",
+      "blocks.8.mlp.fc1.weight",
+      "blocks.8.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.17850625000000003
+  },
+  "layer_10_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.9.gamma_1",
+      "blocks.9.gamma_2",
+      "blocks.9.norm1.weight",
+      "blocks.9.norm1.bias",
+      "blocks.9.attn.q_norm.weight",
+      "blocks.9.attn.q_norm.bias",
+      "blocks.9.attn.k_norm.weight",
+      "blocks.9.attn.k_norm.bias",
+      "blocks.9.attn.proj.bias",
+      "blocks.9.norm2.weight",
+      "blocks.9.norm2.bias",
+      "blocks.9.mlp.fc1.bias",
+      "blocks.9.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.274625
+  },
+  "layer_10_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.9.attn.qkv.weight",
+      "blocks.9.attn.proj.weight",
+      "blocks.9.mlp.fc1.weight",
+      "blocks.9.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.274625
+  },
+  "layer_11_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.10.gamma_1",
+      "blocks.10.gamma_2",
+      "blocks.10.norm1.weight",
+      "blocks.10.norm1.bias",
+      "blocks.10.attn.q_norm.weight",
+      "blocks.10.attn.q_norm.bias",
+      "blocks.10.attn.k_norm.weight",
+      "blocks.10.attn.k_norm.bias",
+      "blocks.10.attn.proj.bias",
+      "blocks.10.norm2.weight",
+      "blocks.10.norm2.bias",
+      "blocks.10.mlp.fc1.bias",
+      "blocks.10.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.42250000000000004
+  },
+  "layer_11_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.10.attn.qkv.weight",
+      "blocks.10.attn.proj.weight",
+      "blocks.10.mlp.fc1.weight",
+      "blocks.10.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.42250000000000004
+  },
+  "layer_12_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.11.gamma_1",
+      "blocks.11.gamma_2",
+      "blocks.11.norm1.weight",
+      "blocks.11.norm1.bias",
+      "blocks.11.attn.q_norm.weight",
+      "blocks.11.attn.q_norm.bias",
+      "blocks.11.attn.k_norm.weight",
+      "blocks.11.attn.k_norm.bias",
+      "blocks.11.attn.proj.bias",
+      "blocks.11.norm2.weight",
+      "blocks.11.norm2.bias",
+      "blocks.11.mlp.fc1.bias",
+      "blocks.11.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.65
+  },
+  "layer_12_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.11.attn.qkv.weight",
+      "blocks.11.attn.proj.weight",
+      "blocks.11.mlp.fc1.weight",
+      "blocks.11.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.65
+  },
+  "layer_13_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "head.weight"
+    ],
+    "lr_scale": 1.0
+  }
+}
+Optimizer config: {'lr': 0.0005, 'weight_decay': 0.0, 'eps': 1e-08}
+Use step level LR scheduler!
+Set warmup steps = 10
+Set warmup steps = 0
+Max WD = 0.0500000, Min WD = 0.0500000
+criterion = LabelSmoothingCrossEntropy()
+Auto resume checkpoint: 
+[S14 F4] Start training for 50 epochs
+NaN or Inf found in input tensor.
+[S14 F4] Val Acc: 0.48%, Test Acc: 0.49%
+[S14 F4] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F4/checkpoint_best_S14_F4.pth
+[S14 F4] Val Acc: 0.48%, Test Acc: 0.49%
+[S14 F4] Val Acc: 0.53%, Test Acc: 0.56%
+[S14 F4] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F4/checkpoint_best_S14_F4.pth
+NaN or Inf found in input tensor.
+[S14 F4] Val Acc: 0.52%, Test Acc: 0.59%
+[S14 F4] Val Acc: 0.52%, Test Acc: 0.51%
+[S14 F4] Val Acc: 0.55%, Test Acc: 0.63%
+[S14 F4] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F4/checkpoint_best_S14_F4.pth
+[S14 F4] Val Acc: 0.52%, Test Acc: 0.55%
+[S14 F4] Val Acc: 0.56%, Test Acc: 0.62%
+[S14 F4] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F4/checkpoint_best_S14_F4.pth
+[S14 F4] Val Acc: 0.56%, Test Acc: 0.59%
+[S14 F4] Val Acc: 0.52%, Test Acc: 0.55%
+NaN or Inf found in input tensor.
+[S14 F4] Val Acc: 0.56%, Test Acc: 0.60%
+[S14 F4] Val Acc: 0.58%, Test Acc: 0.57%
+[S14 F4] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F4/checkpoint_best_S14_F4.pth
+[S14 F4] Val Acc: 0.59%, Test Acc: 0.57%
+[S14 F4] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F4/checkpoint_best_S14_F4.pth
+[S14 F4] Val Acc: 0.55%, Test Acc: 0.63%
+[S14 F4] Val Acc: 0.52%, Test Acc: 0.53%
+[S14 F4] Val Acc: 0.57%, Test Acc: 0.62%
+NaN or Inf found in input tensor.
+[S14 F4] Val Acc: 0.53%, Test Acc: 0.57%
+[S14 F4] Val Acc: 0.53%, Test Acc: 0.57%
+[S14 F4] Val Acc: 0.56%, Test Acc: 0.58%
+[S14 F4] Val Acc: 0.51%, Test Acc: 0.55%
+[S14 F4] Val Acc: 0.52%, Test Acc: 0.53%
+[S14 F4] Val Acc: 0.55%, Test Acc: 0.57%
+[S14 F4] Val Acc: 0.56%, Test Acc: 0.62%
+[S14 F4] Val Acc: 0.51%, Test Acc: 0.58%
+[S14 F4] Val Acc: 0.57%, Test Acc: 0.58%
+[S14 F4] Val Acc: 0.50%, Test Acc: 0.57%
+[S14 F4] Val Acc: 0.56%, Test Acc: 0.53%
+NaN or Inf found in input tensor.
+[S14 F4] Val Acc: 0.59%, Test Acc: 0.52%
+[S14 F4] Val Acc: 0.51%, Test Acc: 0.50%
+NaN or Inf found in input tensor.
+[S14 F4] Val Acc: 0.48%, Test Acc: 0.58%
+[S14 F4] Val Acc: 0.56%, Test Acc: 0.51%
+[S14 F4] Val Acc: 0.60%, Test Acc: 0.53%
+[S14 F4] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F4/checkpoint_best_S14_F4.pth
+[S14 F4] Val Acc: 0.56%, Test Acc: 0.51%
+NaN or Inf found in input tensor.
+[S14 F4] Val Acc: 0.56%, Test Acc: 0.49%
+[S14 F4] Val Acc: 0.58%, Test Acc: 0.53%
+[S14 F4] Val Acc: 0.57%, Test Acc: 0.51%
+[S14 F4] Val Acc: 0.50%, Test Acc: 0.51%
+[S14 F4] Val Acc: 0.55%, Test Acc: 0.53%
+[S14 F4] Val Acc: 0.52%, Test Acc: 0.51%
+[S14 F4] Val Acc: 0.56%, Test Acc: 0.51%
+[S14 F4] Val Acc: 0.53%, Test Acc: 0.52%
+[S14 F4] Val Acc: 0.55%, Test Acc: 0.52%
+[S14 F4] Val Acc: 0.53%, Test Acc: 0.55%
+NaN or Inf found in input tensor.
+[S14 F4] Val Acc: 0.53%, Test Acc: 0.52%
+[S14 F4] Val Acc: 0.55%, Test Acc: 0.53%
+[S14 F4] Val Acc: 0.53%, Test Acc: 0.53%
+[S14 F4] Val Acc: 0.53%, Test Acc: 0.53%
+[S14 F4] Val Acc: 0.53%, Test Acc: 0.53%
+[S14 F4] Val Acc: 0.53%, Test Acc: 0.53%
+[S14 F4] Val Acc: 0.53%, Test Acc: 0.53%
+[S14 F4] Training time 0:01:15
+[S14 F4] Wrote completion marker -> /usr/data/yeqi3/LaBraM_log/math/cv/S14/F4/done.json
+
+===== Subject 15: 427 samples, 5-fold CV =====
+[S15 F0] Patch size = 200
+Load ckpt from /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth
+Load state_dict by model_key = model
+Weights of NeuralTransformer not initialized from pretrained model: ['fc_norm.weight', 'fc_norm.bias', 'head.weight', 'head.bias']
+Weights from pretrained model not used in NeuralTransformer: ['mask_token', 'lm_head.weight', 'lm_head.bias', 'norm.weight', 'norm.bias']
+Model = NeuralTransformer(
+  (patch_embed): TemporalConv(
+    (conv1): Conv2d(1, 8, kernel_size=(1, 15), stride=(1, 8), padding=(0, 7))
+    (gelu1): GELU(approximate='none')
+    (norm1): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv2): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (gelu2): GELU(approximate='none')
+    (norm2): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv3): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (norm3): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (gelu3): GELU(approximate='none')
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (blocks): ModuleList(
+    (0): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (1): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.00909090880304575)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (2): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0181818176060915)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (3): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.027272727340459824)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (4): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.036363635212183)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (5): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.045454543083906174)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (6): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.054545458406209946)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (7): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.06363636255264282)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (8): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0727272778749466)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (9): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.08181818574666977)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (10): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.09090909361839294)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (11): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.10000000149011612)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (norm): Identity()
+  (fc_norm): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+  (head): Linear(in_features=200, out_features=2, bias=True)
+)
+number of params: 5820338
+LR = 0.00050000
+Batch size = 96
+Update frequent = 1
+Number of training examples = 255
+Number of training training per epoch = 2
+Assigned values = [0.003697205891018715, 0.005688009063105715, 0.008750783174008792, 0.013462743344628911, 0.02071191283789063, 0.03186448128906251, 0.049022278906250015, 0.07541889062500001, 0.11602906250000002, 0.17850625000000003, 0.274625, 0.42250000000000004, 0.65, 1.0]
+Skip weight decay name marked in model: {'time_embed', 'cls_token', 'pos_embed'}
+Param groups = {
+  "layer_0_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "cls_token",
+      "pos_embed",
+      "patch_embed.conv1.bias",
+      "patch_embed.norm1.weight",
+      "patch_embed.norm1.bias",
+      "patch_embed.conv2.bias",
+      "patch_embed.norm2.weight",
+      "patch_embed.norm2.bias",
+      "patch_embed.conv3.bias",
+      "patch_embed.norm3.weight",
+      "patch_embed.norm3.bias"
+    ],
+    "lr_scale": 0.003697205891018715
+  },
+  "layer_13_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "time_embed",
+      "fc_norm.weight",
+      "fc_norm.bias",
+      "head.bias"
+    ],
+    "lr_scale": 1.0
+  },
+  "layer_0_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "patch_embed.conv1.weight",
+      "patch_embed.conv2.weight",
+      "patch_embed.conv3.weight"
+    ],
+    "lr_scale": 0.003697205891018715
+  },
+  "layer_1_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.0.gamma_1",
+      "blocks.0.gamma_2",
+      "blocks.0.norm1.weight",
+      "blocks.0.norm1.bias",
+      "blocks.0.attn.q_norm.weight",
+      "blocks.0.attn.q_norm.bias",
+      "blocks.0.attn.k_norm.weight",
+      "blocks.0.attn.k_norm.bias",
+      "blocks.0.attn.proj.bias",
+      "blocks.0.norm2.weight",
+      "blocks.0.norm2.bias",
+      "blocks.0.mlp.fc1.bias",
+      "blocks.0.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.005688009063105715
+  },
+  "layer_1_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.0.attn.qkv.weight",
+      "blocks.0.attn.proj.weight",
+      "blocks.0.mlp.fc1.weight",
+      "blocks.0.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.005688009063105715
+  },
+  "layer_2_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.1.gamma_1",
+      "blocks.1.gamma_2",
+      "blocks.1.norm1.weight",
+      "blocks.1.norm1.bias",
+      "blocks.1.attn.q_norm.weight",
+      "blocks.1.attn.q_norm.bias",
+      "blocks.1.attn.k_norm.weight",
+      "blocks.1.attn.k_norm.bias",
+      "blocks.1.attn.proj.bias",
+      "blocks.1.norm2.weight",
+      "blocks.1.norm2.bias",
+      "blocks.1.mlp.fc1.bias",
+      "blocks.1.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.008750783174008792
+  },
+  "layer_2_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.1.attn.qkv.weight",
+      "blocks.1.attn.proj.weight",
+      "blocks.1.mlp.fc1.weight",
+      "blocks.1.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.008750783174008792
+  },
+  "layer_3_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.2.gamma_1",
+      "blocks.2.gamma_2",
+      "blocks.2.norm1.weight",
+      "blocks.2.norm1.bias",
+      "blocks.2.attn.q_norm.weight",
+      "blocks.2.attn.q_norm.bias",
+      "blocks.2.attn.k_norm.weight",
+      "blocks.2.attn.k_norm.bias",
+      "blocks.2.attn.proj.bias",
+      "blocks.2.norm2.weight",
+      "blocks.2.norm2.bias",
+      "blocks.2.mlp.fc1.bias",
+      "blocks.2.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.013462743344628911
+  },
+  "layer_3_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.2.attn.qkv.weight",
+      "blocks.2.attn.proj.weight",
+      "blocks.2.mlp.fc1.weight",
+      "blocks.2.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.013462743344628911
+  },
+  "layer_4_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.3.gamma_1",
+      "blocks.3.gamma_2",
+      "blocks.3.norm1.weight",
+      "blocks.3.norm1.bias",
+      "blocks.3.attn.q_norm.weight",
+      "blocks.3.attn.q_norm.bias",
+      "blocks.3.attn.k_norm.weight",
+      "blocks.3.attn.k_norm.bias",
+      "blocks.3.attn.proj.bias",
+      "blocks.3.norm2.weight",
+      "blocks.3.norm2.bias",
+      "blocks.3.mlp.fc1.bias",
+      "blocks.3.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.02071191283789063
+  },
+  "layer_4_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.3.attn.qkv.weight",
+      "blocks.3.attn.proj.weight",
+      "blocks.3.mlp.fc1.weight",
+      "blocks.3.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.02071191283789063
+  },
+  "layer_5_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.4.gamma_1",
+      "blocks.4.gamma_2",
+      "blocks.4.norm1.weight",
+      "blocks.4.norm1.bias",
+      "blocks.4.attn.q_norm.weight",
+      "blocks.4.attn.q_norm.bias",
+      "blocks.4.attn.k_norm.weight",
+      "blocks.4.attn.k_norm.bias",
+      "blocks.4.attn.proj.bias",
+      "blocks.4.norm2.weight",
+      "blocks.4.norm2.bias",
+      "blocks.4.mlp.fc1.bias",
+      "blocks.4.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.03186448128906251
+  },
+  "layer_5_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.4.attn.qkv.weight",
+      "blocks.4.attn.proj.weight",
+      "blocks.4.mlp.fc1.weight",
+      "blocks.4.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.03186448128906251
+  },
+  "layer_6_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.5.gamma_1",
+      "blocks.5.gamma_2",
+      "blocks.5.norm1.weight",
+      "blocks.5.norm1.bias",
+      "blocks.5.attn.q_norm.weight",
+      "blocks.5.attn.q_norm.bias",
+      "blocks.5.attn.k_norm.weight",
+      "blocks.5.attn.k_norm.bias",
+      "blocks.5.attn.proj.bias",
+      "blocks.5.norm2.weight",
+      "blocks.5.norm2.bias",
+      "blocks.5.mlp.fc1.bias",
+      "blocks.5.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.049022278906250015
+  },
+  "layer_6_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.5.attn.qkv.weight",
+      "blocks.5.attn.proj.weight",
+      "blocks.5.mlp.fc1.weight",
+      "blocks.5.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.049022278906250015
+  },
+  "layer_7_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.6.gamma_1",
+      "blocks.6.gamma_2",
+      "blocks.6.norm1.weight",
+      "blocks.6.norm1.bias",
+      "blocks.6.attn.q_norm.weight",
+      "blocks.6.attn.q_norm.bias",
+      "blocks.6.attn.k_norm.weight",
+      "blocks.6.attn.k_norm.bias",
+      "blocks.6.attn.proj.bias",
+      "blocks.6.norm2.weight",
+      "blocks.6.norm2.bias",
+      "blocks.6.mlp.fc1.bias",
+      "blocks.6.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.07541889062500001
+  },
+  "layer_7_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.6.attn.qkv.weight",
+      "blocks.6.attn.proj.weight",
+      "blocks.6.mlp.fc1.weight",
+      "blocks.6.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.07541889062500001
+  },
+  "layer_8_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.7.gamma_1",
+      "blocks.7.gamma_2",
+      "blocks.7.norm1.weight",
+      "blocks.7.norm1.bias",
+      "blocks.7.attn.q_norm.weight",
+      "blocks.7.attn.q_norm.bias",
+      "blocks.7.attn.k_norm.weight",
+      "blocks.7.attn.k_norm.bias",
+      "blocks.7.attn.proj.bias",
+      "blocks.7.norm2.weight",
+      "blocks.7.norm2.bias",
+      "blocks.7.mlp.fc1.bias",
+      "blocks.7.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.11602906250000002
+  },
+  "layer_8_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.7.attn.qkv.weight",
+      "blocks.7.attn.proj.weight",
+      "blocks.7.mlp.fc1.weight",
+      "blocks.7.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.11602906250000002
+  },
+  "layer_9_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.8.gamma_1",
+      "blocks.8.gamma_2",
+      "blocks.8.norm1.weight",
+      "blocks.8.norm1.bias",
+      "blocks.8.attn.q_norm.weight",
+      "blocks.8.attn.q_norm.bias",
+      "blocks.8.attn.k_norm.weight",
+      "blocks.8.attn.k_norm.bias",
+      "blocks.8.attn.proj.bias",
+      "blocks.8.norm2.weight",
+      "blocks.8.norm2.bias",
+      "blocks.8.mlp.fc1.bias",
+      "blocks.8.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.17850625000000003
+  },
+  "layer_9_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.8.attn.qkv.weight",
+      "blocks.8.attn.proj.weight",
+      "blocks.8.mlp.fc1.weight",
+      "blocks.8.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.17850625000000003
+  },
+  "layer_10_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.9.gamma_1",
+      "blocks.9.gamma_2",
+      "blocks.9.norm1.weight",
+      "blocks.9.norm1.bias",
+      "blocks.9.attn.q_norm.weight",
+      "blocks.9.attn.q_norm.bias",
+      "blocks.9.attn.k_norm.weight",
+      "blocks.9.attn.k_norm.bias",
+      "blocks.9.attn.proj.bias",
+      "blocks.9.norm2.weight",
+      "blocks.9.norm2.bias",
+      "blocks.9.mlp.fc1.bias",
+      "blocks.9.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.274625
+  },
+  "layer_10_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.9.attn.qkv.weight",
+      "blocks.9.attn.proj.weight",
+      "blocks.9.mlp.fc1.weight",
+      "blocks.9.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.274625
+  },
+  "layer_11_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.10.gamma_1",
+      "blocks.10.gamma_2",
+      "blocks.10.norm1.weight",
+      "blocks.10.norm1.bias",
+      "blocks.10.attn.q_norm.weight",
+      "blocks.10.attn.q_norm.bias",
+      "blocks.10.attn.k_norm.weight",
+      "blocks.10.attn.k_norm.bias",
+      "blocks.10.attn.proj.bias",
+      "blocks.10.norm2.weight",
+      "blocks.10.norm2.bias",
+      "blocks.10.mlp.fc1.bias",
+      "blocks.10.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.42250000000000004
+  },
+  "layer_11_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.10.attn.qkv.weight",
+      "blocks.10.attn.proj.weight",
+      "blocks.10.mlp.fc1.weight",
+      "blocks.10.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.42250000000000004
+  },
+  "layer_12_no_decay": {
+    "weight_decay": 0.0,
+    "params": [
+      "blocks.11.gamma_1",
+      "blocks.11.gamma_2",
+      "blocks.11.norm1.weight",
+      "blocks.11.norm1.bias",
+      "blocks.11.attn.q_norm.weight",
+      "blocks.11.attn.q_norm.bias",
+      "blocks.11.attn.k_norm.weight",
+      "blocks.11.attn.k_norm.bias",
+      "blocks.11.attn.proj.bias",
+      "blocks.11.norm2.weight",
+      "blocks.11.norm2.bias",
+      "blocks.11.mlp.fc1.bias",
+      "blocks.11.mlp.fc2.bias"
+    ],
+    "lr_scale": 0.65
+  },
+  "layer_12_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "blocks.11.attn.qkv.weight",
+      "blocks.11.attn.proj.weight",
+      "blocks.11.mlp.fc1.weight",
+      "blocks.11.mlp.fc2.weight"
+    ],
+    "lr_scale": 0.65
+  },
+  "layer_13_decay": {
+    "weight_decay": 0.05,
+    "params": [
+      "head.weight"
+    ],
+    "lr_scale": 1.0
+  }
+}
+Optimizer config: {'lr': 0.0005, 'weight_decay': 0.0, 'eps': 1e-08}
+Use step level LR scheduler!
+Set warmup steps = 10
+Set warmup steps = 0
+Max WD = 0.0500000, Min WD = 0.0500000
+criterion = LabelSmoothingCrossEntropy()
+Auto resume checkpoint: 
+[S15 F0] Start training for 50 epochs
+NaN or Inf found in input tensor.
+[S15 F0] Val Acc: 0.53%, Test Acc: 0.52%
+[S15 F0] Saved tagged best checkpoint -> /usr/data/yeqi3/LaBraM_log/math/cv/S15/F0/checkpoint_best_S15_F0.pth
