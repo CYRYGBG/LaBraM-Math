@@ -326,3 +326,1124 @@
 [2025-10-29 19:41:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
 [2025-10-29 19:42:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
 [2025-10-29 19:43:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 19:44:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 19:45:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 19:46:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 19:47:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 19:48:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 19:49:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 19:50:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 19:51:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 19:52:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 19:53:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 19:54:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 19:55:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251029_1955.log'
+[2025-10-29 19:55:01] 已后台运行 pid=3029388，详见 /home/yeqi3/cyr/code/LaBraM/log/20251029_1955.log
+[2025-10-29 19:56:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 19:57:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 19:58:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 19:59:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:00:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:01:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:02:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:03:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:04:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:05:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:06:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:07:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:08:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:09:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:10:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:11:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:12:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:13:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:14:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:15:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:16:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:17:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:18:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:19:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:20:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:21:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:22:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:23:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:24:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:25:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:26:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:27:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:28:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:29:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:30:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:31:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:32:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:33:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:34:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:35:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:36:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:37:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:38:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:39:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:40:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:41:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:42:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:43:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:44:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:45:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:46:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:47:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:48:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:49:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:50:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:51:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:52:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:53:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:54:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:55:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:56:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:57:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:58:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 20:59:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:00:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:01:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:02:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:03:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:04:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:05:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:06:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:07:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:08:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:09:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251029_2109.log'
+[2025-10-29 21:09:01] 已后台运行 pid=3646454，详见 /home/yeqi3/cyr/code/LaBraM/log/20251029_2109.log
+[2025-10-29 21:10:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:11:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:12:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:13:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:14:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:15:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:16:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:17:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:18:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:19:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:20:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:21:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:22:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:23:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:24:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:25:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:26:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:27:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:28:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:29:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:30:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:31:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:32:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:33:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:34:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:35:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:36:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:37:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:38:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:39:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:40:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:41:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:42:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:43:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:44:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:45:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:46:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:47:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:48:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:49:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:50:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:51:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:52:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:53:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:54:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:55:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:56:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:57:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:58:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 21:59:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:00:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:01:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:02:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:03:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:04:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:05:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:06:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:07:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:08:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:09:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:10:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:11:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:12:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:13:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:14:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:15:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251029_2215.log'
+[2025-10-29 22:15:02] 已后台运行 pid=6399，详见 /home/yeqi3/cyr/code/LaBraM/log/20251029_2215.log
+[2025-10-29 22:34:48] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251029_2234.log'
+[2025-10-29 22:34:48] 已后台运行 pid=72079，详见 /home/yeqi3/cyr/code/LaBraM/log/20251029_2234.log
+[2025-10-29 22:37:09] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251029_2237.log'
+[2025-10-29 22:37:09] 已后台运行 pid=79913，详见 /home/yeqi3/cyr/code/LaBraM/log/20251029_2237.log
+[2025-10-29 22:44:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:45:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:46:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:47:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:48:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:49:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:50:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:51:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:52:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:53:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:54:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:55:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:56:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:57:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:58:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 22:59:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:00:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:01:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:02:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:03:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:04:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:05:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:06:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:07:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:08:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:09:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:10:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:11:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:12:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:13:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:14:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:15:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:16:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:17:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:18:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:19:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:20:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:21:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:22:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:23:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:24:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:25:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:26:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:27:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:28:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:29:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:30:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:31:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:32:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:33:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:34:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:35:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:36:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:37:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:38:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:39:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:40:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:41:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:42:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:43:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:44:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:45:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:46:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:47:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:48:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:49:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:50:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:51:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:52:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:53:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:54:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:55:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:56:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:57:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:58:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-29 23:59:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:00:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:01:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:02:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:03:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:04:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:05:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:06:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:07:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:08:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:09:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:10:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:11:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:12:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:13:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:14:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:15:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:16:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:17:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:18:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:19:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:20:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:21:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:22:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:23:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:24:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:25:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:26:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:27:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:28:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:29:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:30:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:31:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:32:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:33:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:34:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:35:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:36:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:37:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:38:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:39:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:40:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:41:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:42:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:43:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:44:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:45:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:46:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:47:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:48:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:49:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:50:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:51:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:52:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:53:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:54:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:55:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:56:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:57:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:58:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 00:59:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:00:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:01:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:02:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:03:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:04:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:05:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:06:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:07:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:08:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:09:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:10:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:11:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:12:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:13:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:14:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:15:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:16:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:17:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:18:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:19:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:20:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:21:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:22:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:23:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:24:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:25:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:26:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:27:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:28:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:29:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:30:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:31:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:32:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:33:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:34:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:35:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:36:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:37:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:38:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:39:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:40:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:41:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:42:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:43:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:44:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:45:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:46:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:47:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:48:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:49:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:50:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:51:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:52:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:53:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:54:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:55:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:56:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:57:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:58:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 01:59:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:00:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:01:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:02:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:03:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:04:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:05:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:06:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:07:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:08:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:09:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:10:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:11:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:12:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:13:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:14:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:15:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:16:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:17:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:18:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:19:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:20:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:21:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:22:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:23:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:24:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:25:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:26:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:27:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:28:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:29:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:30:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:31:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:32:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:33:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:34:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:35:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:36:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:37:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:38:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:39:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:40:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:41:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:42:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:43:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:44:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:45:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:46:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:47:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:48:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:49:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:50:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:51:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:52:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:53:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:54:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:55:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:56:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:57:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:58:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 02:59:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:00:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:01:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:02:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:03:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:04:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:05:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:06:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:07:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:08:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:09:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:10:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:11:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:12:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:13:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:14:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:15:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:16:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:17:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:18:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:19:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:20:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:21:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:22:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:23:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:24:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:25:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:26:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:27:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:28:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:29:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:30:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:31:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:32:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:33:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:34:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:35:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:36:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:37:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:38:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:39:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:40:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:41:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:42:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:43:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:44:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:45:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:46:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:47:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:48:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:49:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:50:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:51:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:52:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:53:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:54:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:55:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:56:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:57:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:58:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 03:59:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:00:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:01:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:02:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:03:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:04:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:05:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:06:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:07:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:08:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:09:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:10:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:11:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:12:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:13:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:14:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:15:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:16:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:17:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:18:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:19:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:20:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:21:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:22:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:23:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:24:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:25:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:26:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:27:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:28:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:29:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:30:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:31:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:32:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:33:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:34:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:35:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:36:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:37:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:38:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:39:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:40:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:41:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:42:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:43:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:44:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:45:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:46:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:47:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:48:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:49:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:50:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:51:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:52:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:53:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:54:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:55:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:56:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:57:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:58:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 04:59:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 05:00:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 05:01:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 05:02:02] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 05:03:01] 检测到正在运行（pattern='TrainCVLauncher.py'），无需启动。
+[2025-10-30 05:04:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0504.log'
+[2025-10-30 05:04:01] 已后台运行 pid=3390288，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0504.log
+[2025-10-30 05:05:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0505.log'
+[2025-10-30 05:05:01] 已后台运行 pid=3393524，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0505.log
+[2025-10-30 05:06:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0506.log'
+[2025-10-30 05:06:02] 已后台运行 pid=3396740，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0506.log
+[2025-10-30 05:07:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0507.log'
+[2025-10-30 05:07:01] 已后台运行 pid=3399948，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0507.log
+[2025-10-30 05:08:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0508.log'
+[2025-10-30 05:08:02] 已后台运行 pid=3403166，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0508.log
+[2025-10-30 05:09:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0509.log'
+[2025-10-30 05:09:01] 已后台运行 pid=3406531，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0509.log
+[2025-10-30 05:10:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0510.log'
+[2025-10-30 05:10:01] 已后台运行 pid=3409791，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0510.log
+[2025-10-30 05:11:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0511.log'
+[2025-10-30 05:11:01] 已后台运行 pid=3413263，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0511.log
+[2025-10-30 05:12:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0512.log'
+[2025-10-30 05:12:02] 已后台运行 pid=3416444，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0512.log
+[2025-10-30 05:13:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0513.log'
+[2025-10-30 05:13:01] 已后台运行 pid=3419638，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0513.log
+[2025-10-30 05:14:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0514.log'
+[2025-10-30 05:14:02] 已后台运行 pid=3422968，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0514.log
+[2025-10-30 05:15:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0515.log'
+[2025-10-30 05:15:01] 已后台运行 pid=3426189，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0515.log
+[2025-10-30 05:16:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0516.log'
+[2025-10-30 05:16:01] 已后台运行 pid=3429422，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0516.log
+[2025-10-30 05:17:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0517.log'
+[2025-10-30 05:17:02] 已后台运行 pid=3432633，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0517.log
+[2025-10-30 05:18:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0518.log'
+[2025-10-30 05:18:01] 已后台运行 pid=3435818，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0518.log
+[2025-10-30 05:19:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0519.log'
+[2025-10-30 05:19:02] 已后台运行 pid=3439154，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0519.log
+[2025-10-30 05:20:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0520.log'
+[2025-10-30 05:20:01] 已后台运行 pid=3442413，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0520.log
+[2025-10-30 05:21:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0521.log'
+[2025-10-30 05:21:01] 已后台运行 pid=3445766，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0521.log
+[2025-10-30 05:22:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0522.log'
+[2025-10-30 05:22:02] 已后台运行 pid=3449012，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0522.log
+[2025-10-30 05:23:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0523.log'
+[2025-10-30 05:23:01] 已后台运行 pid=3452206，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0523.log
+[2025-10-30 05:24:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0524.log'
+[2025-10-30 05:24:02] 已后台运行 pid=3455541，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0524.log
+[2025-10-30 05:25:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0525.log'
+[2025-10-30 05:25:01] 已后台运行 pid=3458723，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0525.log
+[2025-10-30 05:26:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0526.log'
+[2025-10-30 05:26:01] 已后台运行 pid=3462119，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0526.log
+[2025-10-30 05:27:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0527.log'
+[2025-10-30 05:27:02] 已后台运行 pid=3465367，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0527.log
+[2025-10-30 05:28:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0528.log'
+[2025-10-30 05:28:01] 已后台运行 pid=3468519，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0528.log
+[2025-10-30 05:29:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0529.log'
+[2025-10-30 05:29:02] 已后台运行 pid=3471803，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0529.log
+[2025-10-30 05:30:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0530.log'
+[2025-10-30 05:30:01] 已后台运行 pid=3475079，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0530.log
+[2025-10-30 05:31:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0531.log'
+[2025-10-30 05:31:01] 已后台运行 pid=3478405，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0531.log
+[2025-10-30 05:32:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0532.log'
+[2025-10-30 05:32:02] 已后台运行 pid=3481620，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0532.log
+[2025-10-30 05:33:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0533.log'
+[2025-10-30 05:33:01] 已后台运行 pid=3484820，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0533.log
+[2025-10-30 05:34:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0534.log'
+[2025-10-30 05:34:01] 已后台运行 pid=3488118，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0534.log
+[2025-10-30 05:35:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0535.log'
+[2025-10-30 05:35:02] 已后台运行 pid=3491278，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0535.log
+[2025-10-30 05:36:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0536.log'
+[2025-10-30 05:36:01] 已后台运行 pid=3494457，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0536.log
+[2025-10-30 05:37:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0537.log'
+[2025-10-30 05:37:02] 已后台运行 pid=3497667，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0537.log
+[2025-10-30 05:38:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0538.log'
+[2025-10-30 05:38:01] 已后台运行 pid=3500886，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0538.log
+[2025-10-30 05:39:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0539.log'
+[2025-10-30 05:39:01] 已后台运行 pid=3504375，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0539.log
+[2025-10-30 05:40:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0540.log'
+[2025-10-30 05:40:02] 已后台运行 pid=3507641，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0540.log
+[2025-10-30 05:41:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0541.log'
+[2025-10-30 05:41:01] 已后台运行 pid=3510910，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0541.log
+[2025-10-30 05:42:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0542.log'
+[2025-10-30 05:42:01] 已后台运行 pid=3514117，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0542.log
+[2025-10-30 05:43:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0543.log'
+[2025-10-30 05:43:02] 已后台运行 pid=3517314，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0543.log
+[2025-10-30 05:44:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0544.log'
+[2025-10-30 05:44:01] 已后台运行 pid=3520569，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0544.log
+[2025-10-30 05:45:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0545.log'
+[2025-10-30 05:45:01] 已后台运行 pid=3523761，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0545.log
+[2025-10-30 05:46:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0546.log'
+[2025-10-30 05:46:02] 已后台运行 pid=3526968，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0546.log
+[2025-10-30 05:47:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0547.log'
+[2025-10-30 05:47:01] 已后台运行 pid=3530153，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0547.log
+[2025-10-30 05:48:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0548.log'
+[2025-10-30 05:48:02] 已后台运行 pid=3533343，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0548.log
+[2025-10-30 05:49:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0549.log'
+[2025-10-30 05:49:01] 已后台运行 pid=3536643，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0549.log
+[2025-10-30 05:50:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0550.log'
+[2025-10-30 05:50:01] 已后台运行 pid=3539900，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0550.log
+[2025-10-30 05:51:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0551.log'
+[2025-10-30 05:51:02] 已后台运行 pid=3543340，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0551.log
+[2025-10-30 05:52:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0552.log'
+[2025-10-30 05:52:01] 已后台运行 pid=3546458，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0552.log
+[2025-10-30 05:53:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0553.log'
+[2025-10-30 05:53:02] 已后台运行 pid=3549667，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0553.log
+[2025-10-30 05:54:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0554.log'
+[2025-10-30 05:54:01] 已后台运行 pid=3552918，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0554.log
+[2025-10-30 05:55:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0555.log'
+[2025-10-30 05:55:01] 已后台运行 pid=3556125，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0555.log
+[2025-10-30 05:56:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0556.log'
+[2025-10-30 05:56:02] 已后台运行 pid=3559297，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0556.log
+[2025-10-30 05:57:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0557.log'
+[2025-10-30 05:57:01] 已后台运行 pid=3562471，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0557.log
+[2025-10-30 05:58:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0558.log'
+[2025-10-30 05:58:01] 已后台运行 pid=3565661，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0558.log
+[2025-10-30 05:59:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0559.log'
+[2025-10-30 05:59:02] 已后台运行 pid=3568958，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0559.log
+[2025-10-30 06:00:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0600.log'
+[2025-10-30 06:00:01] 已后台运行 pid=3572174，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0600.log
+[2025-10-30 06:01:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0601.log'
+[2025-10-30 06:01:01] 已后台运行 pid=3575467，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0601.log
+[2025-10-30 06:02:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0602.log'
+[2025-10-30 06:02:02] 已后台运行 pid=3578656，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0602.log
+[2025-10-30 06:03:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0603.log'
+[2025-10-30 06:03:01] 已后台运行 pid=3581808，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0603.log
+[2025-10-30 06:04:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0604.log'
+[2025-10-30 06:04:02] 已后台运行 pid=3585101，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0604.log
+[2025-10-30 06:05:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0605.log'
+[2025-10-30 06:05:01] 已后台运行 pid=3588241，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0605.log
+[2025-10-30 06:06:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0606.log'
+[2025-10-30 06:06:01] 已后台运行 pid=3591580，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0606.log
+[2025-10-30 06:07:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0607.log'
+[2025-10-30 06:07:02] 已后台运行 pid=3594744，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0607.log
+[2025-10-30 06:08:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0608.log'
+[2025-10-30 06:08:01] 已后台运行 pid=3597879，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0608.log
+[2025-10-30 06:09:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0609.log'
+[2025-10-30 06:09:02] 已后台运行 pid=3601170，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0609.log
+[2025-10-30 06:10:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0610.log'
+[2025-10-30 06:10:01] 已后台运行 pid=3604363，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0610.log
+[2025-10-30 06:11:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0611.log'
+[2025-10-30 06:11:01] 已后台运行 pid=3607651，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0611.log
+[2025-10-30 06:12:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0612.log'
+[2025-10-30 06:12:01] 已后台运行 pid=3610771，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0612.log
+[2025-10-30 06:13:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0613.log'
+[2025-10-30 06:13:02] 已后台运行 pid=3613955，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0613.log
+[2025-10-30 06:14:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0614.log'
+[2025-10-30 06:14:01] 已后台运行 pid=3617221，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0614.log
+[2025-10-30 06:15:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0615.log'
+[2025-10-30 06:15:02] 已后台运行 pid=3620404，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0615.log
+[2025-10-30 06:16:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0616.log'
+[2025-10-30 06:16:01] 已后台运行 pid=3623563，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0616.log
+[2025-10-30 06:17:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0617.log'
+[2025-10-30 06:17:01] 已后台运行 pid=3626749，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0617.log
+[2025-10-30 06:18:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0618.log'
+[2025-10-30 06:18:02] 已后台运行 pid=3629957，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0618.log
+[2025-10-30 06:19:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0619.log'
+[2025-10-30 06:19:01] 已后台运行 pid=3633236，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0619.log
+[2025-10-30 06:20:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0620.log'
+[2025-10-30 06:20:02] 已后台运行 pid=3636540，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0620.log
+[2025-10-30 06:21:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0621.log'
+[2025-10-30 06:21:02] 已后台运行 pid=3639928，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0621.log
+[2025-10-30 06:22:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0622.log'
+[2025-10-30 06:22:01] 已后台运行 pid=3643053，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0622.log
+[2025-10-30 06:23:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0623.log'
+[2025-10-30 06:23:02] 已后台运行 pid=3646306，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0623.log
+[2025-10-30 06:24:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0624.log'
+[2025-10-30 06:24:01] 已后台运行 pid=3649580，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0624.log
+[2025-10-30 06:25:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0625.log'
+[2025-10-30 06:25:01] 已后台运行 pid=3652789，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0625.log
+[2025-10-30 06:26:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0626.log'
+[2025-10-30 06:26:02] 已后台运行 pid=3655965，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0626.log
+[2025-10-30 06:27:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0627.log'
+[2025-10-30 06:27:01] 已后台运行 pid=3659120，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0627.log
+[2025-10-30 06:28:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0628.log'
+[2025-10-30 06:28:02] 已后台运行 pid=3662317，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0628.log
+[2025-10-30 06:29:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0629.log'
+[2025-10-30 06:29:01] 已后台运行 pid=3665580，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0629.log
+[2025-10-30 06:30:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0630.log'
+[2025-10-30 06:30:01] 已后台运行 pid=3668820，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0630.log
+[2025-10-30 06:31:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0631.log'
+[2025-10-30 06:31:02] 已后台运行 pid=3672137，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0631.log
+[2025-10-30 06:32:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0632.log'
+[2025-10-30 06:32:01] 已后台运行 pid=3675297，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0632.log
+[2025-10-30 06:33:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0633.log'
+[2025-10-30 06:33:01] 已后台运行 pid=3678490，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0633.log
+[2025-10-30 06:34:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0634.log'
+[2025-10-30 06:34:02] 已后台运行 pid=3681925，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0634.log
+[2025-10-30 06:35:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0635.log'
+[2025-10-30 06:35:01] 已后台运行 pid=3685046，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0635.log
+[2025-10-30 06:36:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0636.log'
+[2025-10-30 06:36:02] 已后台运行 pid=3688291，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0636.log
+[2025-10-30 06:37:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0637.log'
+[2025-10-30 06:37:01] 已后台运行 pid=3691453，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0637.log
+[2025-10-30 06:38:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0638.log'
+[2025-10-30 06:38:01] 已后台运行 pid=3694634，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0638.log
+[2025-10-30 06:39:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0639.log'
+[2025-10-30 06:39:02] 已后台运行 pid=3697938，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0639.log
+[2025-10-30 06:40:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0640.log'
+[2025-10-30 06:40:01] 已后台运行 pid=3701160，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0640.log
+[2025-10-30 06:41:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0641.log'
+[2025-10-30 06:41:02] 已后台运行 pid=3704474，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0641.log
+[2025-10-30 06:42:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0642.log'
+[2025-10-30 06:42:01] 已后台运行 pid=3707628，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0642.log
+[2025-10-30 06:43:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0643.log'
+[2025-10-30 06:43:01] 已后台运行 pid=3710797，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0643.log
+[2025-10-30 06:44:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0644.log'
+[2025-10-30 06:44:02] 已后台运行 pid=3714058，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0644.log
+[2025-10-30 06:45:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0645.log'
+[2025-10-30 06:45:01] 已后台运行 pid=3717217，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0645.log
+[2025-10-30 06:46:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0646.log'
+[2025-10-30 06:46:01] 已后台运行 pid=3720388，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0646.log
+[2025-10-30 06:47:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0647.log'
+[2025-10-30 06:47:02] 已后台运行 pid=3723674，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0647.log
+[2025-10-30 06:48:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0648.log'
+[2025-10-30 06:48:01] 已后台运行 pid=3726752，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0648.log
+[2025-10-30 06:49:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0649.log'
+[2025-10-30 06:49:02] 已后台运行 pid=3730170，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0649.log
+[2025-10-30 06:50:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0650.log'
+[2025-10-30 06:50:01] 已后台运行 pid=3733412，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0650.log
+[2025-10-30 06:51:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0651.log'
+[2025-10-30 06:51:01] 已后台运行 pid=3736688，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0651.log
+[2025-10-30 06:52:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0652.log'
+[2025-10-30 06:52:02] 已后台运行 pid=3739859，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0652.log
+[2025-10-30 06:53:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0653.log'
+[2025-10-30 06:53:01] 已后台运行 pid=3743007，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0653.log
+[2025-10-30 06:54:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0654.log'
+[2025-10-30 06:54:01] 已后台运行 pid=3746288，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0654.log
+[2025-10-30 06:55:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0655.log'
+[2025-10-30 06:55:02] 已后台运行 pid=3749424，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0655.log
+[2025-10-30 06:56:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0656.log'
+[2025-10-30 06:56:01] 已后台运行 pid=3752584，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0656.log
+[2025-10-30 06:57:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0657.log'
+[2025-10-30 06:57:02] 已后台运行 pid=3755737，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0657.log
+[2025-10-30 06:58:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0658.log'
+[2025-10-30 06:58:01] 已后台运行 pid=3758909，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0658.log
+[2025-10-30 06:59:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0659.log'
+[2025-10-30 06:59:01] 已后台运行 pid=3762192，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0659.log
+[2025-10-30 07:00:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0700.log'
+[2025-10-30 07:00:02] 已后台运行 pid=3765412，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0700.log
+[2025-10-30 07:01:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0701.log'
+[2025-10-30 07:01:01] 已后台运行 pid=3768637，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0701.log
+[2025-10-30 07:02:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0702.log'
+[2025-10-30 07:02:02] 已后台运行 pid=3771857，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0702.log
+[2025-10-30 07:03:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0703.log'
+[2025-10-30 07:03:01] 已后台运行 pid=3774885，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0703.log
+[2025-10-30 07:04:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0704.log'
+[2025-10-30 07:04:01] 已后台运行 pid=3778237，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0704.log
+[2025-10-30 07:05:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0705.log'
+[2025-10-30 07:05:02] 已后台运行 pid=3781375，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0705.log
+[2025-10-30 07:06:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0706.log'
+[2025-10-30 07:06:01] 已后台运行 pid=3784473，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0706.log
+[2025-10-30 07:07:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0707.log'
+[2025-10-30 07:07:01] 已后台运行 pid=3787608，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0707.log
+[2025-10-30 07:08:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0708.log'
+[2025-10-30 07:08:02] 已后台运行 pid=3790720，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0708.log
+[2025-10-30 07:09:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0709.log'
+[2025-10-30 07:09:01] 已后台运行 pid=3793918，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0709.log
+[2025-10-30 07:10:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0710.log'
+[2025-10-30 07:10:02] 已后台运行 pid=3797106，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0710.log
+[2025-10-30 07:11:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0711.log'
+[2025-10-30 07:11:01] 已后台运行 pid=3800338，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0711.log
+[2025-10-30 07:12:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0712.log'
+[2025-10-30 07:12:01] 已后台运行 pid=3803426，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0712.log
+[2025-10-30 07:13:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0713.log'
+[2025-10-30 07:13:02] 已后台运行 pid=3806574，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0713.log
+[2025-10-30 07:14:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0714.log'
+[2025-10-30 07:14:01] 已后台运行 pid=3809800，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0714.log
+[2025-10-30 07:15:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0715.log'
+[2025-10-30 07:15:01] 已后台运行 pid=3812949，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0715.log
+[2025-10-30 07:16:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0716.log'
+[2025-10-30 07:16:02] 已后台运行 pid=3816186，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0716.log
+[2025-10-30 07:17:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0717.log'
+[2025-10-30 07:17:01] 已后台运行 pid=3819214，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0717.log
+[2025-10-30 07:18:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0718.log'
+[2025-10-30 07:18:02] 已后台运行 pid=3822499，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0718.log
+[2025-10-30 07:19:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0719.log'
+[2025-10-30 07:19:01] 已后台运行 pid=3825641，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0719.log
+[2025-10-30 07:20:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0720.log'
+[2025-10-30 07:20:01] 已后台运行 pid=3828880，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0720.log
+[2025-10-30 07:21:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0721.log'
+[2025-10-30 07:21:02] 已后台运行 pid=3832092，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0721.log
+[2025-10-30 07:22:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0722.log'
+[2025-10-30 07:22:01] 已后台运行 pid=3835188，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0722.log
+[2025-10-30 07:23:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0723.log'
+[2025-10-30 07:23:01] 已后台运行 pid=3838297，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0723.log
+[2025-10-30 07:24:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0724.log'
+[2025-10-30 07:24:02] 已后台运行 pid=3841544，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0724.log
+[2025-10-30 07:25:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0725.log'
+[2025-10-30 07:25:01] 已后台运行 pid=3844639，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0725.log
+[2025-10-30 07:26:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0726.log'
+[2025-10-30 07:26:02] 已后台运行 pid=3847770，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0726.log
+[2025-10-30 07:27:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0727.log'
+[2025-10-30 07:27:01] 已后台运行 pid=3850875，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0727.log
+[2025-10-30 07:28:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0728.log'
+[2025-10-30 07:28:01] 已后台运行 pid=3853996，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0728.log
+[2025-10-30 07:29:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0729.log'
+[2025-10-30 07:29:02] 已后台运行 pid=3857212，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0729.log
+[2025-10-30 07:30:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0730.log'
+[2025-10-30 07:30:01] 已后台运行 pid=3860354，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0730.log
+[2025-10-30 07:31:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0731.log'
+[2025-10-30 07:31:01] 已后台运行 pid=3863582，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0731.log
+[2025-10-30 07:32:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0732.log'
+[2025-10-30 07:32:02] 已后台运行 pid=3866872，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0732.log
+[2025-10-30 07:33:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0733.log'
+[2025-10-30 07:33:01] 已后台运行 pid=3869956，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0733.log
+[2025-10-30 07:34:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0734.log'
+[2025-10-30 07:34:02] 已后台运行 pid=3873193，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0734.log
+[2025-10-30 07:35:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0735.log'
+[2025-10-30 07:35:01] 已后台运行 pid=3876296，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0735.log
+[2025-10-30 07:36:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0736.log'
+[2025-10-30 07:36:01] 已后台运行 pid=3879421，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0736.log
+[2025-10-30 07:37:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0737.log'
+[2025-10-30 07:37:02] 已后台运行 pid=3882542，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0737.log
+[2025-10-30 07:38:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0738.log'
+[2025-10-30 07:38:01] 已后台运行 pid=3885639，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0738.log
+[2025-10-30 07:39:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0739.log'
+[2025-10-30 07:39:01] 已后台运行 pid=3888861，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0739.log
+[2025-10-30 07:40:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0740.log'
+[2025-10-30 07:40:02] 已后台运行 pid=3892011，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0740.log
+[2025-10-30 07:41:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0741.log'
+[2025-10-30 07:41:01] 已后台运行 pid=3895213，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0741.log
+[2025-10-30 07:42:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0742.log'
+[2025-10-30 07:42:02] 已后台运行 pid=3898332，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0742.log
+[2025-10-30 07:43:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0743.log'
+[2025-10-30 07:43:01] 已后台运行 pid=3901409，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0743.log
+[2025-10-30 07:44:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0744.log'
+[2025-10-30 07:44:01] 已后台运行 pid=3904611，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0744.log
+[2025-10-30 07:45:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0745.log'
+[2025-10-30 07:45:02] 已后台运行 pid=3907872，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0745.log
+[2025-10-30 07:46:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0746.log'
+[2025-10-30 07:46:01] 已后台运行 pid=3910944，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0746.log
+[2025-10-30 07:47:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0747.log'
+[2025-10-30 07:47:02] 已后台运行 pid=3914078，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0747.log
+[2025-10-30 07:48:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0748.log'
+[2025-10-30 07:48:01] 已后台运行 pid=3917226，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0748.log
+[2025-10-30 07:49:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0749.log'
+[2025-10-30 07:49:01] 已后台运行 pid=3920395，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0749.log
+[2025-10-30 07:50:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0750.log'
+[2025-10-30 07:50:02] 已后台运行 pid=3923675，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0750.log
+[2025-10-30 07:51:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0751.log'
+[2025-10-30 07:51:01] 已后台运行 pid=3926915，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0751.log
+[2025-10-30 07:52:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0752.log'
+[2025-10-30 07:52:01] 已后台运行 pid=3930073，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0752.log
+[2025-10-30 07:53:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0753.log'
+[2025-10-30 07:53:02] 已后台运行 pid=3933226，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0753.log
+[2025-10-30 07:54:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0754.log'
+[2025-10-30 07:54:01] 已后台运行 pid=3936366，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0754.log
+[2025-10-30 07:55:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0755.log'
+[2025-10-30 07:55:02] 已后台运行 pid=3939621，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0755.log
+[2025-10-30 07:56:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0756.log'
+[2025-10-30 07:56:01] 已后台运行 pid=3942756，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0756.log
+[2025-10-30 07:57:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0757.log'
+[2025-10-30 07:57:01] 已后台运行 pid=3945923，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0757.log
+[2025-10-30 07:58:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0758.log'
+[2025-10-30 07:58:02] 已后台运行 pid=3949171，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0758.log
+[2025-10-30 07:59:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0759.log'
+[2025-10-30 07:59:01] 已后台运行 pid=3952180，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0759.log
+[2025-10-30 08:00:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0800.log'
+[2025-10-30 08:00:01] 已后台运行 pid=3955726，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0800.log
+[2025-10-30 08:01:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0801.log'
+[2025-10-30 08:01:02] 已后台运行 pid=3958959，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0801.log
+[2025-10-30 08:02:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0802.log'
+[2025-10-30 08:02:01] 已后台运行 pid=3962076，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0802.log
+[2025-10-30 08:03:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0803.log'
+[2025-10-30 08:03:01] 已后台运行 pid=3965230，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0803.log
+[2025-10-30 08:04:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0804.log'
+[2025-10-30 08:04:02] 已后台运行 pid=3968395，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0804.log
+[2025-10-30 08:05:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0805.log'
+[2025-10-30 08:05:01] 已后台运行 pid=3971616，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0805.log
+[2025-10-30 08:06:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0806.log'
+[2025-10-30 08:06:02] 已后台运行 pid=3974755，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0806.log
+[2025-10-30 08:07:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0807.log'
+[2025-10-30 08:07:01] 已后台运行 pid=3977890，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0807.log
+[2025-10-30 08:08:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0808.log'
+[2025-10-30 08:08:01] 已后台运行 pid=3981029，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0808.log
+[2025-10-30 08:09:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0809.log'
+[2025-10-30 08:09:02] 已后台运行 pid=3984161，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0809.log
+[2025-10-30 08:10:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0810.log'
+[2025-10-30 08:10:01] 已后台运行 pid=3987463，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0810.log
+[2025-10-30 08:11:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0811.log'
+[2025-10-30 08:11:01] 已后台运行 pid=3990697，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0811.log
+[2025-10-30 08:12:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0812.log'
+[2025-10-30 08:12:02] 已后台运行 pid=3993942，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0812.log
+[2025-10-30 08:13:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0813.log'
+[2025-10-30 08:13:01] 已后台运行 pid=3996965，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0813.log
+[2025-10-30 08:14:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0814.log'
+[2025-10-30 08:14:02] 已后台运行 pid=4000222，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0814.log
+[2025-10-30 08:15:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0815.log'
+[2025-10-30 08:15:01] 已后台运行 pid=4003362，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0815.log
+[2025-10-30 08:16:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0816.log'
+[2025-10-30 08:16:01] 已后台运行 pid=4006577，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0816.log
+[2025-10-30 08:17:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0817.log'
+[2025-10-30 08:17:02] 已后台运行 pid=4009733，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0817.log
+[2025-10-30 08:18:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0818.log'
+[2025-10-30 08:18:01] 已后台运行 pid=4012879，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0818.log
+[2025-10-30 08:19:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0819.log'
+[2025-10-30 08:19:01] 已后台运行 pid=4016018，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0819.log
+[2025-10-30 08:20:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0820.log'
+[2025-10-30 08:20:02] 已后台运行 pid=4019319，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0820.log
+[2025-10-30 08:21:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0821.log'
+[2025-10-30 08:21:01] 已后台运行 pid=4022535，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0821.log
+[2025-10-30 08:22:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0822.log'
+[2025-10-30 08:22:01] 已后台运行 pid=4025691，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0822.log
+[2025-10-30 08:23:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0823.log'
+[2025-10-30 08:23:02] 已后台运行 pid=4028827，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0823.log
+[2025-10-30 08:24:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0824.log'
+[2025-10-30 08:24:01] 已后台运行 pid=4031868，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0824.log
+[2025-10-30 08:25:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0825.log'
+[2025-10-30 08:25:02] 已后台运行 pid=4035112，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0825.log
+[2025-10-30 08:26:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0826.log'
+[2025-10-30 08:26:01] 已后台运行 pid=4038215，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0826.log
+[2025-10-30 08:27:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0827.log'
+[2025-10-30 08:27:01] 已后台运行 pid=4041352，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0827.log
+[2025-10-30 08:28:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0828.log'
+[2025-10-30 08:28:02] 已后台运行 pid=4044599，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0828.log
+[2025-10-30 08:29:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0829.log'
+[2025-10-30 08:29:01] 已后台运行 pid=4047585，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0829.log
+[2025-10-30 08:30:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0830.log'
+[2025-10-30 08:30:02] 已后台运行 pid=4051052，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0830.log
+[2025-10-30 08:31:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0831.log'
+[2025-10-30 08:31:02] 已后台运行 pid=4054281，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0831.log
+[2025-10-30 08:32:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0832.log'
+[2025-10-30 08:32:01] 已后台运行 pid=4057373，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0832.log
+[2025-10-30 08:33:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0833.log'
+[2025-10-30 08:33:02] 已后台运行 pid=4060525，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0833.log
+[2025-10-30 08:34:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0834.log'
+[2025-10-30 08:34:01] 已后台运行 pid=4063666，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0834.log
+[2025-10-30 08:35:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0835.log'
+[2025-10-30 08:35:01] 已后台运行 pid=4066922，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0835.log
+[2025-10-30 08:36:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0836.log'
+[2025-10-30 08:36:02] 已后台运行 pid=4070053，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0836.log
+[2025-10-30 08:37:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0837.log'
+[2025-10-30 08:37:01] 已后台运行 pid=4073199，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0837.log
+[2025-10-30 08:38:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0838.log'
+[2025-10-30 08:38:02] 已后台运行 pid=4076341，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0838.log
+[2025-10-30 08:39:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0839.log'
+[2025-10-30 08:39:01] 已后台运行 pid=4079491，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0839.log
+[2025-10-30 08:40:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0840.log'
+[2025-10-30 08:40:01] 已后台运行 pid=4082812，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0840.log
+[2025-10-30 08:41:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0841.log'
+[2025-10-30 08:41:02] 已后台运行 pid=4086077，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0841.log
+[2025-10-30 08:42:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0842.log'
+[2025-10-30 08:42:01] 已后台运行 pid=4089161，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0842.log
+[2025-10-30 08:43:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0843.log'
+[2025-10-30 08:43:01] 已后台运行 pid=4092438，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0843.log
+[2025-10-30 08:44:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0844.log'
+[2025-10-30 08:44:02] 已后台运行 pid=4095591，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0844.log
+[2025-10-30 08:45:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0845.log'
+[2025-10-30 08:45:01] 已后台运行 pid=4098818，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0845.log
+[2025-10-30 08:46:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0846.log'
+[2025-10-30 08:46:02] 已后台运行 pid=4102294，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0846.log
+[2025-10-30 08:47:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0847.log'
+[2025-10-30 08:47:01] 已后台运行 pid=4105410，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0847.log
+[2025-10-30 08:48:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0848.log'
+[2025-10-30 08:48:01] 已后台运行 pid=4108564，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0848.log
+[2025-10-30 08:49:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0849.log'
+[2025-10-30 08:49:02] 已后台运行 pid=4111714，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0849.log
+[2025-10-30 08:50:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0850.log'
+[2025-10-30 08:50:01] 已后台运行 pid=4114982，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0850.log
+[2025-10-30 08:51:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0851.log'
+[2025-10-30 08:51:02] 已后台运行 pid=4118236，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0851.log
+[2025-10-30 08:52:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0852.log'
+[2025-10-30 08:52:01] 已后台运行 pid=4121364，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0852.log
+[2025-10-30 08:53:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0853.log'
+[2025-10-30 08:53:01] 已后台运行 pid=4124525，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0853.log
+[2025-10-30 08:54:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0854.log'
+[2025-10-30 08:54:02] 已后台运行 pid=4127661，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0854.log
+[2025-10-30 08:55:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0855.log'
+[2025-10-30 08:55:01] 已后台运行 pid=4130915，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0855.log
+[2025-10-30 08:56:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0856.log'
+[2025-10-30 08:56:02] 已后台运行 pid=4134055，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0856.log
+[2025-10-30 08:57:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0857.log'
+[2025-10-30 08:57:01] 已后台运行 pid=4137198，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0857.log
+[2025-10-30 08:58:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0858.log'
+[2025-10-30 08:58:01] 已后台运行 pid=4140491，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0858.log
+[2025-10-30 08:59:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0859.log'
+[2025-10-30 08:59:02] 已后台运行 pid=4143617，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0859.log
+[2025-10-30 09:00:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0900.log'
+[2025-10-30 09:00:01] 已后台运行 pid=4146931，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0900.log
+[2025-10-30 09:01:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0901.log'
+[2025-10-30 09:01:01] 已后台运行 pid=4150118，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0901.log
+[2025-10-30 09:02:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0902.log'
+[2025-10-30 09:02:02] 已后台运行 pid=4153226，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0902.log
+[2025-10-30 09:03:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0903.log'
+[2025-10-30 09:03:01] 已后台运行 pid=4156331，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0903.log
+[2025-10-30 09:04:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0904.log'
+[2025-10-30 09:04:02] 已后台运行 pid=4159447，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0904.log
+[2025-10-30 09:05:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0905.log'
+[2025-10-30 09:05:01] 已后台运行 pid=4162663，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0905.log
+[2025-10-30 09:06:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0906.log'
+[2025-10-30 09:06:01] 已后台运行 pid=4165794，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0906.log
+[2025-10-30 09:07:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0907.log'
+[2025-10-30 09:07:02] 已后台运行 pid=4168898，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0907.log
+[2025-10-30 09:08:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0908.log'
+[2025-10-30 09:08:01] 已后台运行 pid=4171966，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0908.log
+[2025-10-30 09:09:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0909.log'
+[2025-10-30 09:09:02] 已后台运行 pid=4175113，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0909.log
+[2025-10-30 09:10:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0910.log'
+[2025-10-30 09:10:01] 已后台运行 pid=4178341，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0910.log
+[2025-10-30 09:11:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0911.log'
+[2025-10-30 09:11:01] 已后台运行 pid=4181553，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0911.log
+[2025-10-30 09:12:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0912.log'
+[2025-10-30 09:12:01] 已后台运行 pid=4184810，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0912.log
+[2025-10-30 09:13:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0913.log'
+[2025-10-30 09:13:02] 已后台运行 pid=4187937，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0913.log
+[2025-10-30 09:14:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0914.log'
+[2025-10-30 09:14:01] 已后台运行 pid=4191024，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0914.log
+[2025-10-30 09:15:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0915.log'
+[2025-10-30 09:15:02] 已后台运行 pid=4194225，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0915.log
+[2025-10-30 09:16:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0916.log'
+[2025-10-30 09:16:01] 已后台运行 pid=4113，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0916.log
+[2025-10-30 09:17:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0917.log'
+[2025-10-30 09:17:01] 已后台运行 pid=7408，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0917.log
+[2025-10-30 09:18:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0918.log'
+[2025-10-30 09:18:02] 已后台运行 pid=10567，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0918.log
+[2025-10-30 09:19:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0919.log'
+[2025-10-30 09:19:01] 已后台运行 pid=13673，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0919.log
+[2025-10-30 09:20:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0920.log'
+[2025-10-30 09:20:02] 已后台运行 pid=16980，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0920.log
+[2025-10-30 09:21:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0921.log'
+[2025-10-30 09:21:02] 已后台运行 pid=20097，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0921.log
+[2025-10-30 09:22:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0922.log'
+[2025-10-30 09:22:01] 已后台运行 pid=23128，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0922.log
+[2025-10-30 09:23:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0923.log'
+[2025-10-30 09:23:01] 已后台运行 pid=26184，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0923.log
+[2025-10-30 09:24:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0924.log'
+[2025-10-30 09:24:02] 已后台运行 pid=29261，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0924.log
+[2025-10-30 09:25:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0925.log'
+[2025-10-30 09:25:01] 已后台运行 pid=32403，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0925.log
+[2025-10-30 09:26:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0926.log'
+[2025-10-30 09:26:02] 已后台运行 pid=35586，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0926.log
+[2025-10-30 09:27:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0927.log'
+[2025-10-30 09:27:01] 已后台运行 pid=38581，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0927.log
+[2025-10-30 09:28:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0928.log'
+[2025-10-30 09:28:01] 已后台运行 pid=41651，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0928.log
+[2025-10-30 09:29:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0929.log'
+[2025-10-30 09:29:02] 已后台运行 pid=44686，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0929.log
+[2025-10-30 09:30:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0930.log'
+[2025-10-30 09:30:01] 已后台运行 pid=47894，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0930.log
+[2025-10-30 09:31:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0931.log'
+[2025-10-30 09:31:02] 已后台运行 pid=51384，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0931.log
+[2025-10-30 09:32:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0932.log'
+[2025-10-30 09:32:01] 已后台运行 pid=54434，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0932.log
+[2025-10-30 09:33:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0933.log'
+[2025-10-30 09:33:01] 已后台运行 pid=57479，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0933.log
+[2025-10-30 09:34:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0934.log'
+[2025-10-30 09:34:02] 已后台运行 pid=60510，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0934.log
+[2025-10-30 09:35:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0935.log'
+[2025-10-30 09:35:01] 已后台运行 pid=63647，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0935.log
+[2025-10-30 09:36:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0936.log'
+[2025-10-30 09:36:01] 已后台运行 pid=66695，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0936.log
+[2025-10-30 09:37:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0937.log'
+[2025-10-30 09:37:02] 已后台运行 pid=69736，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0937.log
+[2025-10-30 09:38:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0938.log'
+[2025-10-30 09:38:01] 已后台运行 pid=72762，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0938.log
+[2025-10-30 09:39:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0939.log'
+[2025-10-30 09:39:02] 已后台运行 pid=75891，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0939.log
+[2025-10-30 09:40:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0940.log'
+[2025-10-30 09:40:01] 已后台运行 pid=79000，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0940.log
+[2025-10-30 09:41:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0941.log'
+[2025-10-30 09:41:01] 已后台运行 pid=82294，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0941.log
+[2025-10-30 09:42:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0942.log'
+[2025-10-30 09:42:02] 已后台运行 pid=85341，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0942.log
+[2025-10-30 09:43:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0943.log'
+[2025-10-30 09:43:01] 已后台运行 pid=88371，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0943.log
+[2025-10-30 09:44:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0944.log'
+[2025-10-30 09:44:02] 已后台运行 pid=91428，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0944.log
+[2025-10-30 09:45:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0945.log'
+[2025-10-30 09:45:01] 已后台运行 pid=94554，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0945.log
+[2025-10-30 09:46:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0946.log'
+[2025-10-30 09:46:01] 已后台运行 pid=97581，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0946.log
+[2025-10-30 09:47:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0947.log'
+[2025-10-30 09:47:02] 已后台运行 pid=100584，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0947.log
+[2025-10-30 09:48:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0948.log'
+[2025-10-30 09:48:01] 已后台运行 pid=103628，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0948.log
+[2025-10-30 09:49:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0949.log'
+[2025-10-30 09:49:02] 已后台运行 pid=106638，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0949.log
+[2025-10-30 09:50:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0950.log'
+[2025-10-30 09:50:01] 已后台运行 pid=109844，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0950.log
+[2025-10-30 09:51:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0951.log'
+[2025-10-30 09:51:01] 已后台运行 pid=113005，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0951.log
+[2025-10-30 09:52:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0952.log'
+[2025-10-30 09:52:02] 已后台运行 pid=116181，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0952.log
+[2025-10-30 09:53:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_0953.log'
+[2025-10-30 09:53:01] 已后台运行 pid=119908，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0953.log
+[2025-10-30 10:00:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_1000.log'
+[2025-10-30 10:00:02] 已后台运行 pid=141345，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_1000.log

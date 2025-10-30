@@ -35,6 +35,7 @@ import torch.backends.cudnn as cudnn
 import json
 import os
 
+
 from pathlib import Path
 from collections import OrderedDict, defaultdict
 from timm.data.mixup import Mixup
@@ -50,6 +51,7 @@ from scipy import interpolate
 import modeling_finetune
 import warnings
 warnings.filterwarnings("ignore")
+import fcntl
 
 # ======== [NEW] 仅为“被试内5折CV”模式增加的轻量依赖 ========
 import re
@@ -324,6 +326,90 @@ def _scan_pkl_roots(pkl_roots, subject_regex):
             all_labels.append(y)
     return subj_to_samples, sorted(set(all_labels))
 
+# ====================== [NEW] 仅主进程写 + 增量更新cv_summary.csv ======================
+def _is_main_process_safe():
+    try:
+        return utils.is_main_process()
+    except Exception:
+        # 兜底：环境变量 RANK
+        try:
+            return int(os.environ.get("RANK", "0")) == 0
+        except Exception:
+            return True
+
+def _incremental_update_cv(csv_path: str, row: dict, metrics: list):
+    """
+    按 subject 去重覆盖写入；并实时重算 OVERALL。
+    Header = ["subject"] + metrics + [m+"_std" for m in metrics]
+    """
+    os.makedirs(os.path.dirname(csv_path), exist_ok=True)
+    fields = ["subject"] + metrics + [m + "_std" for m in metrics]
+
+    # 读取已有内容
+    rows = []
+    if os.path.exists(csv_path):
+        with open(csv_path, "r", encoding="utf-8", newline="") as rf:
+            try:
+                import csv as _csv
+                r = _csv.DictReader(rf)
+                if r.fieldnames:
+                    for x in r:
+                        rows.append(x)
+            except Exception:
+                rows = []
+
+    # 过滤掉旧的同 subject、以及旧的 OVERALL
+    subj = str(row["subject"])
+    rows = [r for r in rows if r.get("subject") not in (subj, "OVERALL")]
+
+    # 追加当前 subject 行
+    def _fmt(v):
+        if v is None: return ""
+        if isinstance(v, float): return f"{v:.12g}"
+        return str(v)
+
+    rows.append({k: _fmt(row.get(k, "")) for k in fields})
+
+    # 生成 OVERALL
+    def _to_float_safe(v):
+        try:
+            return float(v)
+        except Exception:
+            return float("nan")
+
+    valid_rows = [r for r in rows if r.get("subject") not in ("OVERALL", "")]
+    overall = {"subject": "OVERALL"}
+    import numpy as _np
+    for m in metrics:
+        vals = _np.array([_to_float_safe(r.get(m, "nan")) for r in valid_rows], dtype=float)
+        vals = vals[~_np.isnan(vals)]
+        overall[m] = "" if vals.size == 0 else f"{_np.mean(vals):.12g}"
+        # OVERALL 的 *_std 给出各 subject 均值的 std（可按需要改成空字符串）
+        overall[m + "_std"] = "" if vals.size == 0 else f"{_np.std(vals):.12g}"
+    rows.append(overall)
+
+    # 按 subject 数字序排序（OVERALL 放最后）
+    def _key(r):
+        s = r.get("subject", "")
+        if s == "OVERALL": return (1e18,)
+        digits = "".join(ch for ch in s if ch.isdigit())
+        try:
+            return (int(digits),)
+        except Exception:
+            return (s,)
+
+    rows.sort(key=_key)
+
+    # 加锁写回
+    with open(csv_path, "w", encoding="utf-8", newline="") as wf:
+        fcntl.flock(wf, fcntl.LOCK_EX)
+        import csv as _csv
+        w = _csv.DictWriter(wf, fieldnames=fields)
+        w.writeheader()
+        w.writerows(rows)
+        wf.flush(); os.fsync(wf.fileno())
+        fcntl.flock(wf, fcntl.LOCK_UN)
+
 # ====================== [NEW] 每折一次完整训练（尽量复用原逻辑） ======================
 def _run_one_fold(args, ds_init, ch_names_upper, metrics, fold_id, subject_id,
                   train_samples, val_samples, test_samples):
@@ -465,7 +551,7 @@ def _run_one_fold(args, ds_init, ch_names_upper, metrics, fold_id, subject_id,
     model_without_ddp = model
     n_parameters = sum(p.numel() for p in model.parameters() if p.requires_grad)
 
-    print("Model = %s" % str(model_without_ddp))
+    # print("Model = %s" % str(model_without_ddp))
     print('number of params:', n_parameters)
 
     total_batch_size = args.batch_size * args.update_freq * utils.get_world_size()
@@ -1078,9 +1164,14 @@ def main(args, ds_init):
             row[m] = float(np.mean(vals)) if len(vals) else float('nan')
             row[m + "_std"] = float(np.std(vals)) if len(vals) else float('nan')
         subject_rows.append(row)
+        # [NEW] 立刻增量更新一次（仅主进程）
+        if args.output_dir and _is_main_process_safe():
+            out_csv = os.path.join(args.output_dir, "cv_summary.csv")
+            _incremental_update_cv(out_csv, row, metrics)
+            print(f"[S{sub_id}] cv_summary.csv updated -> {out_csv}")
 
     # 输出 CSV 汇总
-    if args.output_dir:
+    if args.output_dir and _is_main_process_safe():
         os.makedirs(args.output_dir, exist_ok=True)
         out_csv = os.path.join(args.output_dir, "cv_summary.csv")
         fieldnames = ["subject"] + [m for m in metrics] + [m + "_std" for m in metrics]

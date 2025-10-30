@@ -174,54 +174,81 @@ def main():
     if not code_path.exists():
         raise FileNotFoundError(f"未找到代码文件：{code_path}")
 
-    output_dir = _resolve(cfg["OUTPUT_DIR"])
-    log_dir = _resolve(cfg["LOG_DIR"])
-    output_dir.mkdir(parents=True, exist_ok=True)
-    log_dir.mkdir(parents=True, exist_ok=True)
-
     # PKL 根目录
     pkl_roots_list = cfg["PKL_ROOTS"]
     if isinstance(pkl_roots_list, (list, tuple)):
-        pkl_roots = ",".join([str(_resolve(p)) for p in pkl_roots_list])
+        pkl_roots_paths = [str(_resolve(p)) for p in pkl_roots_list]
+        pkl_roots = ",".join(pkl_roots_paths)
     else:
         # 也支持直接给逗号分隔的字符串
         pkl_roots = pkl_roots_list
+        pkl_roots_paths = pkl_roots.split(",")
 
-    # 构造命令
-    cmd = _as_shell_cmd_list(
-        nproc=nproc,
-        code_path=code_path,
-        model=cfg["MODEL"],
-        finetune=(str(_resolve(cfg["FINETUNE"])) if cfg.get("FINETUNE") else ""),
-        output_dir=output_dir,
-        log_dir=log_dir,
-        pkl_roots=pkl_roots,
-        subject_regex=cfg["SUBJECT_REGEX"],
-        cv_splits=cfg["CV_SPLITS"],
-        batch_size=cfg["BATCH_SIZE"],
-        epochs=cfg["EPOCHS"],
-        lr=cfg["LR"],
-        warmup_epochs=cfg["WARMUP_EPOCHS"],
-        layer_decay=cfg["LAYER_DECAY"],
-        drop_path=cfg["DROP_PATH"],
-        update_freq=cfg["UPDATE_FREQ"],
-        save_ckpt_freq=cfg["SAVE_CKPT_FREQ"],
-        num_workers=cfg["NUM_WORKERS"],
-        disable_rel_pos_bias=cfg["DISABLE_REL_POS_BIAS"],
-        abs_pos_emb=cfg["ABS_POS_EMB"],
-        disable_qkv_bias=cfg["DISABLE_QKV_BIAS"],
-        extra=cfg.get("EXTRA", ""),
-    )
+    # 为每个pkl根目录创建对应的输出和日志子目录
+    for pkl_root in pkl_roots_paths:
+        # 从pkl根目录路径中提取最后一级目录名作为子目录名
+        subdir_name = Path(pkl_root).name
+        
+        # 创建对应的输出和日志子目录
+        output_subdir = _resolve(cfg["OUTPUT_DIR"]) / subdir_name
+        log_subdir = _resolve(cfg["LOG_DIR"]) / subdir_name
+        output_subdir.mkdir(parents=True, exist_ok=True)
+        log_subdir.mkdir(parents=True, exist_ok=True)
 
-    # 展示并执行
-    print("\n===== Launch Command =====")
-    print(cmd)
-    print("==========================\n")
+    # 新代码（替换 main() 末尾同一位置）
 
-    # shell=True 以兼容 "python -m torch.distributed.run" 形式的 launcher
-    proc = subprocess.Popen(cmd, shell=True)
-    proc.communicate()
-    sys.exit(proc.returncode)
+    # 逐个 PKL 根目录独立启动
+    last_returncode = 0
+    for pkl_root in pkl_roots_paths:
+        subdir_name = Path(pkl_root).name  # 例如 read / type / read_new / type_new
+
+        output_subdir = _resolve(cfg["OUTPUT_DIR"]) / subdir_name
+        log_subdir    = _resolve(cfg["LOG_DIR"]) / subdir_name
+        output_subdir.mkdir(parents=True, exist_ok=True)
+        log_subdir.mkdir(parents=True, exist_ok=True)
+
+        # 仅把当前根目录传给 --pkl_roots
+        cmd = _as_shell_cmd_list(
+            nproc=nproc,
+            code_path=code_path,
+            model=cfg["MODEL"],
+            finetune=(str(_resolve(cfg["FINETUNE"])) if cfg.get("FINETUNE") else ""),
+            output_dir=output_subdir,
+            log_dir=log_subdir,
+            pkl_roots=str(_resolve(pkl_root)),
+            subject_regex=cfg["SUBJECT_REGEX"],
+            cv_splits=cfg["CV_SPLITS"],
+            batch_size=cfg["BATCH_SIZE"],
+            epochs=cfg["EPOCHS"],
+            lr=cfg["LR"],
+            warmup_epochs=cfg["WARMUP_EPOCHS"],
+            layer_decay=cfg["LAYER_DECAY"],
+            drop_path=cfg["DROP_PATH"],
+            update_freq=cfg["UPDATE_FREQ"],
+            save_ckpt_freq=cfg["SAVE_CKPT_FREQ"],
+            num_workers=cfg["NUM_WORKERS"],
+            disable_rel_pos_bias=cfg["DISABLE_REL_POS_BIAS"],
+            abs_pos_emb=cfg["ABS_POS_EMB"],
+            disable_qkv_bias=cfg["DISABLE_QKV_BIAS"],
+            extra=cfg.get("EXTRA", ""),
+        )
+
+        print("\n===== Launch Command =====")
+        print(f"[DATA ROOT] {pkl_root}")
+        print(f"[OUTPUT   ] {output_subdir}")
+        print(f"[LOG      ] {log_subdir}")
+        print(cmd)
+        print("==========================\n")
+
+        # 顺序执行：一个根目录跑完再跑下一个（端口等环境变量可复用）
+        proc = subprocess.Popen(cmd, shell=True)
+        proc.communicate()
+        last_returncode = proc.returncode
+        if last_returncode != 0:
+            print(f"[WARN] 子任务失败（{pkl_root}），返回码 {last_returncode}。后续任务仍将继续。")
+
+    sys.exit(last_returncode)
+
 
 
 if __name__ == "__main__":
