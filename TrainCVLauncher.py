@@ -48,8 +48,8 @@ CONFIG = {
 
     # 模型与超参
     "MODEL": "labram_base_patch200_200",
-    "BATCH_SIZE": 32,
-    "EPOCHS": 50,
+    "BATCH_SIZE": 48,
+    "EPOCHS": 50,  # 50
     "LR": 5e-4,
     "WARMUP_EPOCHS": 5,
     "LAYER_DECAY": 0.65,

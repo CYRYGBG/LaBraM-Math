@@ -17,7 +17,9 @@ TARGET_PATTERN="${TARGET_PATTERN:-${TARGET_FILE}}"  # 进程匹配关键字
 CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-5,6,7}"  # 限制可见GPU
 
 # 日志：程序运行日志 & 心跳日志
-LOG_FILE="${BASE_DIR}/log/$(date +'%Y%m%d_%H%M').log"
+# LOG_FILE="${BASE_DIR}/log/$(date +'%Y%m%d_%H%M').log"
+LOG_FILE="${BASE_DIR}/log/auto_run.log"
+
 HEARTBEAT_LOG="${BASE_DIR}/cron_heartbeat.log"
 # =================================
 
@@ -31,7 +33,7 @@ cd "${BASE_DIR}"
 
 # 1) 并发检测
 if pgrep -f "${TARGET_PATTERN}" >/dev/null 2>&1; then
-  echo "[`now`] 检测到正在运行（pattern='${TARGET_PATTERN}'），无需启动。" >> "${HEARTBEAT_LOG}"
+  # echo "[`now`] 检测到正在运行（pattern='${TARGET_PATTERN}'），无需启动。" >> "${HEARTBEAT_LOG}"
   exit 0
 fi
 

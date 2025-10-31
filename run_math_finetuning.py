@@ -281,10 +281,26 @@ class PKLSegDataset(Dataset):
         p, y = self.samples[idx]
         with open(p, 'rb') as f:
             obj = pickle.load(f)
-        x = obj['X']  # (C, 2000)
+        x = obj['X']  # (C, T_any)
         yy = int(obj['y']) if not isinstance(obj['y'], (int, np.integer)) else int(obj['y'])
-        x = torch.from_numpy(np.asarray(x)).float()   # (C, T)
+
+        x = np.asarray(x)
+        # === [FIX] 确保时间长度为 200 的整数倍，匹配 engine 的 T=200 ===
+        T = 200
+        L = x.shape[-1]
+        if L % T != 0:
+            L2 = (L // T) * T
+            if L2 <= 0:
+                # 极端短片段：用 0 补到 200
+                pad = T - L
+                x = np.pad(x, ((0, 0), (0, pad)), mode='constant')
+            else:
+                # 常见情况（如 2101）：裁掉尾部余数 -> 2100
+                x = x[..., :L2]
+
+        x = torch.from_numpy(x).float()   # (C, T')
         return x, yy
+
 
 # ====================== [NEW] 工具：扫描样本，分被试聚合 ======================
 def _load_channels_from_csv(path):
@@ -468,7 +484,7 @@ def _run_one_fold(args, ds_init, ch_names_upper, metrics, fold_id, subject_id,
         batch_size=args.batch_size,
         num_workers=args.num_workers,
         pin_memory=args.pin_mem,
-        drop_last=True,
+        drop_last=False,
     )
 
     if dataset_val is not None:
@@ -1084,6 +1100,34 @@ def main(args, ds_init):
     subj_to_samples, label_set = _scan_pkl_roots(args.pkl_roots, args.subject_regex)
     assert len(subj_to_samples) > 0, f"未在 {args.pkl_roots} 找到任何符合命名与内容的 .pkl 文件"
 
+    # [NEW] 汇总并打印检测到的被试与样本总数（仅主进程）
+    num_subjects = len(subj_to_samples)
+    total_samples = sum(len(v) for v in subj_to_samples.values())
+    if _is_main_process_safe():
+        # 仅打印前若干个被试以免日志过长
+        _subj_sorted = sorted(subj_to_samples.keys(), key=lambda s: int(s) if str(s).isdigit() else s)
+        _preview = ", ".join(_subj_sorted)
+        print(f"[CV] Detected {num_subjects} subjects, total {total_samples} samples.")
+        print(f"[CV] Subjects preview: {_preview}")
+
+        # 可选：把被试清单与每被试样本数写入 output_dir/subject_index.json（若指定了 output_dir）
+        try:
+            if args.output_dir:
+                os.makedirs(args.output_dir, exist_ok=True)
+                _idx = {
+                    "num_subjects": num_subjects,
+                    "total_samples": total_samples,
+                    "subjects": [
+                        {"subject": sid, "num_samples": len(subj_to_samples[sid])}
+                        for sid in _subj_sorted
+                    ]
+                }
+                with open(os.path.join(args.output_dir, "subject_index.json"), "w", encoding="utf-8") as _f:
+                    json.dump(_idx, _f, ensure_ascii=False, indent=2)
+                print(f"[CV] subject_index.json written -> {os.path.join(args.output_dir, 'subject_index.json')}")
+        except Exception as _e:
+            print(f"[CV] WARN: failed to write subject_index.json: {_e}")
+
     # 自动设置 nb_classes
     if args.nb_classes == 0:
         args.nb_classes = len(label_set)
@@ -1170,24 +1214,99 @@ def main(args, ds_init):
             _incremental_update_cv(out_csv, row, metrics)
             print(f"[S{sub_id}] cv_summary.csv updated -> {out_csv}")
 
-    # 输出 CSV 汇总
+    # 输出/合并 CSV 汇总（避免把已有有效结果用 NaN 覆盖）
     if args.output_dir and _is_main_process_safe():
-        os.makedirs(args.output_dir, exist_ok=True)
         out_csv = os.path.join(args.output_dir, "cv_summary.csv")
         fieldnames = ["subject"] + [m for m in metrics] + [m + "_std" for m in metrics]
-        with open(out_csv, "w", newline='', encoding="utf-8") as f:
-            w = csv.DictWriter(f, fieldnames=fieldnames)
-            w.writeheader()
-            for r in subject_rows:
-                w.writerow(r)
-            # Overall 平均
-            overall = {"subject": "OVERALL"}
+
+        # 读取已有（去掉 OVERALL）
+        existing = {}
+        if os.path.exists(out_csv):
+            with open(out_csv, "r", encoding="utf-8", newline="") as rf:
+                rr = csv.DictReader(rf)
+                if rr.fieldnames:
+                    for x in rr:
+                        subj = x.get("subject", "")
+                        if subj and subj != "OVERALL":
+                            existing[subj] = x
+
+        # 合并逻辑：本轮有有效值覆盖；否则保留旧值
+        def _to_float(v):
+            try:
+                fv = float(v)
+                return fv
+            except Exception:
+                return float("nan")
+
+        merged = {}
+        # 先把本轮的放进去
+        for r in subject_rows:
+            subj = str(r["subject"])
+            row = {"subject": subj}
             for m in metrics:
-                vals = [r[m] for r in subject_rows if not np.isnan(r[m])]
-                overall[m] = float(np.mean(vals)) if len(vals) else float('nan')
-                overall[m + "_std"] = float(np.std(vals)) if len(vals) else float('nan')
-            w.writerow(overall)
-        print(f"\nSaved CV summary to: {out_csv}")
+                v = r.get(m, float("nan"))
+                s = r.get(m + "_std", float("nan"))
+                row[m] = float(v) if not (isinstance(v, float) and np.isnan(v)) else float("nan")
+                row[m + "_std"] = float(s) if not (isinstance(s, float) and np.isnan(s)) else float("nan")
+            merged[subj] = row
+
+        # 再把旧的补齐/保留（仅当本轮对应项是 NaN 才用旧值）
+        for subj, x in existing.items():
+            if subj not in merged:
+                merged[subj] = {"subject": subj}
+                for m in metrics:
+                    merged[subj][m] = _to_float(x.get(m, "nan"))
+                    merged[subj][m + "_std"] = _to_float(x.get(m + "_std", "nan"))
+            else:
+                for m in metrics:
+                    if np.isnan(merged[subj][m]):
+                        merged[subj][m] = _to_float(x.get(m, "nan"))
+                    if np.isnan(merged[subj][m + "_std"]):
+                        merged[subj][m + "_std"] = _to_float(x.get(m + "_std", "nan"))
+
+        # 排序（数字在前，OVERALL 最后写）
+        def _subj_key(s):
+            digits = "".join(ch for ch in s if ch.isdigit())
+            try:
+                return (int(digits),)
+            except Exception:
+                return (s,)
+
+        rows = [merged[k] for k in sorted(merged.keys(), key=_subj_key)]
+
+        # 重新计算 OVERALL
+        overall = {"subject": "OVERALL"}
+        for m in metrics:
+            vals = [float(r[m]) for r in rows if isinstance(r.get(m), (int, float)) and not np.isnan(float(r[m]))]
+            overall[m] = float(np.mean(vals)) if len(vals) else float("nan")
+            overall[m + "_std"] = float(np.std(vals)) if len(vals) else float("nan")
+
+        # 写回
+        os.makedirs(args.output_dir, exist_ok=True)
+        with open(out_csv, "w", newline="", encoding="utf-8") as wf:
+            w = csv.DictWriter(wf, fieldnames=fieldnames)
+            w.writeheader()
+            for r in rows:
+                # 将 NaN 以空串写出更友好（也可保留为 'nan' 字符串）
+                rr = {}
+                for k in fieldnames:
+                    v = r.get(k, "")
+                    if isinstance(v, float) and np.isnan(v):
+                        rr[k] = ""
+                    else:
+                        rr[k] = v
+                w.writerow(rr)
+            # OVERALL 行
+            oo = {}
+            for k in fieldnames:
+                v = overall.get(k, "")
+                if isinstance(v, float) and np.isnan(v):
+                    oo[k] = ""
+                else:
+                    oo[k] = v
+            w.writerow(oo)
+        print(f"\nMerged & saved CV summary to: {out_csv}")
+
 
 if __name__ == '__main__':
     opts, ds_init = get_args()

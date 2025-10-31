@@ -343,7 +343,7 @@ def main(args, ds_init):
         batch_size=args.batch_size,
         num_workers=args.num_workers,
         pin_memory=args.pin_mem,
-        drop_last=True,
+        drop_last=False,
     )
 
     if dataset_val is not None:

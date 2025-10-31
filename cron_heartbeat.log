@@ -1447,3 +1447,513 @@
 [2025-10-30 09:53:01] 已后台运行 pid=119908，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_0953.log
 [2025-10-30 10:00:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_1000.log'
 [2025-10-30 10:00:02] 已后台运行 pid=141345，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_1000.log
+[2025-10-30 11:00:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_1100.log'
+[2025-10-30 11:00:02] 已后台运行 pid=310308，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_1100.log
+[2025-10-30 11:33:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_1133.log'
+[2025-10-30 11:33:01] 已后台运行 pid=404300，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_1133.log
+[2025-10-30 11:34:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_1134.log'
+[2025-10-30 11:34:02] 已后台运行 pid=411226，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_1134.log
+[2025-10-30 11:35:56] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_1135.log'
+[2025-10-30 11:35:56] 已后台运行 pid=420828，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_1135.log
+[2025-10-30 18:16:45] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_1816.log'
+[2025-10-30 18:16:45] 已后台运行 pid=3787359，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_1816.log
+[2025-10-30 18:17:25] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_1817.log'
+[2025-10-30 18:17:25] 已后台运行 pid=3790282，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_1817.log
+[2025-10-30 18:24:42] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_1824.log'
+[2025-10-30 18:24:42] 已后台运行 pid=3810966，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_1824.log
+[2025-10-30 18:29:33] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_1829.log'
+[2025-10-30 18:29:33] 已后台运行 pid=3842722，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_1829.log
+[2025-10-30 18:30:31] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_1830.log'
+[2025-10-30 18:30:31] 已后台运行 pid=3847496，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_1830.log
+[2025-10-30 18:31:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251030_1831.log'
+[2025-10-30 18:31:01] 已后台运行 pid=3850192，详见 /home/yeqi3/cyr/code/LaBraM/log/20251030_1831.log
+[2025-10-31 06:31:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0631.log'
+[2025-10-31 06:31:01] 已后台运行 pid=1306018，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0631.log
+[2025-10-31 06:35:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0635.log'
+[2025-10-31 06:35:02] 已后台运行 pid=1316184，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0635.log
+[2025-10-31 06:36:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0636.log'
+[2025-10-31 06:36:01] 已后台运行 pid=1318882，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0636.log
+[2025-10-31 06:37:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0637.log'
+[2025-10-31 06:37:01] 已后台运行 pid=1321664，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0637.log
+[2025-10-31 06:38:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0638.log'
+[2025-10-31 06:38:02] 已后台运行 pid=1324335，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0638.log
+[2025-10-31 06:39:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0639.log'
+[2025-10-31 06:39:01] 已后台运行 pid=1327030，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0639.log
+[2025-10-31 06:40:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0640.log'
+[2025-10-31 06:40:02] 已后台运行 pid=1329769，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0640.log
+[2025-10-31 06:41:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0641.log'
+[2025-10-31 06:41:02] 已后台运行 pid=1332552，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0641.log
+[2025-10-31 06:42:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0642.log'
+[2025-10-31 06:42:01] 已后台运行 pid=1335330，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0642.log
+[2025-10-31 06:43:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0643.log'
+[2025-10-31 06:43:01] 已后台运行 pid=1338156，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0643.log
+[2025-10-31 06:44:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0644.log'
+[2025-10-31 06:44:02] 已后台运行 pid=1340841，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0644.log
+[2025-10-31 06:45:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0645.log'
+[2025-10-31 06:45:01] 已后台运行 pid=1343523，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0645.log
+[2025-10-31 06:46:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0646.log'
+[2025-10-31 06:46:02] 已后台运行 pid=1346234，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0646.log
+[2025-10-31 06:47:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0647.log'
+[2025-10-31 06:47:01] 已后台运行 pid=1349009，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0647.log
+[2025-10-31 06:48:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0648.log'
+[2025-10-31 06:48:01] 已后台运行 pid=1351704，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0648.log
+[2025-10-31 06:49:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0649.log'
+[2025-10-31 06:49:02] 已后台运行 pid=1354408，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0649.log
+[2025-10-31 06:50:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0650.log'
+[2025-10-31 06:50:01] 已后台运行 pid=1357133，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0650.log
+[2025-10-31 06:51:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0651.log'
+[2025-10-31 06:51:01] 已后台运行 pid=1359941，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0651.log
+[2025-10-31 06:52:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0652.log'
+[2025-10-31 06:52:02] 已后台运行 pid=1362742，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0652.log
+[2025-10-31 06:53:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0653.log'
+[2025-10-31 06:53:01] 已后台运行 pid=1365414，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0653.log
+[2025-10-31 06:54:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0654.log'
+[2025-10-31 06:54:02] 已后台运行 pid=1368101，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0654.log
+[2025-10-31 06:55:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0655.log'
+[2025-10-31 06:55:01] 已后台运行 pid=1370784，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0655.log
+[2025-10-31 06:56:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0656.log'
+[2025-10-31 06:56:01] 已后台运行 pid=1373566，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0656.log
+[2025-10-31 06:57:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0657.log'
+[2025-10-31 06:57:02] 已后台运行 pid=1376427，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0657.log
+[2025-10-31 06:58:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0658.log'
+[2025-10-31 06:58:01] 已后台运行 pid=1379114，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0658.log
+[2025-10-31 06:59:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0659.log'
+[2025-10-31 06:59:02] 已后台运行 pid=1381771，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0659.log
+[2025-10-31 07:00:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0700.log'
+[2025-10-31 07:00:01] 已后台运行 pid=1384499，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0700.log
+[2025-10-31 07:01:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0701.log'
+[2025-10-31 07:01:01] 已后台运行 pid=1387267，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0701.log
+[2025-10-31 07:02:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0702.log'
+[2025-10-31 07:02:01] 已后台运行 pid=1390020，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0702.log
+[2025-10-31 07:03:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0703.log'
+[2025-10-31 07:03:02] 已后台运行 pid=1392686，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0703.log
+[2025-10-31 07:04:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0704.log'
+[2025-10-31 07:04:01] 已后台运行 pid=1395347，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0704.log
+[2025-10-31 07:05:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0705.log'
+[2025-10-31 07:05:02] 已后台运行 pid=1398030，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0705.log
+[2025-10-31 07:06:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0706.log'
+[2025-10-31 07:06:01] 已后台运行 pid=1400702，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0706.log
+[2025-10-31 07:07:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0707.log'
+[2025-10-31 07:07:01] 已后台运行 pid=1403464，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0707.log
+[2025-10-31 07:08:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0708.log'
+[2025-10-31 07:08:02] 已后台运行 pid=1406296，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0708.log
+[2025-10-31 07:09:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0709.log'
+[2025-10-31 07:09:01] 已后台运行 pid=1409671，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0709.log
+[2025-10-31 07:10:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0710.log'
+[2025-10-31 07:10:02] 已后台运行 pid=1412610，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0710.log
+[2025-10-31 07:11:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0711.log'
+[2025-10-31 07:11:02] 已后台运行 pid=1415389，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0711.log
+[2025-10-31 07:12:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0712.log'
+[2025-10-31 07:12:01] 已后台运行 pid=1418140，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0712.log
+[2025-10-31 07:13:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0713.log'
+[2025-10-31 07:13:02] 已后台运行 pid=1420833，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0713.log
+[2025-10-31 07:14:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0714.log'
+[2025-10-31 07:14:01] 已后台运行 pid=1423479，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0714.log
+[2025-10-31 07:15:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0715.log'
+[2025-10-31 07:15:01] 已后台运行 pid=1426155，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0715.log
+[2025-10-31 07:16:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0716.log'
+[2025-10-31 07:16:02] 已后台运行 pid=1428846，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0716.log
+[2025-10-31 07:17:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0717.log'
+[2025-10-31 07:17:01] 已后台运行 pid=1431606，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0717.log
+[2025-10-31 07:18:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0718.log'
+[2025-10-31 07:18:02] 已后台运行 pid=1434305，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0718.log
+[2025-10-31 07:19:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0719.log'
+[2025-10-31 07:19:01] 已后台运行 pid=1436985，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0719.log
+[2025-10-31 07:20:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0720.log'
+[2025-10-31 07:20:01] 已后台运行 pid=1439736，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0720.log
+[2025-10-31 07:21:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0721.log'
+[2025-10-31 07:21:01] 已后台运行 pid=1442523，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0721.log
+[2025-10-31 07:22:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0722.log'
+[2025-10-31 07:22:02] 已后台运行 pid=1445450，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0722.log
+[2025-10-31 07:23:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0723.log'
+[2025-10-31 07:23:01] 已后台运行 pid=1447997，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0723.log
+[2025-10-31 07:24:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0724.log'
+[2025-10-31 07:24:02] 已后台运行 pid=1450763，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0724.log
+[2025-10-31 07:25:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0725.log'
+[2025-10-31 07:25:01] 已后台运行 pid=1453421，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0725.log
+[2025-10-31 07:26:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0726.log'
+[2025-10-31 07:26:01] 已后台运行 pid=1456092，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0726.log
+[2025-10-31 07:27:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0727.log'
+[2025-10-31 07:27:02] 已后台运行 pid=1458890，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0727.log
+[2025-10-31 07:28:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0728.log'
+[2025-10-31 07:28:01] 已后台运行 pid=1461552，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0728.log
+[2025-10-31 07:29:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0729.log'
+[2025-10-31 07:29:02] 已后台运行 pid=1464226，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0729.log
+[2025-10-31 07:30:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0730.log'
+[2025-10-31 07:30:01] 已后台运行 pid=1466965，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0730.log
+[2025-10-31 07:31:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0731.log'
+[2025-10-31 07:31:01] 已后台运行 pid=1469718，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0731.log
+[2025-10-31 07:32:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0732.log'
+[2025-10-31 07:32:02] 已后台运行 pid=1472442，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0732.log
+[2025-10-31 07:33:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0733.log'
+[2025-10-31 07:33:01] 已后台运行 pid=1475131，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0733.log
+[2025-10-31 07:34:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0734.log'
+[2025-10-31 07:34:01] 已后台运行 pid=1477819，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0734.log
+[2025-10-31 07:35:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0735.log'
+[2025-10-31 07:35:02] 已后台运行 pid=1480643，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0735.log
+[2025-10-31 07:36:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0736.log'
+[2025-10-31 07:36:01] 已后台运行 pid=1483165，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0736.log
+[2025-10-31 07:37:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0737.log'
+[2025-10-31 07:37:02] 已后台运行 pid=1485968，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0737.log
+[2025-10-31 07:38:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0738.log'
+[2025-10-31 07:38:01] 已后台运行 pid=1488772，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0738.log
+[2025-10-31 07:39:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0739.log'
+[2025-10-31 07:39:01] 已后台运行 pid=1491417，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0739.log
+[2025-10-31 07:40:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0740.log'
+[2025-10-31 07:40:02] 已后台运行 pid=1494357，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0740.log
+[2025-10-31 07:41:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0741.log'
+[2025-10-31 07:41:01] 已后台运行 pid=1497118，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0741.log
+[2025-10-31 07:42:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0742.log'
+[2025-10-31 07:42:01] 已后台运行 pid=1499782，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0742.log
+[2025-10-31 07:43:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0743.log'
+[2025-10-31 07:43:02] 已后台运行 pid=1502577，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0743.log
+[2025-10-31 07:44:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0744.log'
+[2025-10-31 07:44:01] 已后台运行 pid=1505221，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0744.log
+[2025-10-31 07:45:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0745.log'
+[2025-10-31 07:45:01] 已后台运行 pid=1507899，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0745.log
+[2025-10-31 07:46:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0746.log'
+[2025-10-31 07:46:02] 已后台运行 pid=1510557，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0746.log
+[2025-10-31 07:47:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0747.log'
+[2025-10-31 07:47:01] 已后台运行 pid=1513210，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0747.log
+[2025-10-31 07:48:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0748.log'
+[2025-10-31 07:48:02] 已后台运行 pid=1515971，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0748.log
+[2025-10-31 07:49:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0749.log'
+[2025-10-31 07:49:01] 已后台运行 pid=1518602，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0749.log
+[2025-10-31 07:50:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0750.log'
+[2025-10-31 07:50:01] 已后台运行 pid=1521463，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0750.log
+[2025-10-31 07:51:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0751.log'
+[2025-10-31 07:51:02] 已后台运行 pid=1524283，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0751.log
+[2025-10-31 07:52:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0752.log'
+[2025-10-31 07:52:01] 已后台运行 pid=1526931，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0752.log
+[2025-10-31 07:53:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0753.log'
+[2025-10-31 07:53:02] 已后台运行 pid=1529712，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0753.log
+[2025-10-31 07:54:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0754.log'
+[2025-10-31 07:54:01] 已后台运行 pid=1532350，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0754.log
+[2025-10-31 07:55:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0755.log'
+[2025-10-31 07:55:01] 已后台运行 pid=1535023，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0755.log
+[2025-10-31 07:56:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0756.log'
+[2025-10-31 07:56:02] 已后台运行 pid=1537688，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0756.log
+[2025-10-31 07:57:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0757.log'
+[2025-10-31 07:57:01] 已后台运行 pid=1540324，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0757.log
+[2025-10-31 07:58:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0758.log'
+[2025-10-31 07:58:01] 已后台运行 pid=1543103，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0758.log
+[2025-10-31 07:59:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0759.log'
+[2025-10-31 07:59:02] 已后台运行 pid=1545762，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0759.log
+[2025-10-31 08:00:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0800.log'
+[2025-10-31 08:00:01] 已后台运行 pid=1548607，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0800.log
+[2025-10-31 08:01:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0801.log'
+[2025-10-31 08:01:01] 已后台运行 pid=1551387，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0801.log
+[2025-10-31 08:02:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0802.log'
+[2025-10-31 08:02:02] 已后台运行 pid=1554027，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0802.log
+[2025-10-31 08:03:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0803.log'
+[2025-10-31 08:03:01] 已后台运行 pid=1556779，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0803.log
+[2025-10-31 08:04:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0804.log'
+[2025-10-31 08:04:02] 已后台运行 pid=1559582，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0804.log
+[2025-10-31 08:05:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0805.log'
+[2025-10-31 08:05:01] 已后台运行 pid=1562174，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0805.log
+[2025-10-31 08:06:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0806.log'
+[2025-10-31 08:06:01] 已后台运行 pid=1564897，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0806.log
+[2025-10-31 08:07:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0807.log'
+[2025-10-31 08:07:02] 已后台运行 pid=1567584，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0807.log
+[2025-10-31 08:08:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0808.log'
+[2025-10-31 08:08:01] 已后台运行 pid=1570341，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0808.log
+[2025-10-31 08:09:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0809.log'
+[2025-10-31 08:09:02] 已后台运行 pid=1572999，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0809.log
+[2025-10-31 08:10:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0810.log'
+[2025-10-31 08:10:01] 已后台运行 pid=1575723，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0810.log
+[2025-10-31 08:11:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0811.log'
+[2025-10-31 08:11:01] 已后台运行 pid=1578480，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0811.log
+[2025-10-31 08:12:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0812.log'
+[2025-10-31 08:12:02] 已后台运行 pid=1581178，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0812.log
+[2025-10-31 08:13:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0813.log'
+[2025-10-31 08:13:01] 已后台运行 pid=1583949，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0813.log
+[2025-10-31 08:14:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0814.log'
+[2025-10-31 08:14:01] 已后台运行 pid=1586617，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0814.log
+[2025-10-31 08:15:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0815.log'
+[2025-10-31 08:15:02] 已后台运行 pid=1589311，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0815.log
+[2025-10-31 08:16:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0816.log'
+[2025-10-31 08:16:01] 已后台运行 pid=1591940，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0816.log
+[2025-10-31 08:17:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0817.log'
+[2025-10-31 08:17:01] 已后台运行 pid=1594611，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0817.log
+[2025-10-31 08:18:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0818.log'
+[2025-10-31 08:18:02] 已后台运行 pid=1597533，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0818.log
+[2025-10-31 08:19:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0819.log'
+[2025-10-31 08:19:01] 已后台运行 pid=1600133，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0819.log
+[2025-10-31 08:20:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0820.log'
+[2025-10-31 08:20:02] 已后台运行 pid=1602929，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0820.log
+[2025-10-31 08:21:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0821.log'
+[2025-10-31 08:21:02] 已后台运行 pid=1605659，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0821.log
+[2025-10-31 08:22:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0822.log'
+[2025-10-31 08:22:01] 已后台运行 pid=1608323，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0822.log
+[2025-10-31 08:23:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0823.log'
+[2025-10-31 08:23:02] 已后台运行 pid=1611080，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0823.log
+[2025-10-31 08:24:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0824.log'
+[2025-10-31 08:24:01] 已后台运行 pid=1613747，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0824.log
+[2025-10-31 08:25:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0825.log'
+[2025-10-31 08:25:01] 已后台运行 pid=1616414，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0825.log
+[2025-10-31 08:26:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0826.log'
+[2025-10-31 08:26:02] 已后台运行 pid=1619074，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0826.log
+[2025-10-31 08:27:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0827.log'
+[2025-10-31 08:27:01] 已后台运行 pid=1621728，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0827.log
+[2025-10-31 08:28:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0828.log'
+[2025-10-31 08:28:02] 已后台运行 pid=1624486，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0828.log
+[2025-10-31 08:29:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0829.log'
+[2025-10-31 08:29:01] 已后台运行 pid=1627163，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0829.log
+[2025-10-31 08:30:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0830.log'
+[2025-10-31 08:30:01] 已后台运行 pid=1629865，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0830.log
+[2025-10-31 08:31:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0831.log'
+[2025-10-31 08:31:02] 已后台运行 pid=1632656，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0831.log
+[2025-10-31 08:32:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0832.log'
+[2025-10-31 08:32:01] 已后台运行 pid=1635304，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0832.log
+[2025-10-31 08:33:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0833.log'
+[2025-10-31 08:33:01] 已后台运行 pid=1638208，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0833.log
+[2025-10-31 08:34:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0834.log'
+[2025-10-31 08:34:02] 已后台运行 pid=1640858，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0834.log
+[2025-10-31 08:35:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0835.log'
+[2025-10-31 08:35:01] 已后台运行 pid=1643511，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0835.log
+[2025-10-31 08:36:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0836.log'
+[2025-10-31 08:36:02] 已后台运行 pid=1646178，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0836.log
+[2025-10-31 08:37:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0837.log'
+[2025-10-31 08:37:01] 已后台运行 pid=1648818，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0837.log
+[2025-10-31 08:38:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0838.log'
+[2025-10-31 08:38:01] 已后台运行 pid=1651600，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0838.log
+[2025-10-31 08:39:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0839.log'
+[2025-10-31 08:39:02] 已后台运行 pid=1654263，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0839.log
+[2025-10-31 08:40:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0840.log'
+[2025-10-31 08:40:01] 已后台运行 pid=1656980，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0840.log
+[2025-10-31 08:41:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0841.log'
+[2025-10-31 08:41:01] 已后台运行 pid=1659729，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0841.log
+[2025-10-31 08:42:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0842.log'
+[2025-10-31 08:42:02] 已后台运行 pid=1662380，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0842.log
+[2025-10-31 08:43:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0843.log'
+[2025-10-31 08:43:01] 已后台运行 pid=1665149，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0843.log
+[2025-10-31 08:44:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0844.log'
+[2025-10-31 08:44:01] 已后台运行 pid=1667802，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0844.log
+[2025-10-31 08:45:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0845.log'
+[2025-10-31 08:45:02] 已后台运行 pid=1670521，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0845.log
+[2025-10-31 08:46:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0846.log'
+[2025-10-31 08:46:01] 已后台运行 pid=1673091，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0846.log
+[2025-10-31 08:47:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0847.log'
+[2025-10-31 08:47:02] 已后台运行 pid=1675895，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0847.log
+[2025-10-31 08:48:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0848.log'
+[2025-10-31 08:48:01] 已后台运行 pid=1678636，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0848.log
+[2025-10-31 08:49:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0849.log'
+[2025-10-31 08:49:01] 已后台运行 pid=1681305，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0849.log
+[2025-10-31 08:50:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0850.log'
+[2025-10-31 08:50:02] 已后台运行 pid=1684018，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0850.log
+[2025-10-31 08:51:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0851.log'
+[2025-10-31 08:51:01] 已后台运行 pid=1686740，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0851.log
+[2025-10-31 08:52:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0852.log'
+[2025-10-31 08:52:01] 已后台运行 pid=1689414，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0852.log
+[2025-10-31 08:53:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0853.log'
+[2025-10-31 08:53:02] 已后台运行 pid=1692134，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0853.log
+[2025-10-31 08:54:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0854.log'
+[2025-10-31 08:54:01] 已后台运行 pid=1694758，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0854.log
+[2025-10-31 08:55:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0855.log'
+[2025-10-31 08:55:01] 已后台运行 pid=1697406，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0855.log
+[2025-10-31 08:56:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0856.log'
+[2025-10-31 08:56:02] 已后台运行 pid=1700066，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0856.log
+[2025-10-31 08:57:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0857.log'
+[2025-10-31 08:57:01] 已后台运行 pid=1702682，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0857.log
+[2025-10-31 08:58:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0858.log'
+[2025-10-31 08:58:02] 已后台运行 pid=1705460，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0858.log
+[2025-10-31 08:59:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0859.log'
+[2025-10-31 08:59:01] 已后台运行 pid=1708101，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0859.log
+[2025-10-31 09:00:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0900.log'
+[2025-10-31 09:00:01] 已后台运行 pid=1710819，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0900.log
+[2025-10-31 09:01:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0901.log'
+[2025-10-31 09:01:02] 已后台运行 pid=1713721，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0901.log
+[2025-10-31 09:02:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0902.log'
+[2025-10-31 09:02:01] 已后台运行 pid=1716317，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0902.log
+[2025-10-31 09:03:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0903.log'
+[2025-10-31 09:03:01] 已后台运行 pid=1719152，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0903.log
+[2025-10-31 09:04:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0904.log'
+[2025-10-31 09:04:02] 已后台运行 pid=1721787，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0904.log
+[2025-10-31 09:05:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0905.log'
+[2025-10-31 09:05:01] 已后台运行 pid=1724429，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0905.log
+[2025-10-31 09:06:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0906.log'
+[2025-10-31 09:06:01] 已后台运行 pid=1727069，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0906.log
+[2025-10-31 09:07:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0907.log'
+[2025-10-31 09:07:02] 已后台运行 pid=1729705，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0907.log
+[2025-10-31 09:08:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0908.log'
+[2025-10-31 09:08:01] 已后台运行 pid=1732439，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0908.log
+[2025-10-31 09:09:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0909.log'
+[2025-10-31 09:09:02] 已后台运行 pid=1735092，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0909.log
+[2025-10-31 09:10:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0910.log'
+[2025-10-31 09:10:01] 已后台运行 pid=1737785，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0910.log
+[2025-10-31 09:11:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0911.log'
+[2025-10-31 09:11:01] 已后台运行 pid=1740553，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0911.log
+[2025-10-31 09:12:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0912.log'
+[2025-10-31 09:12:02] 已后台运行 pid=1743194，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0912.log
+[2025-10-31 09:13:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0913.log'
+[2025-10-31 09:13:01] 已后台运行 pid=1745935，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0913.log
+[2025-10-31 09:14:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0914.log'
+[2025-10-31 09:14:01] 已后台运行 pid=1748676，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0914.log
+[2025-10-31 09:15:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0915.log'
+[2025-10-31 09:15:02] 已后台运行 pid=1751404，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0915.log
+[2025-10-31 09:16:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0916.log'
+[2025-10-31 09:16:01] 已后台运行 pid=1754047，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0916.log
+[2025-10-31 09:17:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0917.log'
+[2025-10-31 09:17:02] 已后台运行 pid=1756704，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0917.log
+[2025-10-31 09:18:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0918.log'
+[2025-10-31 09:18:01] 已后台运行 pid=1759466，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0918.log
+[2025-10-31 09:19:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0919.log'
+[2025-10-31 09:19:01] 已后台运行 pid=1762102，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0919.log
+[2025-10-31 09:20:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0920.log'
+[2025-10-31 09:20:02] 已后台运行 pid=1764824，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0920.log
+[2025-10-31 09:21:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0921.log'
+[2025-10-31 09:21:02] 已后台运行 pid=1767556，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0921.log
+[2025-10-31 09:22:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0922.log'
+[2025-10-31 09:22:01] 已后台运行 pid=1770189，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0922.log
+[2025-10-31 09:23:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0923.log'
+[2025-10-31 09:23:02] 已后台运行 pid=1772978，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0923.log
+[2025-10-31 09:24:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0924.log'
+[2025-10-31 09:24:01] 已后台运行 pid=1775608，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0924.log
+[2025-10-31 09:25:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0925.log'
+[2025-10-31 09:25:01] 已后台运行 pid=1778232，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0925.log
+[2025-10-31 09:26:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0926.log'
+[2025-10-31 09:26:02] 已后台运行 pid=1780909，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0926.log
+[2025-10-31 09:27:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0927.log'
+[2025-10-31 09:27:01] 已后台运行 pid=1783540，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0927.log
+[2025-10-31 09:28:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0928.log'
+[2025-10-31 09:28:02] 已后台运行 pid=1786438，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0928.log
+[2025-10-31 09:29:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0929.log'
+[2025-10-31 09:29:01] 已后台运行 pid=1789080，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0929.log
+[2025-10-31 09:30:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0930.log'
+[2025-10-31 09:30:01] 已后台运行 pid=1791782，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0930.log
+[2025-10-31 09:31:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0931.log'
+[2025-10-31 09:31:02] 已后台运行 pid=1794557，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0931.log
+[2025-10-31 09:32:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0932.log'
+[2025-10-31 09:32:01] 已后台运行 pid=1797190，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0932.log
+[2025-10-31 09:33:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0933.log'
+[2025-10-31 09:33:01] 已后台运行 pid=1799964，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0933.log
+[2025-10-31 09:34:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0934.log'
+[2025-10-31 09:34:02] 已后台运行 pid=1802607，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0934.log
+[2025-10-31 09:35:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0935.log'
+[2025-10-31 09:35:01] 已后台运行 pid=1805272，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0935.log
+[2025-10-31 09:36:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0936.log'
+[2025-10-31 09:36:02] 已后台运行 pid=1807890，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0936.log
+[2025-10-31 09:37:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0937.log'
+[2025-10-31 09:37:01] 已后台运行 pid=1810529，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0937.log
+[2025-10-31 09:38:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0938.log'
+[2025-10-31 09:38:01] 已后台运行 pid=1813288，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0938.log
+[2025-10-31 09:39:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0939.log'
+[2025-10-31 09:39:02] 已后台运行 pid=1815955，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0939.log
+[2025-10-31 09:40:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0940.log'
+[2025-10-31 09:40:01] 已后台运行 pid=1818647，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0940.log
+[2025-10-31 09:41:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0941.log'
+[2025-10-31 09:41:01] 已后台运行 pid=1821498，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0941.log
+[2025-10-31 09:42:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0942.log'
+[2025-10-31 09:42:02] 已后台运行 pid=1824344，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0942.log
+[2025-10-31 09:43:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0943.log'
+[2025-10-31 09:43:01] 已后台运行 pid=1827110，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0943.log
+[2025-10-31 09:44:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0944.log'
+[2025-10-31 09:44:01] 已后台运行 pid=1829751，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0944.log
+[2025-10-31 09:45:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0945.log'
+[2025-10-31 09:45:02] 已后台运行 pid=1832408，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0945.log
+[2025-10-31 09:46:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0946.log'
+[2025-10-31 09:46:01] 已后台运行 pid=1835190，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0946.log
+[2025-10-31 09:47:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0947.log'
+[2025-10-31 09:47:02] 已后台运行 pid=1837840，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0947.log
+[2025-10-31 09:48:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0948.log'
+[2025-10-31 09:48:01] 已后台运行 pid=1840591，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0948.log
+[2025-10-31 09:49:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0949.log'
+[2025-10-31 09:49:01] 已后台运行 pid=1843234，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0949.log
+[2025-10-31 09:50:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0950.log'
+[2025-10-31 09:50:02] 已后台运行 pid=1845964，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0950.log
+[2025-10-31 09:51:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0951.log'
+[2025-10-31 09:51:01] 已后台运行 pid=1848709，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0951.log
+[2025-10-31 09:52:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0952.log'
+[2025-10-31 09:52:01] 已后台运行 pid=1851355，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0952.log
+[2025-10-31 09:53:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0953.log'
+[2025-10-31 09:53:02] 已后台运行 pid=1854186，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0953.log
+[2025-10-31 09:54:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0954.log'
+[2025-10-31 09:54:01] 已后台运行 pid=1856812，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0954.log
+[2025-10-31 09:55:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0955.log'
+[2025-10-31 09:55:02] 已后台运行 pid=1859517，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0955.log
+[2025-10-31 09:56:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0956.log'
+[2025-10-31 09:56:01] 已后台运行 pid=1862251，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0956.log
+[2025-10-31 09:57:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0957.log'
+[2025-10-31 09:57:01] 已后台运行 pid=1864890，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0957.log
+[2025-10-31 09:58:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0958.log'
+[2025-10-31 09:58:02] 已后台运行 pid=1867656，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0958.log
+[2025-10-31 09:59:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_0959.log'
+[2025-10-31 09:59:01] 已后台运行 pid=1870292，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_0959.log
+[2025-10-31 10:00:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1000.log'
+[2025-10-31 10:00:02] 已后台运行 pid=1872998，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1000.log
+[2025-10-31 10:01:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1001.log'
+[2025-10-31 10:01:02] 已后台运行 pid=1875761，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1001.log
+[2025-10-31 10:02:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1002.log'
+[2025-10-31 10:02:01] 已后台运行 pid=1878438，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1002.log
+[2025-10-31 10:03:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1003.log'
+[2025-10-31 10:03:01] 已后台运行 pid=1881199，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1003.log
+[2025-10-31 10:04:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1004.log'
+[2025-10-31 10:04:02] 已后台运行 pid=1883859，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1004.log
+[2025-10-31 10:05:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1005.log'
+[2025-10-31 10:05:01] 已后台运行 pid=1886486，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1005.log
+[2025-10-31 10:06:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1006.log'
+[2025-10-31 10:06:02] 已后台运行 pid=1889135，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1006.log
+[2025-10-31 10:07:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1007.log'
+[2025-10-31 10:07:01] 已后台运行 pid=1891787，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1007.log
+[2025-10-31 10:08:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1008.log'
+[2025-10-31 10:08:01] 已后台运行 pid=1894562，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1008.log
+[2025-10-31 10:09:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1009.log'
+[2025-10-31 10:09:02] 已后台运行 pid=1897346，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1009.log
+[2025-10-31 10:10:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1010.log'
+[2025-10-31 10:10:01] 已后台运行 pid=1900028，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1010.log
+[2025-10-31 10:11:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1011.log'
+[2025-10-31 10:11:01] 已后台运行 pid=1904709，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1011.log
+[2025-10-31 10:12:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1012.log'
+[2025-10-31 10:12:02] 已后台运行 pid=1908852，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1012.log
+[2025-10-31 10:13:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1013.log'
+[2025-10-31 10:13:01] 已后台运行 pid=1912015，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1013.log
+[2025-10-31 10:14:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1014.log'
+[2025-10-31 10:14:01] 已后台运行 pid=1916932，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1014.log
+[2025-10-31 10:15:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1015.log'
+[2025-10-31 10:15:02] 已后台运行 pid=1921820，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1015.log
+[2025-10-31 10:16:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1016.log'
+[2025-10-31 10:16:01] 已后台运行 pid=1924482，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1016.log
+[2025-10-31 10:17:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1017.log'
+[2025-10-31 10:17:02] 已后台运行 pid=1927192，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1017.log
+[2025-10-31 10:18:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1018.log'
+[2025-10-31 10:18:01] 已后台运行 pid=1929840，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1018.log
+[2025-10-31 10:19:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1019.log'
+[2025-10-31 10:19:01] 已后台运行 pid=1932585，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1019.log
+[2025-10-31 10:20:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1020.log'
+[2025-10-31 10:20:02] 已后台运行 pid=1935297，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1020.log
+[2025-10-31 10:21:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1021.log'
+[2025-10-31 10:21:01] 已后台运行 pid=1938057，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1021.log
+[2025-10-31 10:22:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1022.log'
+[2025-10-31 10:22:01] 已后台运行 pid=1940926，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1022.log
+[2025-10-31 10:23:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1023.log'
+[2025-10-31 10:23:02] 已后台运行 pid=1944353，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1023.log
+[2025-10-31 10:24:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1024.log'
+[2025-10-31 10:24:01] 已后台运行 pid=1947466，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1024.log
+[2025-10-31 10:25:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1025.log'
+[2025-10-31 10:25:02] 已后台运行 pid=1950195，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1025.log
+[2025-10-31 10:26:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1026.log'
+[2025-10-31 10:26:01] 已后台运行 pid=1952899，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1026.log
+[2025-10-31 10:27:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1027.log'
+[2025-10-31 10:27:01] 已后台运行 pid=1955561，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1027.log
+[2025-10-31 10:28:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1028.log'
+[2025-10-31 10:28:02] 已后台运行 pid=1958375，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1028.log
+[2025-10-31 10:29:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1029.log'
+[2025-10-31 10:29:01] 已后台运行 pid=1961159，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1029.log
+[2025-10-31 10:30:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1030.log'
+[2025-10-31 10:30:02] 已后台运行 pid=1963973，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1030.log
+[2025-10-31 10:31:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1031.log'
+[2025-10-31 10:31:01] 已后台运行 pid=1966748，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1031.log
+[2025-10-31 10:32:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1032.log'
+[2025-10-31 10:32:01] 已后台运行 pid=1969505，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1032.log
+[2025-10-31 10:33:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1033.log'
+[2025-10-31 10:33:02] 已后台运行 pid=1972708，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1033.log
+[2025-10-31 10:34:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1034.log'
+[2025-10-31 10:34:01] 已后台运行 pid=1975448，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1034.log
+[2025-10-31 10:35:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1035.log'
+[2025-10-31 10:35:02] 已后台运行 pid=1978117，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1035.log
+[2025-10-31 10:36:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1036.log'
+[2025-10-31 10:36:01] 已后台运行 pid=1980975，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1036.log
+[2025-10-31 10:37:02] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1037.log'
+[2025-10-31 10:37:02] 已后台运行 pid=1982993，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1037.log
+[2025-10-31 10:38:01] 启动 'TrainCVLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251031_1038.log'
+[2025-10-31 10:38:01] 已后台运行 pid=1987959，详见 /home/yeqi3/cyr/code/LaBraM/log/20251031_1038.log

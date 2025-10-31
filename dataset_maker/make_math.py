@@ -235,48 +235,39 @@ def process_mat_file(mat_path: str,
             print(f"[warn {verbose_name}] 通道重排失败，保持原顺序。err={e}")
 
     E, C, T = eeg.shape
-    wlen = int(out_fs * window_sec)
 
     saved = 0
     for ep in range(E):
         x = np.asarray(eeg[ep], dtype=np.float64)  # (C, T)
         try:
             x = _filter_notch_resample(x, fs=fs,
-                                       band_low=band[0], band_high=band[1],
-                                       notch_freq=notch, out_fs=out_fs)
+                                    band_low=band[0], band_high=band[1],
+                                    notch_freq=notch, out_fs=out_fs)
         except Exception as e:
             errfile = os.path.join(dump_folder, "process_error_files.txt")
             with open(errfile, "a", encoding="utf-8") as f:
                 f.write(f"{Path(mat_path).name}\tFILTER_FAIL(ep={ep})\t{repr(e)}\n")
-            print(f"[warn {verbose_name}] 滤波/重采样失败 @ ep={ep}: {e}")
-            continue
-
-        n_win = x.shape[1] // wlen
-        if n_win == 0:
-            # 该 epoch 太短，跳过
+            print(f"[{now()}] [warn {verbose_name}] 滤波/重采样失败 @ ep={ep}: {e}")
             continue
 
         try:
             y = int(np.asarray(labels[ep]).item())
         except Exception:
-            # 若非数值标签，尝试强制转 int 失败则记录文本
             try:
                 y = int(labels[ep])
             except Exception:
-                y = labels[ep]  # 保存原值（可能是字符串）；下游若严格要求int，可在此自定义映射
+                y = labels[ep]
 
-        for i in range(n_win):
-            seg = x[:, i * wlen:(i + 1) * wlen]  # (C, 2000)
-            if not np.all(np.isfinite(seg)):
-                # 跳过含NaN/Inf的窗
-                continue
-            out_name = f"{base}_ep{ep:04d}_w{i:03d}.pkl"
+        # 整条 epoch 作为一个样本保存
+        if np.all(np.isfinite(x)):
+            out_name = f"{base}_ep{ep:04d}.pkl"
             out_path = os.path.join(dump_folder, out_name)
             with open(out_path, "wb") as f:
-                pickle.dump({"X": seg, "y": y}, f)
+                pickle.dump({"X": x, "y": y, "fs": out_fs if out_fs is not None else fs}, f)
             saved += 1
 
     return saved
+
 
 
 def _gather_subject_mats(root_dir: str):
@@ -298,7 +289,7 @@ def main():
     BAND_HIGH   = 75.0
     NOTCH       = 50.0
     OUT_FS      = 200
-    WINDOW_SEC  = 10
+    WINDOW_SEC  = None
     REORDER     = False  # 先保留你的 64 通道，不做裁剪；若要统一顺序，改 True 并替换 chOrder_standard
     WORKERS_MAX = 1     # 你允许的最大并行数（会与CPU核数、文件数取 min）
 
@@ -306,15 +297,15 @@ def main():
     BASE_OUT_PATH  = '/usr/data/yeqi3/labram_processed'
 
     DATA_PATHS = [
-        os.path.join(BASE_DATA_PATH, 'read'),
+        # os.path.join(BASE_DATA_PATH, 'read'),
         os.path.join(BASE_DATA_PATH, 'type'),
-        os.path.join(BASE_DATA_PATH, 'read_new'),
+        # os.path.join(BASE_DATA_PATH, 'read_new'),
         os.path.join(BASE_DATA_PATH, 'type_new'),
     ]
     OUT_PATHS = [
-        os.path.join(BASE_OUT_PATH, 'read'),
+        # os.path.join(BASE_OUT_PATH, 'read'),
         os.path.join(BASE_OUT_PATH, 'type'),
-        os.path.join(BASE_OUT_PATH, 'read_new'),
+        # os.path.join(BASE_OUT_PATH, 'read_new'),
         os.path.join(BASE_OUT_PATH, 'type_new'),
     ]
     # ====================================================
@@ -337,7 +328,11 @@ def main():
         print(f"Out Dir    : {out_dir}")
         print(f"Files      : {len(mats)}")
         print(f"Filter     : {BAND_LOW}-{BAND_HIGH} Hz, Notch={NOTCH} Hz")
-        print(f"Resample   : {OUT_FS} Hz, Window={WINDOW_SEC}s (= {OUT_FS * WINDOW_SEC} pts)")
+        if WINDOW_SEC and WINDOW_SEC > 0:
+            print(f"Resample   : {OUT_FS} Hz, Window={WINDOW_SEC}s (= {int(OUT_FS * WINDOW_SEC)} pts)")
+        else:
+            print(f"Resample   : {OUT_FS} Hz, Window=None (save whole epoch)")
+
         print(f"Reorder    : {REORDER}")
         print(f"Workers    : {workers}")
         print("=" * 60)
