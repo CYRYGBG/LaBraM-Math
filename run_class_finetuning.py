@@ -18,6 +18,7 @@ import torch.backends.cudnn as cudnn
 import json
 import os
 import warnings
+import csv
 warnings.filterwarnings("ignore")
 
 from pathlib import Path
@@ -301,6 +302,7 @@ def get_dataset(args):
 def main(args, ds_init):
     if args.dataset == 'MATH_KFOLD' and args.fold_index is None:
         fold_accuracies = []
+        fold_results = []
         for fold_idx in range(args.kfold_num):
             print(f"========== Running fold {fold_idx} / {args.kfold_num} ==========")
             fold_args = argparse.Namespace(**vars(args))
@@ -310,9 +312,43 @@ def main(args, ds_init):
                 Path(fold_args.output_dir).mkdir(parents=True, exist_ok=True)
             if args.log_dir:
                 fold_args.log_dir = os.path.join(args.log_dir, f"fold_{fold_idx}")
+            done_file = None
+            if fold_args.output_dir:
+                done_file = Path(fold_args.output_dir) / "finished.json"
+                if done_file.exists():
+                    try:
+                        with open(done_file, "r", encoding="utf-8") as f:
+                            cached_result = json.load(f)
+                    except Exception:
+                        cached_result = None
+                    else:
+                        print(f"Fold {fold_idx} already completed, skip re-running.")
+                        if isinstance(cached_result, dict):
+                            fold_results.append((fold_idx, cached_result))
+                            if 'accuracy' in cached_result and cached_result['accuracy'] is not None:
+                                fold_accuracies.append(cached_result['accuracy'])
+                            continue
             fold_result = main(fold_args, ds_init)
             if isinstance(fold_result, dict) and 'accuracy' in fold_result and fold_result['accuracy'] is not None:
                 fold_accuracies.append(fold_result['accuracy'])
+            if isinstance(fold_result, dict):
+                fold_results.append((fold_idx, fold_result))
+        if args.output_dir and fold_results:
+            summary_path = Path(args.output_dir) / "summary.csv"
+            metric_keys = sorted({key for _, result in fold_results for key in result.keys()})
+            with open(summary_path, "w", encoding="utf-8", newline="") as f:
+                writer = csv.writer(f)
+                writer.writerow(["fold"] + metric_keys)
+                for fold_idx, result in fold_results:
+                    row = [f"fold_{fold_idx}"]
+                    for key in metric_keys:
+                        row.append(result.get(key, ""))
+                    writer.writerow(row)
+                avg_row = ["mean"]
+                for key in metric_keys:
+                    values = [res[key] for _, res in fold_results if key in res and isinstance(res[key], (int, float))]
+                    avg_row.append(float(np.mean(values)) if values else "")
+                writer.writerow(avg_row)
         if fold_accuracies:
             mean_acc = float(np.mean(fold_accuracies))
             print(f"Average accuracy over {len(fold_accuracies)} folds: {mean_acc:.4f}")
@@ -320,6 +356,19 @@ def main(args, ds_init):
         return
 
     utils.init_distributed_mode(args)
+
+    done_file = None
+    if args.dataset == 'MATH_KFOLD' and args.fold_index is not None and args.output_dir:
+        done_file = Path(args.output_dir) / "finished.json"
+        if done_file.exists():
+            try:
+                with open(done_file, "r", encoding="utf-8") as f:
+                    cached_result = json.load(f)
+            except Exception:
+                cached_result = None
+            else:
+                print(f"Fold {args.fold_index} detected as completed. Skipping training.")
+                return cached_result
 
     if ds_init is not None:
         utils.create_ds_config(args)
@@ -574,7 +623,14 @@ def main(args, ds_init):
             bal_mean = float('nan')
             bal_std = float('nan')
         print(f"======Accuracy: {acc_mean} {acc_std}, balanced accuracy: {bal_mean} {bal_std}")
-        return {"accuracy": acc_mean if accuracy else None}
+        result_payload = {"accuracy": acc_mean if accuracy else None}
+        if done_file:
+            try:
+                with open(done_file, "w", encoding="utf-8") as f:
+                    json.dump(result_payload, f)
+            except Exception:
+                pass
+        return result_payload
 
     print(f"Start training for {args.epochs} epochs")
     start_time = time.time()
@@ -667,9 +723,16 @@ def main(args, ds_init):
     total_time = time.time() - start_time
     total_time_str = str(datetime.timedelta(seconds=int(total_time)))
     print('Training time {}'.format(total_time_str))
-    return best_test_stats if best_test_stats is not None else {
+    final_result = best_test_stats if best_test_stats is not None else {
         "accuracy": max_accuracy_test if max_accuracy_test != 0.0 else None
     }
+    if done_file:
+        try:
+            with open(done_file, "w", encoding="utf-8") as f:
+                json.dump(final_result, f)
+        except Exception:
+            pass
+    return final_result
 
 
 if __name__ == '__main__':
