@@ -28,8 +28,8 @@ except Exception:
 # =========================
 # ======== 配置区 =========
 # =========================
-IN_ROOT = Path("/path/to/make_math/output")   # ← 改成 make_math 生成结果的根目录
-OUT_ROOT = Path("/path/to/output/kfold")      # ← 新的五折输出根目录
+IN_ROOT = Path("/usr/data/yeqi3/labram_processed/read_new")   # ← 改成 make_math 生成结果的根目录
+OUT_ROOT = Path("/usr/data/yeqi3/labram_fold/read_new")      # ← 新的五折输出根目录
 FOLDS = 5
 SEED = 42
 SHUFFLE = True

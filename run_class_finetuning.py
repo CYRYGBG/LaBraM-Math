@@ -17,6 +17,8 @@ import torch
 import torch.backends.cudnn as cudnn
 import json
 import os
+import warnings
+warnings.filterwarnings("ignore")
 
 from pathlib import Path
 from collections import OrderedDict
@@ -31,6 +33,34 @@ from utils import NativeScalerWithGradNormCount as NativeScaler
 import utils
 from scipy import interpolate
 import modeling_finetune
+
+# === [NEW] collate：将每个样本最后一维裁剪/补零为 200 的整数倍 ===
+def _collate_align_T200(batch, T: int = 200):
+    """
+    batch: List[ (x, y) ]，其中 x 形状应为 (N_channels, L_time) 或 (N, L)
+    输出:
+      X: (B, N, L_aligned)  其中 L_aligned 是 200 的整数倍
+      y: (B,)
+    """
+    xs, ys = zip(*batch)
+    xs2 = []
+    for x in xs:
+        xt = torch.as_tensor(x)  # 兼容 numpy/torch
+        L = xt.shape[-1]
+        if L % T != 0:
+            L2 = (L // T) * T
+            if L2 <= 0:
+                # 极端短片段：末尾补零到 T
+                pad = T - L
+                xt = torch.nn.functional.pad(xt, (0, pad))
+            else:
+                # 常见情况：裁掉尾部余数
+                xt = xt[..., :L2]
+        xs2.append(xt)
+    X = torch.stack(xs2, dim=0)           # (B, N, L')
+    y = torch.as_tensor(ys, dtype=torch.long)
+    return X, y
+
 
 def get_args():
     parser = argparse.ArgumentParser('LaBraM fine-tuning and evaluation script for EEG classification', add_help=False)
@@ -253,7 +283,17 @@ def get_dataset(args):
         val_dataset = utils.TUABLoader(str(val_root), val_files)
         if args.nb_classes <= 0:
             raise ValueError("Please set --nb_classes to a positive value for the MATH_KFOLD dataset.")
-        ch_names = None
+            
+        # ===== 关键：显式给 64 通道并大写（与能跑通版本一致）=====
+        ch_names = [
+            'Fp1','AF7','AF3','F1','F3','F5','F7','FT7','FC5','FC3','FC1','C1','C3','C5','T7','TP7','CP5','CP3','CP1','P1',
+            'P3','P5','P7','P9','PO7','PO3','O1','Iz','Oz','POz','Pz','CPz','Fpz','Fp2','AF8','AF4','AFz','Fz','F2','F4',
+            'F6','F8','FT8','FC6','FC4','FC2','FCz','Cz','C2','C4','C6','T8','TP8','CP6','CP4','CP2','P2','P4','P6','P8',
+            'P10','PO8','PO4','O2'
+        ]
+        ch_names = [c.upper() for c in ch_names]
+
+        # 多分类常用指标（和你能跑通版本保持一致）
         metrics = ["accuracy", "balanced_accuracy"]
     return train_dataset, test_dataset, val_dataset, ch_names, metrics
 
@@ -344,6 +384,7 @@ def main(args, ds_init):
         num_workers=args.num_workers,
         pin_memory=args.pin_mem,
         drop_last=False,
+        collate_fn=_collate_align_T200,
     )
 
     if dataset_val is not None:
@@ -352,7 +393,8 @@ def main(args, ds_init):
             batch_size=int(1.5 * args.batch_size),
             num_workers=args.num_workers,
             pin_memory=args.pin_mem,
-            drop_last=False
+            drop_last=False,
+            collate_fn=_collate_align_T200,
         )
         if type(dataset_test) == list:
             data_loader_test = [torch.utils.data.DataLoader(
@@ -360,7 +402,8 @@ def main(args, ds_init):
                 batch_size=int(1.5 * args.batch_size),
                 num_workers=args.num_workers,
                 pin_memory=args.pin_mem,
-                drop_last=False
+                drop_last=False,
+                collate_fn=_collate_align_T200,
             ) for dataset, sampler in zip(dataset_test, sampler_test)]
         else:
             data_loader_test = torch.utils.data.DataLoader(
@@ -368,7 +411,8 @@ def main(args, ds_init):
                 batch_size=int(1.5 * args.batch_size),
                 num_workers=args.num_workers,
                 pin_memory=args.pin_mem,
-                drop_last=False
+                drop_last=False,
+                collate_fn=_collate_align_T200,
             )
     else:
         data_loader_val = None
@@ -435,7 +479,7 @@ def main(args, ds_init):
     model_without_ddp = model
     n_parameters = sum(p.numel() for p in model.parameters() if p.requires_grad)
 
-    print("Model = %s" % str(model_without_ddp))
+    # print("Model = %s" % str(model_without_ddp))
     print('number of params:', n_parameters)
 
     total_batch_size = args.batch_size * args.update_freq * utils.get_world_size()

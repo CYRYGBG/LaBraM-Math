@@ -29,9 +29,9 @@ CONFIG = {
 
     # 处理好的 PKL 根目录（可以多个）。支持子目录递归扫描 *.pkl
     "PKL_ROOTS": [
-        "/usr/data/yeqi3/labram_processed/read",
-        "/usr/data/yeqi3/labram_processed/type",
-        "/usr/data/yeqi3/labram_processed/read_new",
+        # "/usr/data/yeqi3/labram_processed/read",
+        # "/usr/data/yeqi3/labram_processed/type",
+        # "/usr/data/yeqi3/labram_processed/read_new",
         "/usr/data/yeqi3/labram_processed/type_new",
     ],
 
@@ -46,17 +46,31 @@ CONFIG = {
     "SUBJECT_REGEX": r"sub_(\d+)_simplified",
     "CV_SPLITS": 5,
 
-    # 模型与超参
+    # 模型与超参(原始参数设置)
+    # "MODEL": "labram_base_patch200_200",
+    # "BATCH_SIZE": 48,
+    # "EPOCHS": 50,  # 50
+    # "LR": 5e-4,
+    # "WARMUP_EPOCHS": 5,
+    # "LAYER_DECAY": 0.65,
+    # "DROP_PATH": 0.1,
+    # "UPDATE_FREQ": 1,
+    # "SAVE_CKPT_FREQ": 9999,
+    # "NUM_WORKERS": 4,
+    # 模型与超参(原始参数设置)
+
+    # 模型与超参(新设置)
     "MODEL": "labram_base_patch200_200",
     "BATCH_SIZE": 48,
-    "EPOCHS": 50,  # 50
-    "LR": 5e-4,
-    "WARMUP_EPOCHS": 5,
-    "LAYER_DECAY": 0.65,
+    "EPOCHS": 200,  # 50
+    "LR": 3e-5,
+    "WARMUP_EPOCHS": 3,
+    "LAYER_DECAY": 0.8,
     "DROP_PATH": 0.1,
     "UPDATE_FREQ": 1,
     "SAVE_CKPT_FREQ": 9999,
     "NUM_WORKERS": 4,
+    # 模型与超参(新设置)
 
     # 官方脚本常见开关（保持与 README 一致）
     "DISABLE_REL_POS_BIAS": True,

@@ -1,0 +1,1708 @@
+
+========== Launch ==========
+[DATASET ] read
+[DATAROOT] /usr/data/yeqi3/labram_fold/read
+[OUTPUT  ] /usr/data/yeqi3/LaBraM_log/multids/cv/read
+[LOG     ] /usr/data/yeqi3/LaBraM_log/multids/log/read
+/home/yeqi3/anaconda3/envs/cyr/bin/torchrun --nproc_per_node=3 /home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py --dataset MATH_KFOLD --data_root /usr/data/yeqi3/labram_fold/read --kfold_num 5 --nb_classes 1 --model labram_base_patch200_200 --input_size 200 --batch_size 48 --epochs 50 --lr 0.0005 --warmup_epochs 5 --layer_decay 0.9 --drop_path 0.1 --update_freq 1 --save_ckpt_freq 9999 --num_workers 4 --seed 42 --output_dir /usr/data/yeqi3/LaBraM_log/multids/cv/read --log_dir /usr/data/yeqi3/LaBraM_log/multids/log/read --disable_rel_pos_bias --abs_pos_emb --disable_qkv_bias --finetune /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth
+============================
+
+========== Running fold 0 / 5 ==========
+========== Running fold 0 / 5 ==========
+========== Running fold 0 / 5 ==========
+| distributed init (rank 1): env://, gpu 1
+[W1103 11:04:53.296812714 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+| distributed init (rank 2): env://, gpu 2
+| distributed init (rank 0): env://, gpu 0
+[W1103 11:04:53.357906373 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[W1103 11:04:53.358357296 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[rank1]:[W1103 11:04:53.642502005 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+[rank0]:[W1103 11:04:53.650962498 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+[rank2]:[W1103 11:04:53.656888377 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+Namespace(batch_size=48, epochs=50, update_freq=1, save_ckpt_freq=9999, robust_test=None, model='labram_base_patch200_200', qkv_bias=False, rel_pos_bias=False, abs_pos_emb=True, layer_scale_init_value=0.1, input_size=200, drop=0.0, attn_drop_rate=0.0, drop_path=0.1, disable_eval_during_finetuning=False, model_ema=False, model_ema_decay=0.9999, model_ema_force_cpu=False, opt='adamw', opt_eps=1e-08, opt_betas=None, clip_grad=None, momentum=0.9, weight_decay=0.05, weight_decay_end=None, lr=0.0005, layer_decay=0.9, warmup_lr=1e-06, min_lr=1e-06, warmup_epochs=5, warmup_steps=-1, smoothing=0.1, reprob=0.25, remode='pixel', recount=1, resplit=False, finetune='/home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth', model_key='model|module', model_prefix='', model_filter_name='gzp', init_scale=0.001, use_mean_pooling=True, disable_weight_decay_on_rel_pos_bias=False, nb_classes=1, output_dir='/usr/data/yeqi3/LaBraM_log/multids/cv/read/fold_0', log_dir='/usr/data/yeqi3/LaBraM_log/multids/log/read/fold_0', device='cuda', seed=42, resume='', auto_resume=True, save_ckpt=True, start_epoch=0, eval=False, dist_eval=False, num_workers=4, pin_mem=True, world_size=3, local_rank=-1, dist_on_itp=False, dist_url='env://', enable_deepspeed=False, dataset='MATH_KFOLD', data_root='/usr/data/yeqi3/labram_fold/read', kfold_num=5, fold_index=0, rank=0, gpu=0, distributed=True, dist_backend='nccl')
+Sampler_train = <torch.utils.data.distributed.DistributedSampler object at 0x7f37bfec1660>
+/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py:421: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(args.finetune, map_location='cpu')
+/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py:421: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(args.finetune, map_location='cpu')
+Patch size = 200
+/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py:421: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(args.finetune, map_location='cpu')
+Load ckpt from /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth
+Load state_dict by model_key = model
+Weights of NeuralTransformer not initialized from pretrained model: ['fc_norm.weight', 'fc_norm.bias', 'head.weight', 'head.bias']
+Weights from pretrained model not used in NeuralTransformer: ['mask_token', 'lm_head.weight', 'lm_head.bias', 'norm.weight', 'norm.bias']
+Model = NeuralTransformer(
+  (patch_embed): TemporalConv(
+    (conv1): Conv2d(1, 8, kernel_size=(1, 15), stride=(1, 8), padding=(0, 7))
+    (gelu1): GELU(approximate='none')
+    (norm1): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv2): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (gelu2): GELU(approximate='none')
+    (norm2): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv3): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (norm3): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (gelu3): GELU(approximate='none')
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (blocks): ModuleList(
+    (0): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (1): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.00909090880304575)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (2): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0181818176060915)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (3): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.027272727340459824)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (4): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.036363635212183)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (5): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.045454543083906174)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (6): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.054545458406209946)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (7): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.06363636255264282)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (8): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0727272778749466)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (9): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.08181818574666977)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (10): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.09090909361839294)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (11): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.10000000149011612)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (norm): Identity()
+  (fc_norm): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+  (head): Linear(in_features=200, out_features=1, bias=True)
+)
+number of params: 5820137
+LR = 0.00050000
+Batch size = 144
+Update frequent = 1
+Number of training examples = 5222
+Number of training training per epoch = 36
+Assigned values = [0.2541865828329001, 0.2824295364810001, 0.31381059609000006, 0.3486784401000001, 0.3874204890000001, 0.4304672100000001, 0.4782969000000001, 0.531441, 0.5904900000000001, 0.6561, 0.7290000000000001, 0.81, 0.9, 1.0]
+Skip weight decay name marked in model: {'pos_embed', 'cls_token', 'time_embed'}
+Optimizer config: {'lr': 0.0005, 'weight_decay': 0.0, 'eps': 1e-08}
+/home/yeqi3/cyr/code/LaBraM/utils.py:505: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self._scaler = torch.cuda.amp.GradScaler()
+Use step level LR scheduler!
+Set warmup steps = 180
+/home/yeqi3/cyr/code/LaBraM/utils.py:505: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self._scaler = torch.cuda.amp.GradScaler()
+/home/yeqi3/cyr/code/LaBraM/utils.py:505: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self._scaler = torch.cuda.amp.GradScaler()
+Set warmup steps = 0
+Max WD = 0.0500000, Min WD = 0.0500000
+criterion = BCEWithLogitsLoss()
+Auto resume checkpoint: 
+Start training for 50 epochs
+/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py:77: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py:77: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py:77: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 667, in <module>
+[rank2]:     main(opts, ds_init)
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 301, in main
+[rank2]:     fold_result = main(fold_args, ds_init)
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 577, in main
+[rank2]:     train_stats = train_one_epoch(
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 78, in train_one_epoch
+[rank2]:     loss, output = train_class_batch(
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 19, in train_class_batch
+[rank2]:     outputs = model(samples, ch_names)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1643, in forward
+[rank2]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1459, in _run_ddp_forward
+[rank2]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 395, in forward
+[rank2]:     x = self.forward_features(x, input_chans=input_chans, return_patch_tokens=return_patch_tokens, return_all_tokens=return_all_tokens, **kwargs)
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 362, in forward_features
+[rank2]:     x = x + pos_embed
+[rank2]: RuntimeError: The size of tensor a (641) must match the size of tensor b (1281) at non-singleton dimension 1
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 667, in <module>
+[rank1]:     main(opts, ds_init)
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 301, in main
+[rank1]:     fold_result = main(fold_args, ds_init)
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 577, in main
+[rank1]:     train_stats = train_one_epoch(
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 78, in train_one_epoch
+[rank1]:     loss, output = train_class_batch(
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 19, in train_class_batch
+[rank1]:     outputs = model(samples, ch_names)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1643, in forward
+[rank1]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1459, in _run_ddp_forward
+[rank1]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 395, in forward
+[rank1]:     x = self.forward_features(x, input_chans=input_chans, return_patch_tokens=return_patch_tokens, return_all_tokens=return_all_tokens, **kwargs)
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 362, in forward_features
+[rank1]:     x = x + pos_embed
+[rank1]: RuntimeError: The size of tensor a (641) must match the size of tensor b (1281) at non-singleton dimension 1
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 667, in <module>
+[rank0]:     main(opts, ds_init)
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 301, in main
+[rank0]:     fold_result = main(fold_args, ds_init)
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 577, in main
+[rank0]:     train_stats = train_one_epoch(
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 78, in train_one_epoch
+[rank0]:     loss, output = train_class_batch(
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 19, in train_class_batch
+[rank0]:     outputs = model(samples, ch_names)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1643, in forward
+[rank0]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1459, in _run_ddp_forward
+[rank0]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 395, in forward
+[rank0]:     x = self.forward_features(x, input_chans=input_chans, return_patch_tokens=return_patch_tokens, return_all_tokens=return_all_tokens, **kwargs)
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 362, in forward_features
+[rank0]:     x = x + pos_embed
+[rank0]: RuntimeError: The size of tensor a (641) must match the size of tensor b (1281) at non-singleton dimension 1
+[rank0]:[W1103 11:04:55.301305739 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W1103 11:04:56.398000 1926247 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1926438 closing signal SIGTERM
+W1103 11:04:56.399000 1926247 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1926439 closing signal SIGTERM
+E1103 11:04:56.613000 1926247 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 2 (pid: 1926440) of binary: /home/yeqi3/anaconda3/envs/cyr/bin/python
+Traceback (most recent call last):
+  File "/home/yeqi3/anaconda3/envs/cyr/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-11-03_11:04:56
+  host      : scnumath
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 1926440)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+[WARN] 子任务失败（read），返回码 1。继续下一个数据集。
+
+========== Launch ==========
+[DATASET ] type
+[DATAROOT] /usr/data/yeqi3/labram_fold/type
+[OUTPUT  ] /usr/data/yeqi3/LaBraM_log/multids/cv/type
+[LOG     ] /usr/data/yeqi3/LaBraM_log/multids/log/type
+/home/yeqi3/anaconda3/envs/cyr/bin/torchrun --nproc_per_node=3 /home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py --dataset MATH_KFOLD --data_root /usr/data/yeqi3/labram_fold/type --kfold_num 5 --nb_classes 1 --model labram_base_patch200_200 --input_size 200 --batch_size 48 --epochs 50 --lr 0.0005 --warmup_epochs 5 --layer_decay 0.9 --drop_path 0.1 --update_freq 1 --save_ckpt_freq 9999 --num_workers 4 --seed 42 --output_dir /usr/data/yeqi3/LaBraM_log/multids/cv/type --log_dir /usr/data/yeqi3/LaBraM_log/multids/log/type --disable_rel_pos_bias --abs_pos_emb --disable_qkv_bias --finetune /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth
+============================
+
+========== Running fold 0 / 5 ==================== Running fold 0 / 5 ==========
+
+========== Running fold 0 / 5 ==========
+| distributed init (rank 2): env://, gpu 2
+[W1103 11:05:02.033472318 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+| distributed init (rank 0): env://, gpu 0
+[W1103 11:05:02.082625749 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+| distributed init (rank 1): env://, gpu 1
+[W1103 11:05:02.186957326 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[rank2]:[W1103 11:05:02.358814798 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+[rank0]:[W1103 11:05:02.392993692 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+[rank1]:[W1103 11:05:02.405252599 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+Namespace(batch_size=48, epochs=50, update_freq=1, save_ckpt_freq=9999, robust_test=None, model='labram_base_patch200_200', qkv_bias=False, rel_pos_bias=False, abs_pos_emb=True, layer_scale_init_value=0.1, input_size=200, drop=0.0, attn_drop_rate=0.0, drop_path=0.1, disable_eval_during_finetuning=False, model_ema=False, model_ema_decay=0.9999, model_ema_force_cpu=False, opt='adamw', opt_eps=1e-08, opt_betas=None, clip_grad=None, momentum=0.9, weight_decay=0.05, weight_decay_end=None, lr=0.0005, layer_decay=0.9, warmup_lr=1e-06, min_lr=1e-06, warmup_epochs=5, warmup_steps=-1, smoothing=0.1, reprob=0.25, remode='pixel', recount=1, resplit=False, finetune='/home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth', model_key='model|module', model_prefix='', model_filter_name='gzp', init_scale=0.001, use_mean_pooling=True, disable_weight_decay_on_rel_pos_bias=False, nb_classes=1, output_dir='/usr/data/yeqi3/LaBraM_log/multids/cv/type/fold_0', log_dir='/usr/data/yeqi3/LaBraM_log/multids/log/type/fold_0', device='cuda', seed=42, resume='', auto_resume=True, save_ckpt=True, start_epoch=0, eval=False, dist_eval=False, num_workers=4, pin_mem=True, world_size=3, local_rank=-1, dist_on_itp=False, dist_url='env://', enable_deepspeed=False, dataset='MATH_KFOLD', data_root='/usr/data/yeqi3/labram_fold/type', kfold_num=5, fold_index=0, rank=0, gpu=0, distributed=True, dist_backend='nccl')
+Sampler_train = <torch.utils.data.distributed.DistributedSampler object at 0x7f2f52fe9660>
+/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py:421: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(args.finetune, map_location='cpu')
+Patch size = 200
+/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py:421: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(args.finetune, map_location='cpu')
+/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py:421: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(args.finetune, map_location='cpu')
+Load ckpt from /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth
+Load state_dict by model_key = model
+Weights of NeuralTransformer not initialized from pretrained model: ['fc_norm.weight', 'fc_norm.bias', 'head.weight', 'head.bias']
+Weights from pretrained model not used in NeuralTransformer: ['mask_token', 'lm_head.weight', 'lm_head.bias', 'norm.weight', 'norm.bias']
+Model = NeuralTransformer(
+  (patch_embed): TemporalConv(
+    (conv1): Conv2d(1, 8, kernel_size=(1, 15), stride=(1, 8), padding=(0, 7))
+    (gelu1): GELU(approximate='none')
+    (norm1): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv2): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (gelu2): GELU(approximate='none')
+    (norm2): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv3): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (norm3): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (gelu3): GELU(approximate='none')
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (blocks): ModuleList(
+    (0): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (1): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.00909090880304575)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (2): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0181818176060915)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (3): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.027272727340459824)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (4): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.036363635212183)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (5): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.045454543083906174)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (6): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.054545458406209946)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (7): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.06363636255264282)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (8): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0727272778749466)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (9): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.08181818574666977)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (10): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.09090909361839294)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (11): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.10000000149011612)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (norm): Identity()
+  (fc_norm): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+  (head): Linear(in_features=200, out_features=1, bias=True)
+)
+number of params: 5820137
+LR = 0.00050000
+Batch size = 144
+Update frequent = 1
+Number of training examples = 4206
+Number of training training per epoch = 29
+Assigned values = [0.2541865828329001, 0.2824295364810001, 0.31381059609000006, 0.3486784401000001, 0.3874204890000001, 0.4304672100000001, 0.4782969000000001, 0.531441, 0.5904900000000001, 0.6561, 0.7290000000000001, 0.81, 0.9, 1.0]
+Skip weight decay name marked in model: {'time_embed', 'cls_token', 'pos_embed'}
+Optimizer config: {'lr': 0.0005, 'weight_decay': 0.0, 'eps': 1e-08}
+/home/yeqi3/cyr/code/LaBraM/utils.py:505: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self._scaler = torch.cuda.amp.GradScaler()
+/home/yeqi3/cyr/code/LaBraM/utils.py:505: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self._scaler = torch.cuda.amp.GradScaler()
+Use step level LR scheduler!
+Set warmup steps = 145
+/home/yeqi3/cyr/code/LaBraM/utils.py:505: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self._scaler = torch.cuda.amp.GradScaler()
+Set warmup steps = 0
+Max WD = 0.0500000, Min WD = 0.0500000
+criterion = BCEWithLogitsLoss()
+Auto resume checkpoint: 
+Start training for 50 epochs
+/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py:77: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py:77: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py:77: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 667, in <module>
+[rank2]:     main(opts, ds_init)
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 301, in main
+[rank2]:     fold_result = main(fold_args, ds_init)
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 577, in main
+[rank2]:     train_stats = train_one_epoch(
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 78, in train_one_epoch
+[rank2]:     loss, output = train_class_batch(
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 19, in train_class_batch
+[rank2]:     outputs = model(samples, ch_names)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1643, in forward
+[rank2]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1459, in _run_ddp_forward
+[rank2]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 395, in forward
+[rank2]:     x = self.forward_features(x, input_chans=input_chans, return_patch_tokens=return_patch_tokens, return_all_tokens=return_all_tokens, **kwargs)
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 362, in forward_features
+[rank2]:     x = x + pos_embed
+[rank2]: RuntimeError: The size of tensor a (449) must match the size of tensor b (897) at non-singleton dimension 1
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 667, in <module>
+[rank1]:     main(opts, ds_init)
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 301, in main
+[rank1]:     fold_result = main(fold_args, ds_init)
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 577, in main
+[rank1]:     train_stats = train_one_epoch(
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 78, in train_one_epoch
+[rank1]:     loss, output = train_class_batch(
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 19, in train_class_batch
+[rank1]:     outputs = model(samples, ch_names)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1643, in forward
+[rank1]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1459, in _run_ddp_forward
+[rank1]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 395, in forward
+[rank1]:     x = self.forward_features(x, input_chans=input_chans, return_patch_tokens=return_patch_tokens, return_all_tokens=return_all_tokens, **kwargs)
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 362, in forward_features
+[rank1]:     x = x + pos_embed
+[rank1]: RuntimeError: The size of tensor a (449) must match the size of tensor b (897) at non-singleton dimension 1
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 667, in <module>
+[rank0]:     main(opts, ds_init)
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 301, in main
+[rank0]:     fold_result = main(fold_args, ds_init)
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 577, in main
+[rank0]:     train_stats = train_one_epoch(
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 78, in train_one_epoch
+[rank0]:     loss, output = train_class_batch(
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 19, in train_class_batch
+[rank0]:     outputs = model(samples, ch_names)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1643, in forward
+[rank0]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1459, in _run_ddp_forward
+[rank0]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 395, in forward
+[rank0]:     x = self.forward_features(x, input_chans=input_chans, return_patch_tokens=return_patch_tokens, return_all_tokens=return_all_tokens, **kwargs)
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 362, in forward_features
+[rank0]:     x = x + pos_embed
+[rank0]: RuntimeError: The size of tensor a (449) must match the size of tensor b (897) at non-singleton dimension 1
+[rank0]:[W1103 11:05:03.693142832 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W1103 11:05:04.946000 1927831 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1927879 closing signal SIGTERM
+W1103 11:05:04.946000 1927831 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1927880 closing signal SIGTERM
+E1103 11:05:05.174000 1927831 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 1927878) of binary: /home/yeqi3/anaconda3/envs/cyr/bin/python
+Traceback (most recent call last):
+  File "/home/yeqi3/anaconda3/envs/cyr/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-11-03_11:05:04
+  host      : scnumath
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1927878)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+[WARN] 子任务失败（type），返回码 1。继续下一个数据集。
+
+========== Launch ==========
+[DATASET ] read_new
+[DATAROOT] /usr/data/yeqi3/labram_fold/read_new
+[OUTPUT  ] /usr/data/yeqi3/LaBraM_log/multids/cv/read_new
+[LOG     ] /usr/data/yeqi3/LaBraM_log/multids/log/read_new
+/home/yeqi3/anaconda3/envs/cyr/bin/torchrun --nproc_per_node=3 /home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py --dataset MATH_KFOLD --data_root /usr/data/yeqi3/labram_fold/read_new --kfold_num 5 --nb_classes 1 --model labram_base_patch200_200 --input_size 200 --batch_size 48 --epochs 50 --lr 0.0005 --warmup_epochs 5 --layer_decay 0.9 --drop_path 0.1 --update_freq 1 --save_ckpt_freq 9999 --num_workers 4 --seed 42 --output_dir /usr/data/yeqi3/LaBraM_log/multids/cv/read_new --log_dir /usr/data/yeqi3/LaBraM_log/multids/log/read_new --disable_rel_pos_bias --abs_pos_emb --disable_qkv_bias --finetune /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth
+============================
+
+========== Running fold 0 / 5 ==========
+========== Running fold 0 / 5 ==========
+========== Running fold 0 / 5 ==========
+| distributed init (rank 2): env://, gpu 2
+[W1103 11:05:10.547064495 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+| distributed init (rank 0): env://, gpu 0
+[W1103 11:05:10.647242698 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+| distributed init (rank 1): env://, gpu 1
+[W1103 11:05:10.709698098 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[rank2]:[W1103 11:05:10.816177332 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+[rank0]:[W1103 11:05:11.951418249 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+[rank1]:[W1103 11:05:11.961991049 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+Namespace(batch_size=48, epochs=50, update_freq=1, save_ckpt_freq=9999, robust_test=None, model='labram_base_patch200_200', qkv_bias=False, rel_pos_bias=False, abs_pos_emb=True, layer_scale_init_value=0.1, input_size=200, drop=0.0, attn_drop_rate=0.0, drop_path=0.1, disable_eval_during_finetuning=False, model_ema=False, model_ema_decay=0.9999, model_ema_force_cpu=False, opt='adamw', opt_eps=1e-08, opt_betas=None, clip_grad=None, momentum=0.9, weight_decay=0.05, weight_decay_end=None, lr=0.0005, layer_decay=0.9, warmup_lr=1e-06, min_lr=1e-06, warmup_epochs=5, warmup_steps=-1, smoothing=0.1, reprob=0.25, remode='pixel', recount=1, resplit=False, finetune='/home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth', model_key='model|module', model_prefix='', model_filter_name='gzp', init_scale=0.001, use_mean_pooling=True, disable_weight_decay_on_rel_pos_bias=False, nb_classes=1, output_dir='/usr/data/yeqi3/LaBraM_log/multids/cv/read_new/fold_0', log_dir='/usr/data/yeqi3/LaBraM_log/multids/log/read_new/fold_0', device='cuda', seed=42, resume='', auto_resume=True, save_ckpt=True, start_epoch=0, eval=False, dist_eval=False, num_workers=4, pin_mem=True, world_size=3, local_rank=-1, dist_on_itp=False, dist_url='env://', enable_deepspeed=False, dataset='MATH_KFOLD', data_root='/usr/data/yeqi3/labram_fold/read_new', kfold_num=5, fold_index=0, rank=0, gpu=0, distributed=True, dist_backend='nccl')
+Sampler_train = <torch.utils.data.distributed.DistributedSampler object at 0x7efd8f2e5660>
+/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py:421: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(args.finetune, map_location='cpu')
+/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py:421: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(args.finetune, map_location='cpu')
+Patch size = 200
+/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py:421: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(args.finetune, map_location='cpu')
+Load ckpt from /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth
+Load state_dict by model_key = model
+Weights of NeuralTransformer not initialized from pretrained model: ['fc_norm.weight', 'fc_norm.bias', 'head.weight', 'head.bias']
+Weights from pretrained model not used in NeuralTransformer: ['mask_token', 'lm_head.weight', 'lm_head.bias', 'norm.weight', 'norm.bias']
+Model = NeuralTransformer(
+  (patch_embed): TemporalConv(
+    (conv1): Conv2d(1, 8, kernel_size=(1, 15), stride=(1, 8), padding=(0, 7))
+    (gelu1): GELU(approximate='none')
+    (norm1): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv2): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (gelu2): GELU(approximate='none')
+    (norm2): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv3): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (norm3): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (gelu3): GELU(approximate='none')
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (blocks): ModuleList(
+    (0): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (1): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.00909090880304575)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (2): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0181818176060915)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (3): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.027272727340459824)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (4): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.036363635212183)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (5): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.045454543083906174)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (6): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.054545458406209946)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (7): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.06363636255264282)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (8): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0727272778749466)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (9): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.08181818574666977)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (10): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.09090909361839294)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (11): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.10000000149011612)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (norm): Identity()
+  (fc_norm): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+  (head): Linear(in_features=200, out_features=1, bias=True)
+)
+number of params: 5820137
+LR = 0.00050000
+Batch size = 144
+Update frequent = 1
+Number of training examples = 5082
+Number of training training per epoch = 35
+Assigned values = [0.2541865828329001, 0.2824295364810001, 0.31381059609000006, 0.3486784401000001, 0.3874204890000001, 0.4304672100000001, 0.4782969000000001, 0.531441, 0.5904900000000001, 0.6561, 0.7290000000000001, 0.81, 0.9, 1.0]
+Skip weight decay name marked in model: {'cls_token', 'time_embed', 'pos_embed'}
+Optimizer config: {'lr': 0.0005, 'weight_decay': 0.0, 'eps': 1e-08}
+/home/yeqi3/cyr/code/LaBraM/utils.py:505: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self._scaler = torch.cuda.amp.GradScaler()
+Use step level LR scheduler!
+Set warmup steps = 175
+/home/yeqi3/cyr/code/LaBraM/utils.py:505: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self._scaler = torch.cuda.amp.GradScaler()
+/home/yeqi3/cyr/code/LaBraM/utils.py:505: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self._scaler = torch.cuda.amp.GradScaler()
+Set warmup steps = 0
+Max WD = 0.0500000, Min WD = 0.0500000
+criterion = BCEWithLogitsLoss()
+Auto resume checkpoint: 
+Start training for 50 epochs
+/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py:77: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py:77: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py:77: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 667, in <module>
+[rank2]:     main(opts, ds_init)
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 301, in main
+[rank2]:     fold_result = main(fold_args, ds_init)
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 577, in main
+[rank2]:     train_stats = train_one_epoch(
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 78, in train_one_epoch
+[rank2]:     loss, output = train_class_batch(
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 19, in train_class_batch
+[rank2]:     outputs = model(samples, ch_names)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1643, in forward
+[rank2]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1459, in _run_ddp_forward
+[rank2]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 395, in forward
+[rank2]:     x = self.forward_features(x, input_chans=input_chans, return_patch_tokens=return_patch_tokens, return_all_tokens=return_all_tokens, **kwargs)
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 362, in forward_features
+[rank2]:     x = x + pos_embed
+[rank2]: RuntimeError: The size of tensor a (641) must match the size of tensor b (1281) at non-singleton dimension 1
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 667, in <module>
+[rank0]:     main(opts, ds_init)
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 301, in main
+[rank0]:     fold_result = main(fold_args, ds_init)
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 577, in main
+[rank0]:     train_stats = train_one_epoch(
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 78, in train_one_epoch
+[rank0]:     loss, output = train_class_batch(
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 19, in train_class_batch
+[rank0]:     outputs = model(samples, ch_names)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1643, in forward
+[rank0]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1459, in _run_ddp_forward
+[rank0]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 395, in forward
+[rank0]:     x = self.forward_features(x, input_chans=input_chans, return_patch_tokens=return_patch_tokens, return_all_tokens=return_all_tokens, **kwargs)
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 362, in forward_features
+[rank0]:     x = x + pos_embed
+[rank0]: RuntimeError: The size of tensor a (641) must match the size of tensor b (1281) at non-singleton dimension 1
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 667, in <module>
+[rank1]:     main(opts, ds_init)
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 301, in main
+[rank1]:     fold_result = main(fold_args, ds_init)
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 577, in main
+[rank1]:     train_stats = train_one_epoch(
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 78, in train_one_epoch
+[rank1]:     loss, output = train_class_batch(
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 19, in train_class_batch
+[rank1]:     outputs = model(samples, ch_names)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1643, in forward
+[rank1]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1459, in _run_ddp_forward
+[rank1]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 395, in forward
+[rank1]:     x = self.forward_features(x, input_chans=input_chans, return_patch_tokens=return_patch_tokens, return_all_tokens=return_all_tokens, **kwargs)
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 362, in forward_features
+[rank1]:     x = x + pos_embed
+[rank1]: RuntimeError: The size of tensor a (641) must match the size of tensor b (1281) at non-singleton dimension 1
+[rank0]:[W1103 11:05:12.627556263 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W1103 11:05:13.932000 1929439 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1929479 closing signal SIGTERM
+W1103 11:05:13.932000 1929439 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1929481 closing signal SIGTERM
+E1103 11:05:14.128000 1929439 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 1 (pid: 1929480) of binary: /home/yeqi3/anaconda3/envs/cyr/bin/python
+Traceback (most recent call last):
+  File "/home/yeqi3/anaconda3/envs/cyr/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-11-03_11:05:13
+  host      : scnumath
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 1929480)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+[WARN] 子任务失败（read_new），返回码 1。继续下一个数据集。
+
+========== Launch ==========
+[DATASET ] type_new
+[DATAROOT] /usr/data/yeqi3/labram_fold/type_new
+[OUTPUT  ] /usr/data/yeqi3/LaBraM_log/multids/cv/type_new
+[LOG     ] /usr/data/yeqi3/LaBraM_log/multids/log/type_new
+/home/yeqi3/anaconda3/envs/cyr/bin/torchrun --nproc_per_node=3 /home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py --dataset MATH_KFOLD --data_root /usr/data/yeqi3/labram_fold/type_new --kfold_num 5 --nb_classes 1 --model labram_base_patch200_200 --input_size 200 --batch_size 48 --epochs 50 --lr 0.0005 --warmup_epochs 5 --layer_decay 0.9 --drop_path 0.1 --update_freq 1 --save_ckpt_freq 9999 --num_workers 4 --seed 42 --output_dir /usr/data/yeqi3/LaBraM_log/multids/cv/type_new --log_dir /usr/data/yeqi3/LaBraM_log/multids/log/type_new --disable_rel_pos_bias --abs_pos_emb --disable_qkv_bias --finetune /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth
+============================
+
+========== Running fold 0 / 5 ==========
+========== Running fold 0 / 5 ==========
+========== Running fold 0 / 5 ==========
+| distributed init (rank 0): env://, gpu 0
+[W1103 11:05:19.520255036 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+| distributed init (rank 1): env://, gpu 1
+[W1103 11:05:19.539468508 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+| distributed init (rank 2): env://, gpu 2
+[W1103 11:05:19.671513594 CUDAAllocatorConfig.h:28] Warning: expandable_segments not supported on this platform (function operator())
+[rank1]:[W1103 11:05:19.846911792 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+[rank0]:[W1103 11:05:19.849068206 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+[rank2]:[W1103 11:05:19.880459817 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+Namespace(batch_size=48, epochs=50, update_freq=1, save_ckpt_freq=9999, robust_test=None, model='labram_base_patch200_200', qkv_bias=False, rel_pos_bias=False, abs_pos_emb=True, layer_scale_init_value=0.1, input_size=200, drop=0.0, attn_drop_rate=0.0, drop_path=0.1, disable_eval_during_finetuning=False, model_ema=False, model_ema_decay=0.9999, model_ema_force_cpu=False, opt='adamw', opt_eps=1e-08, opt_betas=None, clip_grad=None, momentum=0.9, weight_decay=0.05, weight_decay_end=None, lr=0.0005, layer_decay=0.9, warmup_lr=1e-06, min_lr=1e-06, warmup_epochs=5, warmup_steps=-1, smoothing=0.1, reprob=0.25, remode='pixel', recount=1, resplit=False, finetune='/home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth', model_key='model|module', model_prefix='', model_filter_name='gzp', init_scale=0.001, use_mean_pooling=True, disable_weight_decay_on_rel_pos_bias=False, nb_classes=1, output_dir='/usr/data/yeqi3/LaBraM_log/multids/cv/type_new/fold_0', log_dir='/usr/data/yeqi3/LaBraM_log/multids/log/type_new/fold_0', device='cuda', seed=42, resume='', auto_resume=True, save_ckpt=True, start_epoch=0, eval=False, dist_eval=False, num_workers=4, pin_mem=True, world_size=3, local_rank=-1, dist_on_itp=False, dist_url='env://', enable_deepspeed=False, dataset='MATH_KFOLD', data_root='/usr/data/yeqi3/labram_fold/type_new', kfold_num=5, fold_index=0, rank=0, gpu=0, distributed=True, dist_backend='nccl')
+Sampler_train = <torch.utils.data.distributed.DistributedSampler object at 0x7fa71d47d660>
+/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py:421: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(args.finetune, map_location='cpu')
+Patch size = 200
+/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py:421: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(args.finetune, map_location='cpu')
+/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py:421: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(args.finetune, map_location='cpu')
+Load ckpt from /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth
+Load state_dict by model_key = model
+Weights of NeuralTransformer not initialized from pretrained model: ['fc_norm.weight', 'fc_norm.bias', 'head.weight', 'head.bias']
+Weights from pretrained model not used in NeuralTransformer: ['mask_token', 'lm_head.weight', 'lm_head.bias', 'norm.weight', 'norm.bias']
+Model = NeuralTransformer(
+  (patch_embed): TemporalConv(
+    (conv1): Conv2d(1, 8, kernel_size=(1, 15), stride=(1, 8), padding=(0, 7))
+    (gelu1): GELU(approximate='none')
+    (norm1): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv2): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (gelu2): GELU(approximate='none')
+    (norm2): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (conv3): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+    (norm3): GroupNorm(4, 8, eps=1e-05, affine=True)
+    (gelu3): GELU(approximate='none')
+  )
+  (pos_drop): Dropout(p=0.0, inplace=False)
+  (blocks): ModuleList(
+    (0): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): Identity()
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (1): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.00909090880304575)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (2): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0181818176060915)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (3): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.027272727340459824)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (4): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.036363635212183)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (5): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.045454543083906174)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (6): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.054545458406209946)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (7): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.06363636255264282)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (8): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.0727272778749466)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (9): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.08181818574666977)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (10): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.09090909361839294)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+    (11): Block(
+      (norm1): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (attn): Attention(
+        (qkv): Linear(in_features=200, out_features=600, bias=False)
+        (q_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (k_norm): LayerNorm((20,), eps=1e-06, elementwise_affine=True)
+        (attn_drop): Dropout(p=0.0, inplace=False)
+        (proj): Linear(in_features=200, out_features=200, bias=True)
+        (proj_drop): Dropout(p=0.0, inplace=False)
+      )
+      (drop_path): DropPath(p=0.10000000149011612)
+      (norm2): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+      (mlp): Mlp(
+        (fc1): Linear(in_features=200, out_features=800, bias=True)
+        (act): GELU(approximate='none')
+        (fc2): Linear(in_features=800, out_features=200, bias=True)
+        (drop): Dropout(p=0.0, inplace=False)
+      )
+    )
+  )
+  (norm): Identity()
+  (fc_norm): LayerNorm((200,), eps=1e-06, elementwise_affine=True)
+  (head): Linear(in_features=200, out_features=1, bias=True)
+)
+number of params: 5820137
+LR = 0.00050000
+Batch size = 144
+Update frequent = 1
+Number of training examples = 4335
+Number of training training per epoch = 30
+Assigned values = [0.2541865828329001, 0.2824295364810001, 0.31381059609000006, 0.3486784401000001, 0.3874204890000001, 0.4304672100000001, 0.4782969000000001, 0.531441, 0.5904900000000001, 0.6561, 0.7290000000000001, 0.81, 0.9, 1.0]
+Skip weight decay name marked in model: {'cls_token', 'pos_embed', 'time_embed'}
+Optimizer config: {'lr': 0.0005, 'weight_decay': 0.0, 'eps': 1e-08}
+/home/yeqi3/cyr/code/LaBraM/utils.py:505: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self._scaler = torch.cuda.amp.GradScaler()
+Use step level LR scheduler!
+Set warmup steps = 150
+/home/yeqi3/cyr/code/LaBraM/utils.py:505: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self._scaler = torch.cuda.amp.GradScaler()
+/home/yeqi3/cyr/code/LaBraM/utils.py:505: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self._scaler = torch.cuda.amp.GradScaler()
+Set warmup steps = 0
+Max WD = 0.0500000, Min WD = 0.0500000
+criterion = BCEWithLogitsLoss()
+Auto resume checkpoint: 
+Start training for 50 epochs
+/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py:77: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py:77: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py:77: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 667, in <module>
+[rank1]:     main(opts, ds_init)
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 301, in main
+[rank1]:     fold_result = main(fold_args, ds_init)
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 577, in main
+[rank1]:     train_stats = train_one_epoch(
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 78, in train_one_epoch
+[rank1]:     loss, output = train_class_batch(
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 19, in train_class_batch
+[rank1]:     outputs = model(samples, ch_names)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1643, in forward
+[rank1]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1459, in _run_ddp_forward
+[rank1]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 395, in forward
+[rank1]:     x = self.forward_features(x, input_chans=input_chans, return_patch_tokens=return_patch_tokens, return_all_tokens=return_all_tokens, **kwargs)
+[rank1]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 362, in forward_features
+[rank1]:     x = x + pos_embed
+[rank1]: RuntimeError: The size of tensor a (449) must match the size of tensor b (897) at non-singleton dimension 1
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 667, in <module>
+[rank0]:     main(opts, ds_init)
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 301, in main
+[rank0]:     fold_result = main(fold_args, ds_init)
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 577, in main
+[rank0]:     train_stats = train_one_epoch(
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 78, in train_one_epoch
+[rank0]:     loss, output = train_class_batch(
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 19, in train_class_batch
+[rank0]:     outputs = model(samples, ch_names)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1643, in forward
+[rank0]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1459, in _run_ddp_forward
+[rank0]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 395, in forward
+[rank0]:     x = self.forward_features(x, input_chans=input_chans, return_patch_tokens=return_patch_tokens, return_all_tokens=return_all_tokens, **kwargs)
+[rank0]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 362, in forward_features
+[rank0]:     x = x + pos_embed
+[rank0]: RuntimeError: The size of tensor a (449) must match the size of tensor b (897) at non-singleton dimension 1
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 667, in <module>
+[rank2]:     main(opts, ds_init)
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 301, in main
+[rank2]:     fold_result = main(fold_args, ds_init)
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py", line 577, in main
+[rank2]:     train_stats = train_one_epoch(
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 78, in train_one_epoch
+[rank2]:     loss, output = train_class_batch(
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/engine_for_finetuning.py", line 19, in train_class_batch
+[rank2]:     outputs = model(samples, ch_names)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1643, in forward
+[rank2]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1459, in _run_ddp_forward
+[rank2]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:   File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 395, in forward
+[rank2]:     x = self.forward_features(x, input_chans=input_chans, return_patch_tokens=return_patch_tokens, return_all_tokens=return_all_tokens, **kwargs)
+[rank2]:   File "/home/yeqi3/cyr/code/LaBraM/modeling_finetune.py", line 362, in forward_features
+[rank2]:     x = x + pos_embed
+[rank2]: RuntimeError: The size of tensor a (449) must match the size of tensor b (897) at non-singleton dimension 1
+[rank0]:[W1103 11:05:21.317945598 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+W1103 11:05:22.605000 1930896 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1930937 closing signal SIGTERM
+W1103 11:05:22.606000 1930896 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1930939 closing signal SIGTERM
+E1103 11:05:22.820000 1930896 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 1 (pid: 1930938) of binary: /home/yeqi3/anaconda3/envs/cyr/bin/python
+Traceback (most recent call last):
+  File "/home/yeqi3/anaconda3/envs/cyr/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-11-03_11:05:22
+  host      : scnumath
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 1930938)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+[WARN] 子任务失败（type_new），返回码 1。继续下一个数据集。

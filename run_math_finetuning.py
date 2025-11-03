@@ -1178,9 +1178,40 @@ def main(args, ds_init):
             best_tag  = f"checkpoint_best_S{sub_id}_F{k}.pth"
             best_path = os.path.join(fold_out, best_tag) if fold_out else None
 
+            # 新代码（遇到完成标记：先尽量从 done.json 或 best_*.pth 恢复测试集指标，再跳过训练）
             if fold_out and (os.path.exists(done_path) or os.path.exists(best_path)):
-                print(f"[S{sub_id} F{k}] Found completion marker, skip this fold.")
+                restored = False
+                # 1) 优先从 done.json 还原（写入时就包含了 best_test 指标字典）
+                if done_path and os.path.exists(done_path):
+                    try:
+                        with open(done_path, "r", encoding="utf-8") as _f:
+                            _obj = json.load(_f)
+                        _test = _obj.get("best_test") or {}
+                        for m in metrics:
+                            if m in _test:
+                                fold_metrics[m].append(float(_test[m]))
+                                restored = True
+                    except Exception as _e:
+                        print(f"[S{sub_id} F{k}] WARN: failed to restore metrics from done.json: {_e}")
+
+                # 2) 兜底：从 checkpoint_best_Sx_Fy.pth 里读取 test_metrics（新保存逻辑里已包含）
+                if (not restored) and best_path and os.path.exists(best_path):
+                    try:
+                        _ckpt = torch.load(best_path, map_location="cpu")
+                        _test = _ckpt.get("test_metrics") or {}
+                        for m in metrics:
+                            if m in _test:
+                                fold_metrics[m].append(float(_test[m]))
+                                restored = True
+                    except Exception as _e:
+                        print(f"[S{sub_id} F{k}] WARN: failed to restore metrics from checkpoint: {_e}")
+
+                if restored:
+                    print(f"[S{sub_id} F{k}] Skip training but restored metrics from artifacts.")
+                else:
+                    print(f"[S{sub_id} F{k}] Skip training; NO metrics found in artifacts (will count as missing).")
                 continue
+
 
             # 临时切换 output_dir 到该折目录（保证 save/auto_resume/日志都落在独立目录）
             orig_out = args.output_dir
@@ -1286,22 +1317,25 @@ def main(args, ds_init):
         with open(out_csv, "w", newline="", encoding="utf-8") as wf:
             w = csv.DictWriter(wf, fieldnames=fieldnames)
             w.writeheader()
+            MISSING_TOKEN = "nan"  # 或者 "NA"
+
+            # 写每个 subject 行
             for r in rows:
-                # 将 NaN 以空串写出更友好（也可保留为 'nan' 字符串）
                 rr = {}
                 for k in fieldnames:
                     v = r.get(k, "")
                     if isinstance(v, float) and np.isnan(v):
-                        rr[k] = ""
+                        rr[k] = MISSING_TOKEN
                     else:
                         rr[k] = v
                 w.writerow(rr)
-            # OVERALL 行
+
+            # 写 OVERALL 行
             oo = {}
             for k in fieldnames:
                 v = overall.get(k, "")
                 if isinstance(v, float) and np.isnan(v):
-                    oo[k] = ""
+                    oo[k] = MISSING_TOKEN
                 else:
                     oo[k] = v
             w.writerow(oo)

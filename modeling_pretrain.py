@@ -22,6 +22,20 @@ import torch.nn.functional as F
 
 
 def trunc_normal_(tensor, mean=0., std=1.):
+    """
+    对张量进行截断正态分布初始化
+    
+    该函数将输入张量按照指定的均值和标准差进行截断正态分布初始化，
+    截断范围为[-std, std]。
+    
+    参数:
+        tensor: 待初始化的张量
+        mean: 正态分布的均值，默认为0.0
+        std: 正态分布的标准差，默认为1.0
+    
+    返回值:
+        无返回值，直接修改输入张量
+    """
     __call_trunc_normal_(tensor, mean=mean, std=std, a=-std, b=std)
 
 

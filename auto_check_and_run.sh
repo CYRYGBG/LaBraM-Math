@@ -12,13 +12,13 @@ export TZ="Asia/Shanghai"
 BASE_DIR="/home/yeqi3/cyr/code/LaBraM"          # 代码目录
 ENV_NAME="cyr"                                  # conda 环境名
 PYTHON_BIN="${PYTHON_BIN:-python}"              # Python 可执行
-TARGET_FILE="TrainCVLauncher.py"                # 要运行的 Python 文件
+TARGET_FILE="TrainMultiDatasetKFoldLauncher.py"                # 要运行的 Python 文件
 TARGET_PATTERN="${TARGET_PATTERN:-${TARGET_FILE}}"  # 进程匹配关键字
 CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-5,6,7}"  # 限制可见GPU
 
 # 日志：程序运行日志 & 心跳日志
-# LOG_FILE="${BASE_DIR}/log/$(date +'%Y%m%d_%H%M').log"
-LOG_FILE="${BASE_DIR}/log/auto_run.log"
+LOG_FILE="${BASE_DIR}/log/$(date +'%Y%m%d_%H%M').log"
+# LOG_FILE="${BASE_DIR}/log/auto_run.log"
 
 HEARTBEAT_LOG="${BASE_DIR}/cron_heartbeat.log"
 # =================================
