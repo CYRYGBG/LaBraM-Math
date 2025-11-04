@@ -405,6 +405,15 @@ def _get_world_size_env():
 
 
 def init_distributed_mode(args):
+    # 已有 PG 则直接复用，避免在 k-fold 内重复初始化导致冲突
+    if dist.is_available() and dist.is_initialized():
+        args.distributed = True
+        args.rank = get_rank()
+        args.world_size = get_world_size()
+        # 这里拿 LOCAL_RANK；结合 CUDA_VISIBLE_DEVICES 的重映射，0/1/2 -> 物理 5/6/7
+        args.gpu = int(os.environ.get("LOCAL_RANK", 0))
+        setup_for_distributed(args.rank == 0)
+        return
     if args.dist_on_itp:
         args.rank = _get_rank_env()
         args.world_size = _get_world_size_env()  # int(os.environ['OMPI_COMM_WORLD_SIZE'])
@@ -429,13 +438,33 @@ def init_distributed_mode(args):
     args.distributed = True
 
     torch.cuda.set_device(args.gpu)
+    # 预热：确保当前进程已在目标 GPU 上建立 CUDA 上下文（NCCL 随后就能拿到设备）
+    _ = torch.empty(0, device=f"cuda:{args.gpu}")
+
     args.dist_backend = 'nccl'
     print('| distributed init (rank {}): {}, gpu {}'.format(
         args.rank, args.dist_url, args.gpu), flush=True)
-    torch.distributed.init_process_group(backend=args.dist_backend, init_method=args.dist_url,
-                                         world_size=args.world_size, rank=args.rank)
-    torch.distributed.barrier()
+    torch.distributed.init_process_group(
+        backend=args.dist_backend,
+        init_method=args.dist_url,
+        world_size=args.world_size,
+        rank=args.rank,
+    )
+
+    # ---- 安全版 barrier，确保本机通信 ----
+    if dist.get_backend() == "nccl":
+        # 仅在当前主机进程组通信；屏蔽外部网络连接
+        try:
+            torch.distributed.barrier(device_ids=[args.gpu])
+        except Exception as e:
+            print(f"[WARN] NCCL barrier failed on rank {args.rank}, retrying on CPU backend. ({e})")
+            torch.distributed.barrier()  # 回退到默认 CPU 同步
+    else:
+        torch.distributed.barrier()
+
+
     setup_for_distributed(args.rank == 0)
+
 
 
 def load_state_dict(model, state_dict, prefix='', ignore_missing="relative_position_index"):

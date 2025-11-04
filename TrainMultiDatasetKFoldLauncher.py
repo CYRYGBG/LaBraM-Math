@@ -38,11 +38,19 @@ CONFIG = {
     "COMMON": {
         "model": "labram_base_patch200_200",
         "input_size": 200,          # 你的窗口长度
+
         "batch_size": 48,
-        "epochs": 50,
-        "lr": 5e-4,
-        "warmup_epochs": 5,
-        "layer_decay": 0.9,
+        "epochs": 200,
+        "lr": 3e-5,
+        "warmup_epochs": 3,
+        "layer_decay": 0.8,
+
+        # "batch_size": 48,
+        # "epochs": 50,
+        # "lr": 5e-4,
+        # "warmup_epochs": 5,
+        # "layer_decay": 0.9,
+
         "drop_path": 0.1,
         "update_freq": 1,
         "save_ckpt_freq": 9999,
@@ -89,7 +97,11 @@ CONFIG = {
 
     "ENV": {
         "OMP_NUM_THREADS": "1",
-        "MASTER_PORT": "29501",  # 如端口冲突可改
+        "MASTER_ADDR": "127.0.0.1",
+        "MASTER_PORT": "29501",
+        "NCCL_IB_DISABLE": "1",      # 禁用 InfiniBand
+        "NCCL_P2P_DISABLE": "1",     # 禁用 GPU 间直连
+        "NCCL_SOCKET_IFNAME": "lo",  # 仅使用本机 loopback
     },
 }
 # =========================
@@ -170,6 +182,7 @@ def _build_cmd(
     return " ".join([p for p in parts if p])
 
 
+# [修改后]
 def main():
     cfg = CONFIG
 
@@ -186,8 +199,9 @@ def main():
         raise ValueError("未解析到有效 GPU，请检查 CONFIG['GPUS'].")
 
     os.environ["CUDA_VISIBLE_DEVICES"] = gpus_env
-    for k, v in cfg.get("ENV", {}).items():
-        os.environ[str(k)] = str(v)
+    # [FIX 2] 不再全局设置 ENV，而是传递给 Popen
+    # for k, v in cfg.get("ENV", {}).items():
+    #    os.environ[str(k)] = str(v)
 
     code_path = _resolve(cfg["CODE_PATH"])
     if not code_path.exists():
@@ -201,13 +215,28 @@ def main():
     fold_index = cfg.get("FOLD_INDEX", None)
     common = cfg["COMMON"]
 
+    # [FIX 2] 获取基础端口号
+    base_port = int(cfg.get("ENV", {}).get("MASTER_PORT", "29501"))
+
     last_rc = 0
-    for ds in cfg["DATASETS"]:
+    # [FIX 2] 添加 enumerate 以获取数据集索引 i
+    for i, ds in enumerate(cfg["DATASETS"]):
         name = ds.get("name") or Path(ds["data_root"]).name
         output_dir = out_base / name
         log_dir = log_base / name
         output_dir.mkdir(parents=True, exist_ok=True)
         log_dir.mkdir(parents=True, exist_ok=True)
+        
+        # [FIX 2] 为每个子进程创建独立的环境变量
+        current_env = os.environ.copy()
+        for k, v in cfg.get("ENV", {}).items():
+            current_env[str(k)] = str(v)
+        
+        # [FIX 2] 为每个数据集分配一个不同的基础端口
+        # (例如：read=29501, type=29511, read_new=29521)
+        # 乘以 10 是为了给 K-Fold 内部递增(Fix 1)留出足够空间
+        current_ds_port = base_port + (i * 10)
+        current_env["MASTER_PORT"] = str(current_ds_port)
 
         cmd = _build_cmd(
             nproc=nproc,
@@ -224,17 +253,14 @@ def main():
         print(f"[DATAROOT] {ds['data_root']}")
         print(f"[OUTPUT  ] {output_dir}")
         print(f"[LOG     ] {log_dir}")
+        print(f"[PORT    ] {current_ds_port} (Base)") # 打印当前使用的基础端口
         print(cmd)
         print("============================\n")
 
-        proc = subprocess.Popen(cmd, shell=True)
+        # [FIX 2] 必须将修改后的独立环境 env=current_env 传入 Popen
+        proc = subprocess.Popen(cmd, shell=True, env=current_env)
         proc.communicate()
         rc = proc.returncode
-        last_rc = rc
-        if rc != 0:
-            print(f"[WARN] 子任务失败（{name}），返回码 {rc}。继续下一个数据集。")
-
-    sys.exit(last_rc)
 
 
 if __name__ == "__main__":

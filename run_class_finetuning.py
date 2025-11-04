@@ -20,7 +20,8 @@ import os
 import warnings
 import csv
 warnings.filterwarnings("ignore")
-
+import torch.distributed as dist
+_PG_OWNER = False 
 from pathlib import Path
 from collections import OrderedDict
 from timm.data.mixup import Mixup
@@ -300,21 +301,43 @@ def get_dataset(args):
 
 
 def main(args, ds_init):
+    global _PG_OWNER
     if args.dataset == 'MATH_KFOLD' and args.fold_index is None:
         fold_accuracies = []
         fold_results = []
+        
+        # [NEW] 外层：一次性初始化 PG（本数据集全体折共用）
+        global _PG_OWNER
+        this_call_owns_pg = False  # 标记“本次 main 调用是否拥有 PG”
+        if dist.is_available() and not dist.is_initialized():
+            local_rank = int(os.environ.get("LOCAL_RANK", 0))
+            args.gpu = local_rank
+            if torch.cuda.is_available():
+                torch.cuda.set_device(local_rank)
+                _ = torch.empty(0, device=f"cuda:{local_rank}")
+
+            os.environ.setdefault("MASTER_ADDR", "127.0.0.1")
+            os.environ.setdefault("MASTER_PORT", os.environ.get("MASTER_PORT", "29500"))
+            os.environ.setdefault("NCCL_ASYNC_ERROR_HANDLING", "1")
+            os.environ.setdefault("TORCH_NCCL_BLOCKING_WAIT", "1")
+            args.dist_url = f"tcp://127.0.0.1:{os.environ['MASTER_PORT']}"
+
+            utils.init_distributed_mode(args)
+            _PG_OWNER = True
+            this_call_owns_pg = True
+        else:
+            args.distributed = True
+            args.gpu = int(os.environ.get("LOCAL_RANK", 0))
+            args.world_size = int(os.environ.get("WORLD_SIZE", 1))
+
         for fold_idx in range(args.kfold_num):
-            print(f"========== Running fold {fold_idx} / {args.kfold_num} ==========")
+            print(f"========== Running fold {fold_idx + 1} / {args.kfold_num} ==========")
             fold_args = argparse.Namespace(**vars(args))
             fold_args.fold_index = fold_idx
+            # 外层：到对应的 fold 子目录里找标记文件（与内层写入保持一致）
             if args.output_dir:
-                fold_args.output_dir = os.path.join(args.output_dir, f"fold_{fold_idx}")
-                Path(fold_args.output_dir).mkdir(parents=True, exist_ok=True)
-            if args.log_dir:
-                fold_args.log_dir = os.path.join(args.log_dir, f"fold_{fold_idx}")
-            done_file = None
-            if fold_args.output_dir:
-                done_file = Path(fold_args.output_dir) / "finished.json"
+                fold_out_dir = Path(fold_args.output_dir) / f"fold_{fold_idx}"
+                done_file = fold_out_dir / f"finished_fold_{fold_idx}.json"
                 if done_file.exists():
                     try:
                         with open(done_file, "r", encoding="utf-8") as f:
@@ -327,7 +350,8 @@ def main(args, ds_init):
                             fold_results.append((fold_idx, cached_result))
                             if 'accuracy' in cached_result and cached_result['accuracy'] is not None:
                                 fold_accuracies.append(cached_result['accuracy'])
-                            continue
+                        continue
+
             fold_result = main(fold_args, ds_init)
             if isinstance(fold_result, dict) and 'accuracy' in fold_result and fold_result['accuracy'] is not None:
                 fold_accuracies.append(fold_result['accuracy'])
@@ -352,387 +376,440 @@ def main(args, ds_init):
         if fold_accuracies:
             mean_acc = float(np.mean(fold_accuracies))
             print(f"Average accuracy over {len(fold_accuracies)} folds: {mean_acc:.4f}")
+
+
+        # [NEW] 外层统一销毁 PG（只在外层拥有 PG 时执行）
+        if this_call_owns_pg and dist.is_initialized():
+            try:
+                dist.barrier()
+            except Exception:
+                pass
+            dist.destroy_process_group()
+            _PG_OWNER = False
+
+        if fold_accuracies:
             return {"accuracy": mean_acc}
         return
 
-    utils.init_distributed_mode(args)
 
+    # 仅当尚未初始化时才初始化；否则复用已有 PG
+    this_call_owns_pg = False  # [NEW] 函数内局部标志
+    if dist.is_available() and not dist.is_initialized():
+        # 绑定本进程到对应 GPU，预热 CUDA
+        local_rank = int(os.environ.get("LOCAL_RANK", 0))
+        args.gpu = local_rank
+        if torch.cuda.is_available():
+            torch.cuda.set_device(local_rank)
+            _ = torch.empty(0, device=f"cuda:{local_rank}")
+
+        # 单机：强制使用本机回环 rendezvous
+        os.environ.setdefault("MASTER_ADDR", "127.0.0.1")
+        os.environ.setdefault("MASTER_PORT", os.environ.get("MASTER_PORT", "29500"))
+        os.environ.setdefault("NCCL_ASYNC_ERROR_HANDLING", "1")
+        os.environ.setdefault("TORCH_NCCL_BLOCKING_WAIT", "1")
+        args.dist_url = f"tcp://127.0.0.1:{os.environ['MASTER_PORT']}"
+
+        utils.init_distributed_mode(args)
+        _PG_OWNER = True   # 只在“首次 init”时置 True
+        this_call_owns_pg = True
+    else:
+        # 复用现有 PG，千万不要再把 _PG_OWNER 设为 True！
+        args.distributed = True
+        args.gpu = int(os.environ.get("LOCAL_RANK", 0))
+        args.world_size = int(os.environ.get("WORLD_SIZE", 1))
+
+
+
+    # 新代码（内层）——不再在这里 return，外层已经有“已完成即跳过”的判断
     done_file = None
     if args.dataset == 'MATH_KFOLD' and args.fold_index is not None and args.output_dir:
-        done_file = Path(args.output_dir) / "finished.json"
-        if done_file.exists():
-            try:
-                with open(done_file, "r", encoding="utf-8") as f:
-                    cached_result = json.load(f)
-            except Exception:
-                cached_result = None
-            else:
-                print(f"Fold {args.fold_index} detected as completed. Skipping training.")
-                return cached_result
+        if args.output_dir:
+            args.output_dir = os.path.join(args.output_dir, f"fold_{args.fold_index}")
+            Path(args.output_dir).mkdir(parents=True, exist_ok=True)
+        if args.log_dir:
+            args.log_dir = os.path.join(args.log_dir, f"fold_{args.fold_index}")
+            Path(args.log_dir).mkdir(parents=True, exist_ok=True)
+
+        # 仅记录路径，训练完成后由 finally 前面的写回逻辑去写文件
+        done_file = Path(args.output_dir) / f"finished_fold_{args.fold_index}.json"
+
 
     if ds_init is not None:
         utils.create_ds_config(args)
 
     print(args)
 
-    device = torch.device(args.device)
+    try:
+        device = torch.device(args.device)
 
-    # fix the seed for reproducibility
-    seed = args.seed + utils.get_rank()
-    torch.manual_seed(seed)
-    np.random.seed(seed)
-    # random.seed(seed)
+        # fix the seed for reproducibility
+        seed = args.seed + utils.get_rank()
+        torch.manual_seed(seed)
+        np.random.seed(seed)
+        # random.seed(seed)
 
-    cudnn.benchmark = True
+        cudnn.benchmark = True
 
-    # dataset_train, dataset_test, dataset_val: follows the standard format of torch.utils.data.Dataset.
-    # ch_names: list of strings, channel names of the dataset. It should be in capital letters.
-    # metrics: list of strings, the metrics you want to use. We utilize PyHealth to implement it.
-    dataset_train, dataset_test, dataset_val, ch_names, metrics = get_dataset(args)
+        # dataset_train, dataset_test, dataset_val: follows the standard format of torch.utils.data.Dataset.
+        # ch_names: list of strings, channel names of the dataset. It should be in capital letters.
+        # metrics: list of strings, the metrics you want to use. We utilize PyHealth to implement it.
+        dataset_train, dataset_test, dataset_val, ch_names, metrics = get_dataset(args)
 
-    if args.disable_eval_during_finetuning:
-        dataset_val = None
-        dataset_test = None
+        if args.disable_eval_during_finetuning:
+            dataset_val = None
+            dataset_test = None
 
-    if True:  # args.distributed:
-        num_tasks = utils.get_world_size()
-        global_rank = utils.get_rank()
-        sampler_train = torch.utils.data.DistributedSampler(
-            dataset_train, num_replicas=num_tasks, rank=global_rank, shuffle=True
-        )
-        print("Sampler_train = %s" % str(sampler_train))
-        if args.dist_eval:
-            if len(dataset_val) % num_tasks != 0:
-                print('Warning: Enabling distributed evaluation with an eval dataset not divisible by process number. '
-                      'This will slightly alter validation results as extra duplicate entries are added to achieve '
-                      'equal num of samples per-process.')
-            sampler_val = torch.utils.data.DistributedSampler(
-                dataset_val, num_replicas=num_tasks, rank=global_rank, shuffle=False)
-            if type(dataset_test) == list:
-                sampler_test = [torch.utils.data.DistributedSampler(
-                    dataset, num_replicas=num_tasks, rank=global_rank, shuffle=False) for dataset in dataset_test]
+        if True:  # args.distributed:
+            num_tasks = utils.get_world_size()
+            global_rank = utils.get_rank()
+            sampler_train = torch.utils.data.DistributedSampler(
+                dataset_train, num_replicas=num_tasks, rank=global_rank, shuffle=True
+            )
+            print("Sampler_train = %s" % str(sampler_train))
+            if args.dist_eval:
+                if len(dataset_val) % num_tasks != 0:
+                    print('Warning: Enabling distributed evaluation with an eval dataset not divisible by process number. '
+                        'This will slightly alter validation results as extra duplicate entries are added to achieve '
+                        'equal num of samples per-process.')
+                sampler_val = torch.utils.data.DistributedSampler(
+                    dataset_val, num_replicas=num_tasks, rank=global_rank, shuffle=False)
+                if type(dataset_test) == list:
+                    sampler_test = [torch.utils.data.DistributedSampler(
+                        dataset, num_replicas=num_tasks, rank=global_rank, shuffle=False) for dataset in dataset_test]
+                else:
+                    sampler_test = torch.utils.data.DistributedSampler(
+                        dataset_test, num_replicas=num_tasks, rank=global_rank, shuffle=False)
             else:
-                sampler_test = torch.utils.data.DistributedSampler(
-                    dataset_test, num_replicas=num_tasks, rank=global_rank, shuffle=False)
+                sampler_val = torch.utils.data.SequentialSampler(dataset_val)
+                sampler_test = torch.utils.data.SequentialSampler(dataset_test)
         else:
+            sampler_train = torch.utils.data.RandomSampler(dataset_train)
             sampler_val = torch.utils.data.SequentialSampler(dataset_val)
-            sampler_test = torch.utils.data.SequentialSampler(dataset_test)
-    else:
-        sampler_train = torch.utils.data.RandomSampler(dataset_train)
-        sampler_val = torch.utils.data.SequentialSampler(dataset_val)
 
-    if global_rank == 0 and args.log_dir is not None:
-        os.makedirs(args.log_dir, exist_ok=True)
-        log_writer = utils.TensorboardLogger(log_dir=args.log_dir)
-    else:
-        log_writer = None
+        if global_rank == 0 and args.log_dir is not None:
+            os.makedirs(args.log_dir, exist_ok=True)
+            log_writer = utils.TensorboardLogger(log_dir=args.log_dir)
+        else:
+            log_writer = None
 
-    data_loader_train = torch.utils.data.DataLoader(
-        dataset_train, sampler=sampler_train,
-        batch_size=args.batch_size,
-        num_workers=args.num_workers,
-        pin_memory=args.pin_mem,
-        drop_last=False,
-        collate_fn=_collate_align_T200,
-    )
-
-    if dataset_val is not None:
-        data_loader_val = torch.utils.data.DataLoader(
-            dataset_val, sampler=sampler_val,
-            batch_size=int(1.5 * args.batch_size),
+        data_loader_train = torch.utils.data.DataLoader(
+            dataset_train, sampler=sampler_train,
+            batch_size=args.batch_size,
             num_workers=args.num_workers,
             pin_memory=args.pin_mem,
             drop_last=False,
             collate_fn=_collate_align_T200,
         )
-        if type(dataset_test) == list:
-            data_loader_test = [torch.utils.data.DataLoader(
-                dataset, sampler=sampler,
-                batch_size=int(1.5 * args.batch_size),
-                num_workers=args.num_workers,
-                pin_memory=args.pin_mem,
-                drop_last=False,
-                collate_fn=_collate_align_T200,
-            ) for dataset, sampler in zip(dataset_test, sampler_test)]
-        else:
-            data_loader_test = torch.utils.data.DataLoader(
-                dataset_test, sampler=sampler_test,
+
+        if dataset_val is not None:
+            data_loader_val = torch.utils.data.DataLoader(
+                dataset_val, sampler=sampler_val,
                 batch_size=int(1.5 * args.batch_size),
                 num_workers=args.num_workers,
                 pin_memory=args.pin_mem,
                 drop_last=False,
                 collate_fn=_collate_align_T200,
             )
-    else:
-        data_loader_val = None
-        data_loader_test = None
-
-    model = get_models(args)
-
-    patch_size = model.patch_size
-    print("Patch size = %s" % str(patch_size))
-    args.window_size = (1, args.input_size // patch_size)
-    args.patch_size = patch_size
-
-    if args.finetune:
-        if args.finetune.startswith('https'):
-            checkpoint = torch.hub.load_state_dict_from_url(
-                args.finetune, map_location='cpu', check_hash=True)
+            if type(dataset_test) == list:
+                data_loader_test = [torch.utils.data.DataLoader(
+                    dataset, sampler=sampler,
+                    batch_size=int(1.5 * args.batch_size),
+                    num_workers=args.num_workers,
+                    pin_memory=args.pin_mem,
+                    drop_last=False,
+                    collate_fn=_collate_align_T200,
+                ) for dataset, sampler in zip(dataset_test, sampler_test)]
+            else:
+                data_loader_test = torch.utils.data.DataLoader(
+                    dataset_test, sampler=sampler_test,
+                    batch_size=int(1.5 * args.batch_size),
+                    num_workers=args.num_workers,
+                    pin_memory=args.pin_mem,
+                    drop_last=False,
+                    collate_fn=_collate_align_T200,
+                )
         else:
-            checkpoint = torch.load(args.finetune, map_location='cpu')
+            data_loader_val = None
+            data_loader_test = None
 
-        print("Load ckpt from %s" % args.finetune)
-        checkpoint_model = None
-        for model_key in args.model_key.split('|'):
-            if model_key in checkpoint:
-                checkpoint_model = checkpoint[model_key]
-                print("Load state_dict by model_key = %s" % model_key)
-                break
-        if checkpoint_model is None:
-            checkpoint_model = checkpoint
-        if (checkpoint_model is not None) and (args.model_filter_name != ''):
+        model = get_models(args)
+
+        patch_size = model.patch_size
+        print("Patch size = %s" % str(patch_size))
+        args.window_size = (1, args.input_size // patch_size)
+        args.patch_size = patch_size
+
+        if args.finetune:
+            if args.finetune.startswith('https'):
+                checkpoint = torch.hub.load_state_dict_from_url(
+                    args.finetune, map_location='cpu', check_hash=True)
+            else:
+                checkpoint = torch.load(args.finetune, map_location='cpu')
+
+            print("Load ckpt from %s" % args.finetune)
+            checkpoint_model = None
+            for model_key in args.model_key.split('|'):
+                if model_key in checkpoint:
+                    checkpoint_model = checkpoint[model_key]
+                    print("Load state_dict by model_key = %s" % model_key)
+                    break
+            if checkpoint_model is None:
+                checkpoint_model = checkpoint
+            if (checkpoint_model is not None) and (args.model_filter_name != ''):
+                all_keys = list(checkpoint_model.keys())
+                new_dict = OrderedDict()
+                for key in all_keys:
+                    if key.startswith('student.'):
+                        new_dict[key[8:]] = checkpoint_model[key]
+                    else:
+                        pass
+                checkpoint_model = new_dict
+
+            state_dict = model.state_dict()
+            for k in ['head.weight', 'head.bias']:
+                if k in checkpoint_model and checkpoint_model[k].shape != state_dict[k].shape:
+                    print(f"Removing key {k} from pretrained checkpoint")
+                    del checkpoint_model[k]
+
             all_keys = list(checkpoint_model.keys())
-            new_dict = OrderedDict()
             for key in all_keys:
-                if key.startswith('student.'):
-                    new_dict[key[8:]] = checkpoint_model[key]
-                else:
-                    pass
-            checkpoint_model = new_dict
+                if "relative_position_index" in key:
+                    checkpoint_model.pop(key)
 
-        state_dict = model.state_dict()
-        for k in ['head.weight', 'head.bias']:
-            if k in checkpoint_model and checkpoint_model[k].shape != state_dict[k].shape:
-                print(f"Removing key {k} from pretrained checkpoint")
-                del checkpoint_model[k]
+            utils.load_state_dict(model, checkpoint_model, prefix=args.model_prefix)
 
-        all_keys = list(checkpoint_model.keys())
-        for key in all_keys:
-            if "relative_position_index" in key:
-                checkpoint_model.pop(key)
+        model.to(device)
 
-        utils.load_state_dict(model, checkpoint_model, prefix=args.model_prefix)
+        model_ema = None
+        if args.model_ema:
+            # Important to create EMA model after cuda(), DP wrapper, and AMP but before SyncBN and DDP wrapper
+            model_ema = ModelEma(
+                model,
+                decay=args.model_ema_decay,
+                device='cpu' if args.model_ema_force_cpu else '',
+                resume='')
+            print("Using EMA with decay = %.8f" % args.model_ema_decay)
 
-    model.to(device)
+        model_without_ddp = model
+        n_parameters = sum(p.numel() for p in model.parameters() if p.requires_grad)
 
-    model_ema = None
-    if args.model_ema:
-        # Important to create EMA model after cuda(), DP wrapper, and AMP but before SyncBN and DDP wrapper
-        model_ema = ModelEma(
-            model,
-            decay=args.model_ema_decay,
-            device='cpu' if args.model_ema_force_cpu else '',
-            resume='')
-        print("Using EMA with decay = %.8f" % args.model_ema_decay)
+        # print("Model = %s" % str(model_without_ddp))
+        print('number of params:', n_parameters)
 
-    model_without_ddp = model
-    n_parameters = sum(p.numel() for p in model.parameters() if p.requires_grad)
+        total_batch_size = args.batch_size * args.update_freq * utils.get_world_size()
+        num_training_steps_per_epoch = len(dataset_train) // total_batch_size
+        print("LR = %.8f" % args.lr)
+        print("Batch size = %d" % total_batch_size)
+        print("Update frequent = %d" % args.update_freq)
+        print("Number of training examples = %d" % len(dataset_train))
+        print("Number of training training per epoch = %d" % num_training_steps_per_epoch)
 
-    # print("Model = %s" % str(model_without_ddp))
-    print('number of params:', n_parameters)
+        num_layers = model_without_ddp.get_num_layers()
+        if args.layer_decay < 1.0:
+            assigner = LayerDecayValueAssigner(list(args.layer_decay ** (num_layers + 1 - i) for i in range(num_layers + 2)))
+        else:
+            assigner = None
 
-    total_batch_size = args.batch_size * args.update_freq * utils.get_world_size()
-    num_training_steps_per_epoch = len(dataset_train) // total_batch_size
-    print("LR = %.8f" % args.lr)
-    print("Batch size = %d" % total_batch_size)
-    print("Update frequent = %d" % args.update_freq)
-    print("Number of training examples = %d" % len(dataset_train))
-    print("Number of training training per epoch = %d" % num_training_steps_per_epoch)
+        if assigner is not None:
+            print("Assigned values = %s" % str(assigner.values))
 
-    num_layers = model_without_ddp.get_num_layers()
-    if args.layer_decay < 1.0:
-        assigner = LayerDecayValueAssigner(list(args.layer_decay ** (num_layers + 1 - i) for i in range(num_layers + 2)))
-    else:
-        assigner = None
+        skip_weight_decay_list = model.no_weight_decay()
+        if args.disable_weight_decay_on_rel_pos_bias:
+            for i in range(num_layers):
+                skip_weight_decay_list.add("blocks.%d.attn.relative_position_bias_table" % i)
 
-    if assigner is not None:
-        print("Assigned values = %s" % str(assigner.values))
+        if args.enable_deepspeed:
+            loss_scaler = None
+            optimizer_params = get_parameter_groups(
+                model, args.weight_decay, skip_weight_decay_list,
+                assigner.get_layer_id if assigner is not None else None,
+                assigner.get_scale if assigner is not None else None)
+            model, optimizer, _, _ = ds_init(
+                args=args, model=model, model_parameters=optimizer_params, dist_init_required=not args.distributed,
+            )
 
-    skip_weight_decay_list = model.no_weight_decay()
-    if args.disable_weight_decay_on_rel_pos_bias:
-        for i in range(num_layers):
-            skip_weight_decay_list.add("blocks.%d.attn.relative_position_bias_table" % i)
+            print("model.gradient_accumulation_steps() = %d" % model.gradient_accumulation_steps())
+            assert model.gradient_accumulation_steps() == args.update_freq
+        else:
+            if args.distributed:
+                model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.gpu], find_unused_parameters=True)
+                model_without_ddp = model.module
 
-    if args.enable_deepspeed:
-        loss_scaler = None
-        optimizer_params = get_parameter_groups(
-            model, args.weight_decay, skip_weight_decay_list,
-            assigner.get_layer_id if assigner is not None else None,
-            assigner.get_scale if assigner is not None else None)
-        model, optimizer, _, _ = ds_init(
-            args=args, model=model, model_parameters=optimizer_params, dist_init_required=not args.distributed,
+            optimizer = create_optimizer(
+                args, model_without_ddp, skip_list=skip_weight_decay_list,
+                get_num_layer=assigner.get_layer_id if assigner is not None else None, 
+                get_layer_scale=assigner.get_scale if assigner is not None else None)
+            loss_scaler = NativeScaler()
+
+        print("Use step level LR scheduler!")
+        lr_schedule_values = utils.cosine_scheduler(
+            args.lr, args.min_lr, args.epochs, num_training_steps_per_epoch,
+            warmup_epochs=args.warmup_epochs, warmup_steps=args.warmup_steps,
         )
+        if args.weight_decay_end is None:
+            args.weight_decay_end = args.weight_decay
+        wd_schedule_values = utils.cosine_scheduler(
+            args.weight_decay, args.weight_decay_end, args.epochs, num_training_steps_per_epoch)
+        print("Max WD = %.7f, Min WD = %.7f" % (max(wd_schedule_values), min(wd_schedule_values)))
 
-        print("model.gradient_accumulation_steps() = %d" % model.gradient_accumulation_steps())
-        assert model.gradient_accumulation_steps() == args.update_freq
-    else:
-        if args.distributed:
-            model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.gpu], find_unused_parameters=True)
-            model_without_ddp = model.module
+        if args.nb_classes == 1:
+            criterion = torch.nn.BCEWithLogitsLoss()
+        elif args.smoothing > 0.:
+            criterion = LabelSmoothingCrossEntropy(smoothing=args.smoothing)
+        else:
+            criterion = torch.nn.CrossEntropyLoss()
 
-        optimizer = create_optimizer(
-            args, model_without_ddp, skip_list=skip_weight_decay_list,
-            get_num_layer=assigner.get_layer_id if assigner is not None else None, 
-            get_layer_scale=assigner.get_scale if assigner is not None else None)
-        loss_scaler = NativeScaler()
+        print("criterion = %s" % str(criterion))
 
-    print("Use step level LR scheduler!")
-    lr_schedule_values = utils.cosine_scheduler(
-        args.lr, args.min_lr, args.epochs, num_training_steps_per_epoch,
-        warmup_epochs=args.warmup_epochs, warmup_steps=args.warmup_steps,
-    )
-    if args.weight_decay_end is None:
-        args.weight_decay_end = args.weight_decay
-    wd_schedule_values = utils.cosine_scheduler(
-        args.weight_decay, args.weight_decay_end, args.epochs, num_training_steps_per_epoch)
-    print("Max WD = %.7f, Min WD = %.7f" % (max(wd_schedule_values), min(wd_schedule_values)))
+        utils.auto_load_model(
+            args=args, model=model, model_without_ddp=model_without_ddp,
+            optimizer=optimizer, loss_scaler=loss_scaler, model_ema=model_ema)
+                
+        if args.eval:
+            balanced_accuracy = []
+            accuracy = []
+            loaders = data_loader_test if isinstance(data_loader_test, list) else [data_loader_test]
+            for data_loader in loaders:
+                test_stats = evaluate(data_loader, model, device, header='Test:', ch_names=ch_names, metrics=metrics, is_binary=(args.nb_classes == 1))
+                if test_stats.get('accuracy') is not None:
+                    accuracy.append(test_stats.get('accuracy'))
+                if test_stats.get('balanced_accuracy') is not None:
+                    balanced_accuracy.append(test_stats.get('balanced_accuracy'))
+            if accuracy:
+                acc_mean = float(np.mean(accuracy))
+                acc_std = float(np.std(accuracy))
+            else:
+                acc_mean = float('nan')
+                acc_std = float('nan')
+            if balanced_accuracy:
+                bal_mean = float(np.mean(balanced_accuracy))
+                bal_std = float(np.std(balanced_accuracy))
+            else:
+                bal_mean = float('nan')
+                bal_std = float('nan')
+            print(f"======Accuracy: {acc_mean} {acc_std}, balanced accuracy: {bal_mean} {bal_std}")
+            result_payload = {"accuracy": acc_mean if accuracy else None}
+            if done_file and utils.is_main_process():
+                try:
+                    with open(done_file, "w", encoding="utf-8") as f:
+                        json.dump(result_payload, f)
+                except Exception:
+                    pass
 
-    if args.nb_classes == 1:
-        criterion = torch.nn.BCEWithLogitsLoss()
-    elif args.smoothing > 0.:
-        criterion = LabelSmoothingCrossEntropy(smoothing=args.smoothing)
-    else:
-        criterion = torch.nn.CrossEntropyLoss()
+            return result_payload
 
-    print("criterion = %s" % str(criterion))
-
-    utils.auto_load_model(
-        args=args, model=model, model_without_ddp=model_without_ddp,
-        optimizer=optimizer, loss_scaler=loss_scaler, model_ema=model_ema)
+        print(f"Start training for {args.epochs} epochs")
+        start_time = time.time()
+        max_accuracy = 0.0
+        max_accuracy_test = 0.0
+        best_test_stats = None
+        for epoch in range(args.start_epoch, args.epochs):
+            if args.distributed:
+                data_loader_train.sampler.set_epoch(epoch)
+            if log_writer is not None:
+                log_writer.set_step(epoch * num_training_steps_per_epoch * args.update_freq)
+            train_stats = train_one_epoch(
+                model, criterion, data_loader_train, optimizer,
+                device, epoch, loss_scaler, args.clip_grad, model_ema,
+                log_writer=log_writer, start_steps=epoch * num_training_steps_per_epoch,
+                lr_schedule_values=lr_schedule_values, wd_schedule_values=wd_schedule_values,
+                num_training_steps_per_epoch=num_training_steps_per_epoch, update_freq=args.update_freq, 
+                ch_names=ch_names, is_binary=args.nb_classes == 1
+            )
             
-    if args.eval:
-        balanced_accuracy = []
-        accuracy = []
-        loaders = data_loader_test if isinstance(data_loader_test, list) else [data_loader_test]
-        for data_loader in loaders:
-            test_stats = evaluate(data_loader, model, device, header='Test:', ch_names=ch_names, metrics=metrics, is_binary=(args.nb_classes == 1))
-            if test_stats.get('accuracy') is not None:
-                accuracy.append(test_stats.get('accuracy'))
-            if test_stats.get('balanced_accuracy') is not None:
-                balanced_accuracy.append(test_stats.get('balanced_accuracy'))
-        if accuracy:
-            acc_mean = float(np.mean(accuracy))
-            acc_std = float(np.std(accuracy))
-        else:
-            acc_mean = float('nan')
-            acc_std = float('nan')
-        if balanced_accuracy:
-            bal_mean = float(np.mean(balanced_accuracy))
-            bal_std = float(np.std(balanced_accuracy))
-        else:
-            bal_mean = float('nan')
-            bal_std = float('nan')
-        print(f"======Accuracy: {acc_mean} {acc_std}, balanced accuracy: {bal_mean} {bal_std}")
-        result_payload = {"accuracy": acc_mean if accuracy else None}
+            if args.output_dir and args.save_ckpt:
+                utils.save_model(
+                    args=args, model=model, model_without_ddp=model_without_ddp, optimizer=optimizer,
+                    loss_scaler=loss_scaler, epoch=epoch, model_ema=model_ema, save_ckpt_freq=args.save_ckpt_freq)
+                
+            if data_loader_val is not None:
+                val_stats = evaluate(data_loader_val, model, device, header='Val:', ch_names=ch_names, metrics=metrics, is_binary=args.nb_classes == 1)
+                print(f"Accuracy of the network on the {len(dataset_val)} val EEG: {val_stats['accuracy']:.2f}%")
+                test_stats = evaluate(data_loader_test, model, device, header='Test:', ch_names=ch_names, metrics=metrics, is_binary=args.nb_classes == 1)
+                print(f"Accuracy of the network on the {len(dataset_test)} test EEG: {test_stats['accuracy']:.2f}%")
+                
+                if max_accuracy < val_stats["accuracy"]:
+                    max_accuracy = val_stats["accuracy"]
+                    if args.output_dir and args.save_ckpt:
+                        utils.save_model(
+                            args=args, model=model, model_without_ddp=model_without_ddp, optimizer=optimizer,
+                            loss_scaler=loss_scaler, epoch="best", model_ema=model_ema)
+                    max_accuracy_test = test_stats["accuracy"]
+                    best_test_stats = test_stats.copy()
+
+                print(f'Max accuracy val: {max_accuracy:.2f}%, max accuracy test: {max_accuracy_test:.2f}%')
+                if log_writer is not None:
+                    for key, value in val_stats.items():
+                        if key == 'accuracy':
+                            log_writer.update(accuracy=value, head="val", step=epoch)
+                        elif key == 'balanced_accuracy':
+                            log_writer.update(balanced_accuracy=value, head="val", step=epoch)
+                        elif key == 'f1_weighted':
+                            log_writer.update(f1_weighted=value, head="val", step=epoch)
+                        elif key == 'pr_auc':
+                            log_writer.update(pr_auc=value, head="val", step=epoch)
+                        elif key == 'roc_auc':
+                            log_writer.update(roc_auc=value, head="val", step=epoch)
+                        elif key == 'cohen_kappa':
+                            log_writer.update(cohen_kappa=value, head="val", step=epoch)
+                        elif key == 'loss':
+                            log_writer.update(loss=value, head="val", step=epoch)
+                    for key, value in test_stats.items():
+                        if key == 'accuracy':
+                            log_writer.update(accuracy=value, head="test", step=epoch)
+                        elif key == 'balanced_accuracy':
+                            log_writer.update(balanced_accuracy=value, head="test", step=epoch)
+                        elif key == 'f1_weighted':
+                            log_writer.update(f1_weighted=value, head="test", step=epoch)
+                        elif key == 'pr_auc':
+                            log_writer.update(pr_auc=value, head="test", step=epoch)
+                        elif key == 'roc_auc':
+                            log_writer.update(roc_auc=value, head="test", step=epoch)
+                        elif key == 'cohen_kappa':
+                            log_writer.update(cohen_kappa=value, head="test", step=epoch)
+                        elif key == 'loss':
+                            log_writer.update(loss=value, head="test", step=epoch)
+                    
+                log_stats = {**{f'train_{k}': v for k, v in train_stats.items()},
+                            **{f'val_{k}': v for k, v in val_stats.items()},
+                            **{f'test_{k}': v for k, v in test_stats.items()},
+                            'epoch': epoch,
+                            'n_parameters': n_parameters}
+            else:
+                log_stats = {**{f'train_{k}': v for k, v in train_stats.items()},
+                            'epoch': epoch,
+                            'n_parameters': n_parameters}
+
+            if args.output_dir and utils.is_main_process():
+                if log_writer is not None:
+                    log_writer.flush()
+                with open(os.path.join(args.output_dir, "log.txt"), mode="a", encoding="utf-8") as f:
+                    f.write(json.dumps(log_stats) + "\n")
+
+        total_time = time.time() - start_time
+        total_time_str = str(datetime.timedelta(seconds=int(total_time)))
+        print('Training time {}'.format(total_time_str))
+        final_result = best_test_stats if best_test_stats is not None else {
+            "accuracy": max_accuracy_test if max_accuracy_test != 0.0 else None
+        }
         if done_file:
             try:
                 with open(done_file, "w", encoding="utf-8") as f:
-                    json.dump(result_payload, f)
+                    json.dump(final_result, f)
             except Exception:
                 pass
-        return result_payload
+        return final_result
+    finally:
+        # [NEW] 仅当本函数负责初始化过PG时在此销毁
+        if this_call_owns_pg and dist.is_initialized():
+            try:
+                dist.barrier()
+            except Exception:
+                pass
+            dist.destroy_process_group()
+            _PG_OWNER = False
 
-    print(f"Start training for {args.epochs} epochs")
-    start_time = time.time()
-    max_accuracy = 0.0
-    max_accuracy_test = 0.0
-    best_test_stats = None
-    for epoch in range(args.start_epoch, args.epochs):
-        if args.distributed:
-            data_loader_train.sampler.set_epoch(epoch)
-        if log_writer is not None:
-            log_writer.set_step(epoch * num_training_steps_per_epoch * args.update_freq)
-        train_stats = train_one_epoch(
-            model, criterion, data_loader_train, optimizer,
-            device, epoch, loss_scaler, args.clip_grad, model_ema,
-            log_writer=log_writer, start_steps=epoch * num_training_steps_per_epoch,
-            lr_schedule_values=lr_schedule_values, wd_schedule_values=wd_schedule_values,
-            num_training_steps_per_epoch=num_training_steps_per_epoch, update_freq=args.update_freq, 
-            ch_names=ch_names, is_binary=args.nb_classes == 1
-        )
-        
-        if args.output_dir and args.save_ckpt:
-            utils.save_model(
-                args=args, model=model, model_without_ddp=model_without_ddp, optimizer=optimizer,
-                loss_scaler=loss_scaler, epoch=epoch, model_ema=model_ema, save_ckpt_freq=args.save_ckpt_freq)
-            
-        if data_loader_val is not None:
-            val_stats = evaluate(data_loader_val, model, device, header='Val:', ch_names=ch_names, metrics=metrics, is_binary=args.nb_classes == 1)
-            print(f"Accuracy of the network on the {len(dataset_val)} val EEG: {val_stats['accuracy']:.2f}%")
-            test_stats = evaluate(data_loader_test, model, device, header='Test:', ch_names=ch_names, metrics=metrics, is_binary=args.nb_classes == 1)
-            print(f"Accuracy of the network on the {len(dataset_test)} test EEG: {test_stats['accuracy']:.2f}%")
-            
-            if max_accuracy < val_stats["accuracy"]:
-                max_accuracy = val_stats["accuracy"]
-                if args.output_dir and args.save_ckpt:
-                    utils.save_model(
-                        args=args, model=model, model_without_ddp=model_without_ddp, optimizer=optimizer,
-                        loss_scaler=loss_scaler, epoch="best", model_ema=model_ema)
-                max_accuracy_test = test_stats["accuracy"]
-                best_test_stats = test_stats.copy()
 
-            print(f'Max accuracy val: {max_accuracy:.2f}%, max accuracy test: {max_accuracy_test:.2f}%')
-            if log_writer is not None:
-                for key, value in val_stats.items():
-                    if key == 'accuracy':
-                        log_writer.update(accuracy=value, head="val", step=epoch)
-                    elif key == 'balanced_accuracy':
-                        log_writer.update(balanced_accuracy=value, head="val", step=epoch)
-                    elif key == 'f1_weighted':
-                        log_writer.update(f1_weighted=value, head="val", step=epoch)
-                    elif key == 'pr_auc':
-                        log_writer.update(pr_auc=value, head="val", step=epoch)
-                    elif key == 'roc_auc':
-                        log_writer.update(roc_auc=value, head="val", step=epoch)
-                    elif key == 'cohen_kappa':
-                        log_writer.update(cohen_kappa=value, head="val", step=epoch)
-                    elif key == 'loss':
-                        log_writer.update(loss=value, head="val", step=epoch)
-                for key, value in test_stats.items():
-                    if key == 'accuracy':
-                        log_writer.update(accuracy=value, head="test", step=epoch)
-                    elif key == 'balanced_accuracy':
-                        log_writer.update(balanced_accuracy=value, head="test", step=epoch)
-                    elif key == 'f1_weighted':
-                        log_writer.update(f1_weighted=value, head="test", step=epoch)
-                    elif key == 'pr_auc':
-                        log_writer.update(pr_auc=value, head="test", step=epoch)
-                    elif key == 'roc_auc':
-                        log_writer.update(roc_auc=value, head="test", step=epoch)
-                    elif key == 'cohen_kappa':
-                        log_writer.update(cohen_kappa=value, head="test", step=epoch)
-                    elif key == 'loss':
-                        log_writer.update(loss=value, head="test", step=epoch)
-                
-            log_stats = {**{f'train_{k}': v for k, v in train_stats.items()},
-                         **{f'val_{k}': v for k, v in val_stats.items()},
-                         **{f'test_{k}': v for k, v in test_stats.items()},
-                         'epoch': epoch,
-                         'n_parameters': n_parameters}
-        else:
-            log_stats = {**{f'train_{k}': v for k, v in train_stats.items()},
-                         'epoch': epoch,
-                         'n_parameters': n_parameters}
-
-        if args.output_dir and utils.is_main_process():
-            if log_writer is not None:
-                log_writer.flush()
-            with open(os.path.join(args.output_dir, "log.txt"), mode="a", encoding="utf-8") as f:
-                f.write(json.dumps(log_stats) + "\n")
-
-    total_time = time.time() - start_time
-    total_time_str = str(datetime.timedelta(seconds=int(total_time)))
-    print('Training time {}'.format(total_time_str))
-    final_result = best_test_stats if best_test_stats is not None else {
-        "accuracy": max_accuracy_test if max_accuracy_test != 0.0 else None
-    }
-    if done_file:
-        try:
-            with open(done_file, "w", encoding="utf-8") as f:
-                json.dump(final_result, f)
-        except Exception:
-            pass
-    return final_result
 
 
 if __name__ == '__main__':
