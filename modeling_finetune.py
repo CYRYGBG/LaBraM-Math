@@ -22,31 +22,40 @@ from einops import rearrange
 def _cfg(url='', **kwargs):
     return {
         'url': url,
-        'num_classes': 1000, 'input_size': (3, 224, 224), 'pool_size': None,
-        'crop_pct': .9, 'interpolation': 'bicubic',
-        'mean': (0.5, 0.5, 0.5), 'std': (0.5, 0.5, 0.5),
+        'num_classes': 1000,     # 类别数量
+        'input_size': (3, 224, 224),  # 输入图像尺寸
+        'pool_size': None,  # 池化输出尺寸
+        'crop_pct': .9,     # 
+        'interpolation': 'bicubic',
+        'mean': (0.5, 0.5, 0.5), 
+        'std': (0.5, 0.5, 0.5),
         **kwargs
     }
 
 
 class DropPath(nn.Module):
     """Drop paths (Stochastic Depth) per sample  (when applied in main path of residual blocks).
+    在训练过程中，随机丢弃某些残差连接中对应部分的输出（相当于只保留恒等映射），让模型在训练过程中相当于有不同深度的网络结构，从而提升模型的泛化能力。
     """
     def __init__(self, drop_prob=None):
         super(DropPath, self).__init__()
-        self.drop_prob = drop_prob
+        self.drop_prob = drop_prob  # 丢弃概率
 
     def forward(self, x):
         return drop_path(x, self.drop_prob, self.training)
     
     def extra_repr(self) -> str:
+        # 打印参数
         return 'p={}'.format(self.drop_prob)
 
 
 class Mlp(nn.Module):
+    """
+    输入x ──► 全连接1 ──► GELU ──► 全连接2 ──► Dropout ──► 输出
+    """
     def __init__(self, in_features, hidden_features=None, out_features=None, act_layer=nn.GELU, drop=0.):
         super().__init__()
-        out_features = out_features or in_features
+        out_features = out_features or in_features  
         hidden_features = hidden_features or in_features
         self.fc1 = nn.Linear(in_features, hidden_features)
         self.act = act_layer()
@@ -64,6 +73,36 @@ class Mlp(nn.Module):
 
 
 class Attention(nn.Module):
+    """
+    多头自注意力模块，支持 Q/K 归一化与 2D 相对位置偏置。
+
+    参数
+    - dim (int): 输入/输出通道维度 C。
+    - num_heads (int): 注意力头数 H。
+    - qkv_bias (bool): 是否为 q、v 使用独立偏置（k 无偏置）。
+    - qk_norm (Callable[[int], nn.Module] | None): 用于对 q/k 最后一维归一化的模块构造器（如 nn.LayerNorm）；None 表示不使用。
+    - qk_scale (float | None): q 的缩放因子；默认使用 1/sqrt(head_dim)。
+    - attn_drop (float): 注意力权重 softmax 后的 dropout 概率。
+    - proj_drop (float): 输出投影后的 dropout 概率。
+    - window_size (Tuple[int, int] | None): (Wh, Ww)，启用 2D 相对位置偏置（包含 cls↔token 的三类偏置）。
+    - attn_head_dim (int | None): 每个头的维度；缺省为 dim // num_heads。
+
+    前向传播
+    - 输入 x: Tensor[B, N, C]，B 为 batch，N 为 token 数，C 为通道数（等于 dim）。
+    - 可选 rel_pos_bias: 张量，形状应可广播到 [B, H, N, N]、[1, H, N, N] 或 [H, N, N]，将加到注意力得分上。
+    - return_attention (bool): 为 True 时直接返回注意力权重 attn，形状 [B, H, N, N]。
+    - return_qkv (bool): 为 True 时返回 (out, qkv)。当 return_attention=True 时忽略该参数。
+
+    关键张量形状
+    - q, k, v: [B, H, N, head_dim]，其中 head_dim = attn_head_dim 或 dim // H。
+    - 注意力权重 attn: [B, H, N, N]。
+    - 输出 out: [B, N, C]。
+    - 返回的 qkv: [3, B, H, N, head_dim]（顺序为 q、k、v；数值对应归一化/缩放前的线性投影输出）。
+
+    说明
+    - 实际缩放因子为 qk_scale 或 1/sqrt(head_dim)。
+    - 设置 window_size 时会基于 (Wh, Ww) 自动构造并加入相对位置偏置。
+    """
     def __init__(
             self, dim, num_heads=8, qkv_bias=False, qk_norm=None, qk_scale=None, attn_drop=0.,
             proj_drop=0., window_size=None, attn_head_dim=None):
@@ -170,7 +209,7 @@ class Attention(nn.Module):
 
 
 class Block(nn.Module):
-
+    """Transformer Block, 由多头注意力块和 MLP 组成的，并带有 LayerNorm 和残差连接。"""
     def __init__(self, dim, num_heads, mlp_ratio=4., qkv_bias=False, qk_norm=None, qk_scale=None, drop=0., attn_drop=0.,
                  drop_path=0., init_values=None, act_layer=nn.GELU, norm_layer=nn.LayerNorm,
                  window_size=None, attn_head_dim=None):
@@ -211,6 +250,8 @@ class Block(nn.Module):
 
 class PatchEmbed(nn.Module):
     """ EEG to Patch Embedding
+    输入： [B, 1, channels, EEG_size]
+    输出： [B, channels × (EEG_size // patch_size), embed_dim]
     """
     def __init__(self, EEG_size=2000, patch_size=200, in_chans=1, embed_dim=200):
         super().__init__()
