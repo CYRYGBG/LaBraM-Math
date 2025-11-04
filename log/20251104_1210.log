@@ -1,0 +1,123 @@
+
+========== Launch ==========
+[DATASET ] read
+[DATAROOT] /usr/data/yeqi3/labram_fold/read
+[OUTPUT  ] /usr/data/yeqi3/LaBraM_log/multids/cv/read
+[LOG     ] /usr/data/yeqi3/LaBraM_log/multids/log/read
+[PORT    ] 29501 (Base)
+/home/yeqi3/anaconda3/envs/cyr/bin/torchrun --nproc_per_node=3 /home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py --dataset MATH_KFOLD --data_root /usr/data/yeqi3/labram_fold/read --kfold_num 5 --nb_classes 1 --model labram_base_patch200_200 --input_size 200 --batch_size 48 --epochs 200 --lr 3e-05 --warmup_epochs 3 --layer_decay 0.8 --drop_path 0.1 --update_freq 1 --save_ckpt_freq 9999 --num_workers 4 --seed 42 --output_dir /usr/data/yeqi3/LaBraM_log/multids/cv/read --log_dir /usr/data/yeqi3/LaBraM_log/multids/log/read --disable_rel_pos_bias --abs_pos_emb --disable_qkv_bias --finetune /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth
+============================
+
+| distributed init (rank 2): tcp://127.0.0.1:29500, gpu 2
+[W1104 12:10:07.380656844 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+| distributed init (rank 0): tcp://127.0.0.1:29500, gpu 0
+[W1104 12:10:07.392566625 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+| distributed init (rank 1): tcp://127.0.0.1:29500, gpu 1
+[W1104 12:10:07.409654761 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+========== Running fold 1 / 5 ==========
+Fold 0 already completed, skip re-running.
+========== Running fold 2 / 5 ==========
+Fold 1 already completed, skip re-running.
+========== Running fold 3 / 5 ==========
+Fold 2 already completed, skip re-running.
+========== Running fold 4 / 5 ==========
+Fold 3 already completed, skip re-running.
+========== Running fold 5 / 5 ==========
+Fold 4 already completed, skip re-running.
+Average accuracy over 5 folds: 0.6621
+[E1104 12:10:08.131582637 ProcessGroupNCCL.cpp:542] [Rank 1] Collective WorkNCCL(SeqNum=2, OpType=ALLREDUCE, NumelIn=1, NumelOut=1, Timeout(ms)=600000) raised the following async exception: NCCL error: unhandled system error (run with NCCL_DEBUG=INFO for details), NCCL version 2.21.5
+ncclSystemError: System call (e.g. socket, malloc) or external library call failed or device error. 
+Last error:
+
+Exception raised from checkForNCCLErrorsInternal at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:2027 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7f8a97f2c446 in /home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::checkForNCCLErrorsInternal(std::shared_ptr<c10d::NCCLComm>&) + 0x220 (0x7f8a9917de80 in /home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::WorkNCCL::checkAndSetException() + 0x7c (0x7f8a9917e0cc in /home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::WorkNCCL::isStarted() + 0x90 (0x7f8a9917e3a0 in /home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: c10d::ProcessGroupNCCL::watchdogHandler() + 0x9f8 (0x7f8a99186278 in /home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #5: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7f8a9918751d in /home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0x145c0 (0x7f8ae78c05c0 in /home/yeqi3/anaconda3/envs/cyr/lib/python3.10/site-packages/torch/lib/libtorch.so)
+frame #7: <unknown function> + 0x94ac3 (0x7f8af8102ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #8: <unknown function> + 0x1268c0 (0x7f8af81948c0 in /lib/x86_64-linux-gnu/libc.so.6)
+
+
+========== Launch ==========
+[DATASET ] type
+[DATAROOT] /usr/data/yeqi3/labram_fold/type
+[OUTPUT  ] /usr/data/yeqi3/LaBraM_log/multids/cv/type
+[LOG     ] /usr/data/yeqi3/LaBraM_log/multids/log/type
+[PORT    ] 29511 (Base)
+/home/yeqi3/anaconda3/envs/cyr/bin/torchrun --nproc_per_node=3 /home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py --dataset MATH_KFOLD --data_root /usr/data/yeqi3/labram_fold/type --kfold_num 5 --nb_classes 1 --model labram_base_patch200_200 --input_size 200 --batch_size 48 --epochs 200 --lr 3e-05 --warmup_epochs 3 --layer_decay 0.8 --drop_path 0.1 --update_freq 1 --save_ckpt_freq 9999 --num_workers 4 --seed 42 --output_dir /usr/data/yeqi3/LaBraM_log/multids/cv/type --log_dir /usr/data/yeqi3/LaBraM_log/multids/log/type --disable_rel_pos_bias --abs_pos_emb --disable_qkv_bias --finetune /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth
+============================
+
+| distributed init (rank 1): tcp://127.0.0.1:29500, gpu 1
+[W1104 12:10:15.260336751 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+| distributed init (rank 0): tcp://127.0.0.1:29500, gpu 0
+[W1104 12:10:15.267791474 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+| distributed init (rank 2): tcp://127.0.0.1:29500, gpu 2
+[W1104 12:10:15.270868703 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+========== Running fold 1 / 5 ==========
+Fold 0 already completed, skip re-running.
+========== Running fold 2 / 5 ==========
+Fold 1 already completed, skip re-running.
+========== Running fold 3 / 5 ==========
+Fold 2 already completed, skip re-running.
+========== Running fold 4 / 5 ==========
+Fold 3 already completed, skip re-running.
+========== Running fold 5 / 5 ==========
+Fold 4 already completed, skip re-running.
+Average accuracy over 5 folds: 0.6800
+
+========== Launch ==========
+[DATASET ] read_new
+[DATAROOT] /usr/data/yeqi3/labram_fold/read_new
+[OUTPUT  ] /usr/data/yeqi3/LaBraM_log/multids/cv/read_new
+[LOG     ] /usr/data/yeqi3/LaBraM_log/multids/log/read_new
+[PORT    ] 29521 (Base)
+/home/yeqi3/anaconda3/envs/cyr/bin/torchrun --nproc_per_node=3 /home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py --dataset MATH_KFOLD --data_root /usr/data/yeqi3/labram_fold/read_new --kfold_num 5 --nb_classes 1 --model labram_base_patch200_200 --input_size 200 --batch_size 48 --epochs 200 --lr 3e-05 --warmup_epochs 3 --layer_decay 0.8 --drop_path 0.1 --update_freq 1 --save_ckpt_freq 9999 --num_workers 4 --seed 42 --output_dir /usr/data/yeqi3/LaBraM_log/multids/cv/read_new --log_dir /usr/data/yeqi3/LaBraM_log/multids/log/read_new --disable_rel_pos_bias --abs_pos_emb --disable_qkv_bias --finetune /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth
+============================
+
+| distributed init (rank 0): tcp://127.0.0.1:29500, gpu 0
+[W1104 12:10:23.906558655 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+| distributed init (rank 2): tcp://127.0.0.1:29500, gpu 2
+[W1104 12:10:23.919938821 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+| distributed init (rank 1): tcp://127.0.0.1:29500, gpu 1
+[W1104 12:10:23.998900494 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+========== Running fold 1 / 5 ==========
+Fold 0 already completed, skip re-running.
+========== Running fold 2 / 5 ==========
+Fold 1 already completed, skip re-running.
+========== Running fold 3 / 5 ==========
+Fold 2 already completed, skip re-running.
+========== Running fold 4 / 5 ==========
+Fold 3 already completed, skip re-running.
+========== Running fold 5 / 5 ==========
+Fold 4 already completed, skip re-running.
+Average accuracy over 5 folds: 0.6740
+
+========== Launch ==========
+[DATASET ] type_new
+[DATAROOT] /usr/data/yeqi3/labram_fold/type_new
+[OUTPUT  ] /usr/data/yeqi3/LaBraM_log/multids/cv/type_new
+[LOG     ] /usr/data/yeqi3/LaBraM_log/multids/log/type_new
+[PORT    ] 29531 (Base)
+/home/yeqi3/anaconda3/envs/cyr/bin/torchrun --nproc_per_node=3 /home/yeqi3/cyr/code/LaBraM/run_class_finetuning.py --dataset MATH_KFOLD --data_root /usr/data/yeqi3/labram_fold/type_new --kfold_num 5 --nb_classes 1 --model labram_base_patch200_200 --input_size 200 --batch_size 48 --epochs 200 --lr 3e-05 --warmup_epochs 3 --layer_decay 0.8 --drop_path 0.1 --update_freq 1 --save_ckpt_freq 9999 --num_workers 4 --seed 42 --output_dir /usr/data/yeqi3/LaBraM_log/multids/cv/type_new --log_dir /usr/data/yeqi3/LaBraM_log/multids/log/type_new --disable_rel_pos_bias --abs_pos_emb --disable_qkv_bias --finetune /home/yeqi3/cyr/code/LaBraM/checkpoints/labram-base.pth
+============================
+
+| distributed init (rank 1): tcp://127.0.0.1:29500, gpu 1
+[W1104 12:10:31.942653806 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+| distributed init (rank 0): tcp://127.0.0.1:29500, gpu 0
+[W1104 12:10:31.951597832 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+| distributed init (rank 2): tcp://127.0.0.1:29500, gpu 2
+[W1104 12:10:31.958523536 Utils.hpp:135] Warning: Environment variable NCCL_ASYNC_ERROR_HANDLING is deprecated; use TORCH_NCCL_ASYNC_ERROR_HANDLING instead (function operator())
+========== Running fold 1 / 5 ==========
+Fold 0 already completed, skip re-running.
+========== Running fold 2 / 5 ==========
+Fold 1 already completed, skip re-running.
+========== Running fold 3 / 5 ==========
+Fold 2 already completed, skip re-running.
+========== Running fold 4 / 5 ==========
+Fold 3 already completed, skip re-running.
+========== Running fold 5 / 5 ==========
+Fold 4 already completed, skip re-running.
+Average accuracy over 5 folds: 0.7124
