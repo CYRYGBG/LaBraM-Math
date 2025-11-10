@@ -4709,3 +4709,263 @@
 [2025-11-04 12:13:01] 已后台运行 pid=496127，详见 /home/yeqi3/cyr/code/LaBraM/log/20251104_1213.log
 [2025-11-04 12:14:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251104_1214.log'
 [2025-11-04 12:14:02] 已后台运行 pid=500246，详见 /home/yeqi3/cyr/code/LaBraM/log/20251104_1214.log
+[2025-11-04 13:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251104_1300.log'
+[2025-11-04 13:00:01] 已后台运行 pid=687140，详见 /home/yeqi3/cyr/code/LaBraM/log/20251104_1300.log
+[2025-11-05 02:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_0200.log'
+[2025-11-05 02:00:02] 已后台运行 pid=111159，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_0200.log
+[2025-11-05 03:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_0300.log'
+[2025-11-05 03:00:02] 已后台运行 pid=324102，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_0300.log
+[2025-11-05 04:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_0400.log'
+[2025-11-05 04:00:01] 已后台运行 pid=535479，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_0400.log
+[2025-11-05 05:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_0500.log'
+[2025-11-05 05:00:01] 已后台运行 pid=745141，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_0500.log
+[2025-11-05 06:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_0600.log'
+[2025-11-05 06:00:01] 已后台运行 pid=955705，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_0600.log
+[2025-11-05 07:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_0700.log'
+[2025-11-05 07:00:01] 已后台运行 pid=1167284，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_0700.log
+[2025-11-05 08:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_0800.log'
+[2025-11-05 08:00:01] 已后台运行 pid=1382935，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_0800.log
+[2025-11-05 09:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_0900.log'
+[2025-11-05 09:00:01] 已后台运行 pid=1595048，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_0900.log
+[2025-11-05 10:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_1000.log'
+[2025-11-05 10:00:01] 已后台运行 pid=1811732，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_1000.log
+[2025-11-05 11:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_1100.log'
+[2025-11-05 11:00:02] 已后台运行 pid=2050044，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_1100.log
+[2025-11-05 12:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_1200.log'
+[2025-11-05 12:00:02] 已后台运行 pid=2291472，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_1200.log
+[2025-11-05 13:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_1300.log'
+[2025-11-05 13:00:01] 已后台运行 pid=2523516，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_1300.log
+[2025-11-05 14:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_1400.log'
+[2025-11-05 14:00:01] 已后台运行 pid=2767406，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_1400.log
+[2025-11-05 15:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_1500.log'
+[2025-11-05 15:00:01] 已后台运行 pid=3021364，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_1500.log
+[2025-11-05 16:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_1600.log'
+[2025-11-05 16:00:02] 已后台运行 pid=3342623，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_1600.log
+[2025-11-05 17:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_1700.log'
+[2025-11-05 17:00:02] 已后台运行 pid=3665535，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_1700.log
+[2025-11-05 18:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_1800.log'
+[2025-11-05 18:00:01] 已后台运行 pid=3975022，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_1800.log
+[2025-11-05 19:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_1900.log'
+[2025-11-05 19:00:01] 已后台运行 pid=75120，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_1900.log
+[2025-11-05 20:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_2000.log'
+[2025-11-05 20:00:02] 已后台运行 pid=343929，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_2000.log
+[2025-11-05 21:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_2100.log'
+[2025-11-05 21:00:02] 已后台运行 pid=625552，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_2100.log
+[2025-11-05 22:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_2200.log'
+[2025-11-05 22:00:01] 已后台运行 pid=939053，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_2200.log
+[2025-11-05 23:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251105_2300.log'
+[2025-11-05 23:00:01] 已后台运行 pid=1269104，详见 /home/yeqi3/cyr/code/LaBraM/log/20251105_2300.log
+[2025-11-06 00:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_0000.log'
+[2025-11-06 00:00:01] 已后台运行 pid=1578058，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_0000.log
+[2025-11-06 01:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_0100.log'
+[2025-11-06 01:00:01] 已后台运行 pid=1816530，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_0100.log
+[2025-11-06 02:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_0200.log'
+[2025-11-06 02:00:01] 已后台运行 pid=2062071，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_0200.log
+[2025-11-06 03:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_0300.log'
+[2025-11-06 03:00:01] 已后台运行 pid=2296365，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_0300.log
+[2025-11-06 04:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_0400.log'
+[2025-11-06 04:00:02] 已后台运行 pid=2543375，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_0400.log
+[2025-11-06 05:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_0500.log'
+[2025-11-06 05:00:02] 已后台运行 pid=2753445，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_0500.log
+[2025-11-06 06:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_0600.log'
+[2025-11-06 06:00:01] 已后台运行 pid=2888309，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_0600.log
+[2025-11-06 07:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_0700.log'
+[2025-11-06 07:00:01] 已后台运行 pid=3023322，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_0700.log
+[2025-11-06 08:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_0800.log'
+[2025-11-06 08:00:02] 已后台运行 pid=3158481，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_0800.log
+[2025-11-06 09:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_0900.log'
+[2025-11-06 09:00:01] 已后台运行 pid=3294987，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_0900.log
+[2025-11-06 10:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_1000.log'
+[2025-11-06 10:00:01] 已后台运行 pid=3431488，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_1000.log
+[2025-11-06 11:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_1100.log'
+[2025-11-06 11:00:02] 已后台运行 pid=3600045，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_1100.log
+[2025-11-06 12:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_1200.log'
+[2025-11-06 12:00:01] 已后台运行 pid=3816837，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_1200.log
+[2025-11-06 13:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_1300.log'
+[2025-11-06 13:00:01] 已后台运行 pid=4036595，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_1300.log
+[2025-11-06 14:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_1400.log'
+[2025-11-06 14:00:01] 已后台运行 pid=75848，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_1400.log
+[2025-11-06 15:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_1500.log'
+[2025-11-06 15:00:01] 已后台运行 pid=329046，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_1500.log
+[2025-11-06 16:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_1600.log'
+[2025-11-06 16:00:01] 已后台运行 pid=577487，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_1600.log
+[2025-11-06 17:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_1700.log'
+[2025-11-06 17:00:01] 已后台运行 pid=817183，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_1700.log
+[2025-11-06 18:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_1800.log'
+[2025-11-06 18:00:02] 已后台运行 pid=1092171，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_1800.log
+[2025-11-06 19:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_1900.log'
+[2025-11-06 19:00:01] 已后台运行 pid=1349110，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_1900.log
+[2025-11-06 20:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_2000.log'
+[2025-11-06 20:00:01] 已后台运行 pid=1610468，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_2000.log
+[2025-11-06 21:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_2100.log'
+[2025-11-06 21:00:01] 已后台运行 pid=1880016，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_2100.log
+[2025-11-06 22:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_2200.log'
+[2025-11-06 22:00:01] 已后台运行 pid=2148745，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_2200.log
+[2025-11-06 23:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251106_2300.log'
+[2025-11-06 23:00:01] 已后台运行 pid=2446562，详见 /home/yeqi3/cyr/code/LaBraM/log/20251106_2300.log
+[2025-11-07 00:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_0000.log'
+[2025-11-07 00:00:01] 已后台运行 pid=2741760，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_0000.log
+[2025-11-07 01:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_0100.log'
+[2025-11-07 01:00:02] 已后台运行 pid=2929653，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_0100.log
+[2025-11-07 02:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_0200.log'
+[2025-11-07 02:00:01] 已后台运行 pid=3118692，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_0200.log
+[2025-11-07 03:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_0300.log'
+[2025-11-07 03:00:01] 已后台运行 pid=3295732，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_0300.log
+[2025-11-07 04:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_0400.log'
+[2025-11-07 04:00:02] 已后台运行 pid=3440188，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_0400.log
+[2025-11-07 05:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_0500.log'
+[2025-11-07 05:00:01] 已后台运行 pid=3587044，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_0500.log
+[2025-11-07 06:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_0600.log'
+[2025-11-07 06:00:01] 已后台运行 pid=3735386，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_0600.log
+[2025-11-07 07:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_0700.log'
+[2025-11-07 07:00:02] 已后台运行 pid=3881799，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_0700.log
+[2025-11-07 08:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_0800.log'
+[2025-11-07 08:00:02] 已后台运行 pid=4027949，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_0800.log
+[2025-11-07 09:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_0900.log'
+[2025-11-07 09:00:02] 已后台运行 pid=4165331，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_0900.log
+[2025-11-07 10:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_1000.log'
+[2025-11-07 10:00:02] 已后台运行 pid=107897，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_1000.log
+[2025-11-07 11:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_1100.log'
+[2025-11-07 11:00:01] 已后台运行 pid=247774，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_1100.log
+[2025-11-07 12:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_1200.log'
+[2025-11-07 12:00:01] 已后台运行 pid=403259，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_1200.log
+[2025-11-07 13:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_1300.log'
+[2025-11-07 13:00:02] 已后台运行 pid=594934，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_1300.log
+[2025-11-07 14:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_1400.log'
+[2025-11-07 14:00:01] 已后台运行 pid=806221，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_1400.log
+[2025-11-07 15:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_1500.log'
+[2025-11-07 15:00:01] 已后台运行 pid=970335，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_1500.log
+[2025-11-07 16:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_1600.log'
+[2025-11-07 16:00:01] 已后台运行 pid=1156055，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_1600.log
+[2025-11-07 17:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_1700.log'
+[2025-11-07 17:00:01] 已后台运行 pid=1404420，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_1700.log
+[2025-11-07 18:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_1800.log'
+[2025-11-07 18:00:02] 已后台运行 pid=1765241，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_1800.log
+[2025-11-07 19:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_1900.log'
+[2025-11-07 19:00:02] 已后台运行 pid=2188039，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_1900.log
+[2025-11-07 20:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_2000.log'
+[2025-11-07 20:00:01] 已后台运行 pid=2545826，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_2000.log
+[2025-11-07 21:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_2100.log'
+[2025-11-07 21:00:02] 已后台运行 pid=2960767，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_2100.log
+[2025-11-07 22:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_2200.log'
+[2025-11-07 22:00:01] 已后台运行 pid=3144636，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_2200.log
+[2025-11-07 23:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251107_2300.log'
+[2025-11-07 23:00:01] 已后台运行 pid=3302074，详见 /home/yeqi3/cyr/code/LaBraM/log/20251107_2300.log
+[2025-11-08 00:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_0000.log'
+[2025-11-08 00:00:01] 已后台运行 pid=3445437，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_0000.log
+[2025-11-08 01:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_0100.log'
+[2025-11-08 01:00:02] 已后台运行 pid=3590964，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_0100.log
+[2025-11-08 02:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_0200.log'
+[2025-11-08 02:00:02] 已后台运行 pid=3735026，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_0200.log
+[2025-11-08 03:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_0300.log'
+[2025-11-08 03:00:02] 已后台运行 pid=3879007，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_0300.log
+[2025-11-08 04:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_0400.log'
+[2025-11-08 04:00:01] 已后台运行 pid=4023155，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_0400.log
+[2025-11-08 05:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_0500.log'
+[2025-11-08 05:00:01] 已后台运行 pid=4168111，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_0500.log
+[2025-11-08 06:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_0600.log'
+[2025-11-08 06:00:01] 已后台运行 pid=119351，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_0600.log
+[2025-11-08 07:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_0700.log'
+[2025-11-08 07:00:01] 已后台运行 pid=264250，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_0700.log
+[2025-11-08 08:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_0800.log'
+[2025-11-08 08:00:01] 已后台运行 pid=408675，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_0800.log
+[2025-11-08 09:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_0900.log'
+[2025-11-08 09:00:01] 已后台运行 pid=552783，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_0900.log
+[2025-11-08 10:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_1000.log'
+[2025-11-08 10:00:01] 已后台运行 pid=696910，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_1000.log
+[2025-11-08 11:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_1100.log'
+[2025-11-08 11:00:02] 已后台运行 pid=841751，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_1100.log
+[2025-11-08 12:00:09] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_1200.log'
+[2025-11-08 12:00:09] 已后台运行 pid=975295，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_1200.log
+[2025-11-08 13:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_1300.log'
+[2025-11-08 13:00:02] 已后台运行 pid=1108312，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_1300.log
+[2025-11-08 14:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_1400.log'
+[2025-11-08 14:00:01] 已后台运行 pid=1245864，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_1400.log
+[2025-11-08 15:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_1500.log'
+[2025-11-08 15:00:01] 已后台运行 pid=1383543，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_1500.log
+[2025-11-08 16:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_1600.log'
+[2025-11-08 16:00:02] 已后台运行 pid=1525611，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_1600.log
+[2025-11-08 17:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_1700.log'
+[2025-11-08 17:00:01] 已后台运行 pid=1676513，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_1700.log
+[2025-11-08 18:04:52] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_1800.log'
+[2025-11-08 18:04:53] 已后台运行 pid=1743962，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_1800.log
+[2025-11-08 20:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_2000.log'
+[2025-11-08 20:00:02] 已后台运行 pid=1912721，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_2000.log
+[2025-11-08 21:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_2100.log'
+[2025-11-08 21:00:01] 已后台运行 pid=2256827，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_2100.log
+[2025-11-08 22:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_2200.log'
+[2025-11-08 22:00:01] 已后台运行 pid=2505471，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_2200.log
+[2025-11-08 23:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251108_2300.log'
+[2025-11-08 23:00:01] 已后台运行 pid=2850305，详见 /home/yeqi3/cyr/code/LaBraM/log/20251108_2300.log
+[2025-11-09 00:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_0000.log'
+[2025-11-09 00:00:02] 已后台运行 pid=2988405，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_0000.log
+[2025-11-09 01:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_0100.log'
+[2025-11-09 01:00:01] 已后台运行 pid=3122444，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_0100.log
+[2025-11-09 02:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_0200.log'
+[2025-11-09 02:00:01] 已后台运行 pid=3265192，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_0200.log
+[2025-11-09 03:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_0300.log'
+[2025-11-09 03:00:01] 已后台运行 pid=3408203，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_0300.log
+[2025-11-09 04:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_0400.log'
+[2025-11-09 04:00:01] 已后台运行 pid=3548692，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_0400.log
+[2025-11-09 05:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_0500.log'
+[2025-11-09 05:00:02] 已后台运行 pid=3683973，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_0500.log
+[2025-11-09 06:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_0600.log'
+[2025-11-09 06:00:01] 已后台运行 pid=3819613，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_0600.log
+[2025-11-09 07:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_0700.log'
+[2025-11-09 07:00:01] 已后台运行 pid=3956183，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_0700.log
+[2025-11-09 08:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_0800.log'
+[2025-11-09 08:00:01] 已后台运行 pid=4093025，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_0800.log
+[2025-11-09 09:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_0900.log'
+[2025-11-09 09:00:01] 已后台运行 pid=37603，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_0900.log
+[2025-11-09 10:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_1000.log'
+[2025-11-09 10:00:01] 已后台运行 pid=175516，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_1000.log
+[2025-11-09 11:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_1100.log'
+[2025-11-09 11:00:01] 已后台运行 pid=318632，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_1100.log
+[2025-11-09 12:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_1200.log'
+[2025-11-09 12:00:01] 已后台运行 pid=461862，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_1200.log
+[2025-11-09 13:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_1300.log'
+[2025-11-09 13:00:01] 已后台运行 pid=802355，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_1300.log
+[2025-11-09 14:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_1400.log'
+[2025-11-09 14:00:01] 已后台运行 pid=1036971，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_1400.log
+[2025-11-09 15:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_1500.log'
+[2025-11-09 15:00:01] 已后台运行 pid=1181426，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_1500.log
+[2025-11-09 16:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_1600.log'
+[2025-11-09 16:00:02] 已后台运行 pid=1323468，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_1600.log
+[2025-11-09 17:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_1700.log'
+[2025-11-09 17:00:02] 已后台运行 pid=1461796，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_1700.log
+[2025-11-09 18:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_1800.log'
+[2025-11-09 18:00:02] 已后台运行 pid=1599878，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_1800.log
+[2025-11-09 19:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_1900.log'
+[2025-11-09 19:00:02] 已后台运行 pid=1738308，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_1900.log
+[2025-11-09 20:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_2000.log'
+[2025-11-09 20:00:02] 已后台运行 pid=1876771，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_2000.log
+[2025-11-09 21:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_2100.log'
+[2025-11-09 21:00:02] 已后台运行 pid=2017498，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_2100.log
+[2025-11-09 22:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_2200.log'
+[2025-11-09 22:00:01] 已后台运行 pid=2155359，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_2200.log
+[2025-11-09 23:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251109_2300.log'
+[2025-11-09 23:00:02] 已后台运行 pid=2297931，详见 /home/yeqi3/cyr/code/LaBraM/log/20251109_2300.log
+[2025-11-10 00:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251110_0000.log'
+[2025-11-10 00:00:01] 已后台运行 pid=2444051，详见 /home/yeqi3/cyr/code/LaBraM/log/20251110_0000.log
+[2025-11-10 01:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251110_0100.log'
+[2025-11-10 01:00:01] 已后台运行 pid=2590061，详见 /home/yeqi3/cyr/code/LaBraM/log/20251110_0100.log
+[2025-11-10 02:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251110_0200.log'
+[2025-11-10 02:00:01] 已后台运行 pid=2734831，详见 /home/yeqi3/cyr/code/LaBraM/log/20251110_0200.log
+[2025-11-10 03:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251110_0300.log'
+[2025-11-10 03:00:01] 已后台运行 pid=2879332，详见 /home/yeqi3/cyr/code/LaBraM/log/20251110_0300.log
+[2025-11-10 04:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251110_0400.log'
+[2025-11-10 04:00:02] 已后台运行 pid=3023332，详见 /home/yeqi3/cyr/code/LaBraM/log/20251110_0400.log
+[2025-11-10 05:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251110_0500.log'
+[2025-11-10 05:00:01] 已后台运行 pid=3167335，详见 /home/yeqi3/cyr/code/LaBraM/log/20251110_0500.log
+[2025-11-10 06:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251110_0600.log'
+[2025-11-10 06:00:02] 已后台运行 pid=3310229，详见 /home/yeqi3/cyr/code/LaBraM/log/20251110_0600.log
+[2025-11-10 07:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251110_0700.log'
+[2025-11-10 07:00:02] 已后台运行 pid=3444519，详见 /home/yeqi3/cyr/code/LaBraM/log/20251110_0700.log
+[2025-11-10 08:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251110_0800.log'
+[2025-11-10 08:00:02] 已后台运行 pid=3578268，详见 /home/yeqi3/cyr/code/LaBraM/log/20251110_0800.log
+[2025-11-10 09:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251110_0900.log'
+[2025-11-10 09:00:01] 已后台运行 pid=3711402，详见 /home/yeqi3/cyr/code/LaBraM/log/20251110_0900.log
+[2025-11-10 10:00:02] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251110_1000.log'
+[2025-11-10 10:00:02] 已后台运行 pid=3843913，详见 /home/yeqi3/cyr/code/LaBraM/log/20251110_1000.log
+[2025-11-10 11:00:01] 启动 'TrainMultiDatasetKFoldLauncher.py' | CUDA_VISIBLE_DEVICES='5,6,7' | LOG='/home/yeqi3/cyr/code/LaBraM/log/20251110_1100.log'
+[2025-11-10 11:00:01] 已后台运行 pid=3976061，详见 /home/yeqi3/cyr/code/LaBraM/log/20251110_1100.log
